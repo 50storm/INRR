@@ -1,0 +1,311 @@
+﻿/*Div*/
+/*外枠*/
+#Wrapper
+{
+	/*width:21.0cm;*/
+	/*height:29.7cm;*/
+	width:800px;
+	/*height:1030px;*/
+	height:750px;
+	/*border:1mm black solid;*/
+	padding:2px 2px 2px 2px;
+}
+/*メニュー*/
+#Menu
+{
+	float:left;
+	width:800px;
+	height:30px;
+	/*padding:0px 0px 0px 0px ;*/
+	/*border:1px solid lime;*/
+}
+/*メニュー*/
+#Menu_Link{
+	width:90px;
+	height:30px;
+	float:left;
+
+}
+#btnlinkMenu
+{
+	width:90px;
+	height:30px;
+	
+}
+/*ログアウト*/
+#Menu_Btn{
+	width:90px;
+	height:30px;
+	float:left;
+
+}
+#btnLogOut
+{
+	width:90px;
+	height:30px;
+}
+
+
+/*メッセージ*/
+#Message
+{
+	float:left;
+	width:800px;
+	/*padding:0px 0px 0px 0px ;*/
+	height:25px;
+	/*margin-left:60px;*/
+	/*border:1px solid blue;*/
+}
+
+/*元号*/
+#Era
+{	
+	float:right;
+	width:250px;
+	height:40px;
+	
+	/*border:1px solid black;*/
+	margin-left:550px;
+}
+.Era
+{
+	width:20px;
+	
+}
+
+/*会社名*/
+#Coname
+{
+	float:left;
+	width:800px;
+	height:30px;
+	border:1px solid black;
+	
+
+}
+
+
+#ConameInner
+{
+		float:right;
+		margin-right:200px;
+}
+
+/*担当者*/
+#Tantou
+{
+	float:left;
+	border:1px solid pink;
+	width:800px;
+	height:30px;
+}
+#TantouInner
+{
+		float:right;
+		margin-right:200px;	
+}
+/*タイトル*/
+#Title
+{
+	float:left;
+	width:800px;
+	font-size:x-large;
+	font-weight:bold;
+}
+
+
+/*テーブル*/
+#TableDiv
+{
+	width:800px;
+	/*
+	border: 1px solid blue;
+	*/
+	/*background-color:Gray;*/
+}
+#tblReport
+{
+	table-layout: fixed;
+    border: 2px black solid;
+    border-collapse: collapse;
+	/*border-collapse: separate;*/
+    width:800px;
+
+}
+
+#tblReport colgroup.class1
+{
+	width:50px;
+	/*background:Pink;*/
+}
+#tblReport colgroup.class3
+{
+	width:120px;
+	vertical-align:middle;
+	text-align:center;
+	/*background:blue;*/
+}
+
+#tblReport th
+{
+	
+	border: 1px black solid;
+}
+#tblReport td
+{
+	border: 1px  black solid;
+	text-align:center;
+}
+.txtTableType1
+{
+	width:80px;
+	text-align:center;
+	ime-mode:disabled;
+}
+.txtTableType2
+{
+	width:30px;
+	text-align:center;
+	ime-mode:disabled;
+}
+
+.Category
+{
+	white-space:nowrap;	
+}
+
+/*フッター*/
+#footer
+{
+	float:left;
+	/*margin-top:1px;	*/
+	padding-top:5px; 
+	width:300px;
+	height:70px;
+	/*border:1px solid pink;*/]
+	
+	
+}
+
+
+#footer .footer_p
+{
+/*	padding-top:5px;*/
+	line-height:11px;	
+	font-size:12px;
+}
+
+
+/*ボタン*/
+#footerButton 
+{
+	float:left;
+	padding-top:10px;	
+	width:400px;
+	height:70px;
+	/*border:1px solid lime;*/
+	/*clear:both;*/
+	
+}
+.FooterBtn
+{
+	width:100px;
+	height:50px;
+}
+
+#linkMenu
+{
+	color:#0000ff;
+	background:transparent;
+	font-size:18px;
+	font-weight:bold;
+	font-family:MS UI Gothic;
+	width:100px;
+	text-decoration:none;
+}
+/*メニューボタン*/
+.BtnMenu
+{
+	width:100px;
+    text-decoration:none;
+}
+
+#txtSyamei
+{
+	width:300px;	
+}
+#txtTantou
+{
+	width:300px;
+	ime-mode:active;
+	
+}
+
+#txtYearRep0
+{
+	width:20px;
+	height:20px;
+}
+#txtYearRep1
+{
+	width:20px;
+	height:20px;
+}
+#txtMonthRep0
+{
+	width:20px;
+	height:20px;
+}
+#txtMonthRep1
+{
+	width:20px;
+	height:20px;
+}
+
+/*20131202*/
+#txtYear
+{
+	width:20px;
+	height:20px;
+}
+
+#txtMonth
+{
+	width:20px;
+	height:20px;
+}
+#txtDay
+{
+	width:20px;
+	height:20px;
+	
+}
+
+/*乗用及び貨物車*/
+.Row_JK{
+	height:180px;
+}
+
+#Row_JK_1{
+	line-height:5px;
+	padding-top:20px;
+}
+
+#Row_JK_2{
+	line-height:5px;
+	padding-top:20px;
+}
+
+#Row_JK_3{
+	line-height:5px;
+}
+
+#Row_JK_4{
+	line-height:5px;
+}
+
+#Row_JK_5{
+	line-height:5px;
+	padding-top:20px;
+}
+
