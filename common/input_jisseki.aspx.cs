@@ -2023,6 +2023,9 @@ namespace Jisseki_Report_Ibaraki.common
                 txtSyamei.Text = Session["CONAME"].ToString();
                 txtSyamei.Enabled = false;
 
+                //担当者名
+                txtTantou.Text = getRepName();
+                
 
                 //報告日
                 txtYearRep0.Text = jCalender.GetYear(DateTime.Today).ToString();
@@ -2049,7 +2052,7 @@ namespace Jisseki_Report_Ibaraki.common
                         setSonota();
                         setGoukei();
 
-                        this.lblMsg.Text = "既に登録されています。";
+                        this.lblMsg.Text = "既に一度登録されています。<br/>(修正可能です)";
                         this.lblMsg.BackColor = System.Drawing.Color.Pink;
                     }
                 }
@@ -2073,7 +2076,7 @@ namespace Jisseki_Report_Ibaraki.common
                         setSonota();
                         setGoukei();
 
-                        this.lblMsg.Text = "既に登録されています。";
+                        this.lblMsg.Text = "既に一度登録されています。<br/>(修正可能です)";
                         this.lblMsg.BackColor = System.Drawing.Color.Pink;
                     }
                 }
@@ -2164,12 +2167,13 @@ namespace Jisseki_Report_Ibaraki.common
                     using (SqlCommand cmd = new SqlCommand(SqlHeader, Conn))
                     {
 
-                        //cmd.Parameters.Add(new SqlParameter("@COCODE", qCOCODE));
+                        //未受信画面でセットしたもの
                         cmd.Parameters.Add(new SqlParameter("@COCODE", this.Session["COCODE_MEMBER"].ToString()));
                         using (SqlDataReader Reader = cmd.ExecuteReader())
                         {
                             Reader.Read();
                             this.txtSyamei.Text = Reader["CONAME"].ToString();
+                            this.txtTantou.Text = Reader["RepName"].ToString();//要望対応
                         }
                     }
                     Conn.Close();
@@ -2177,6 +2181,72 @@ namespace Jisseki_Report_Ibaraki.common
             }
 
             #endregion
+
+            private string getRepName() {
+                try
+                {
+                    string Sql = " SELECT * FROM [Jisseki_Report_Ibaraki].dbo.ID WHERE COCODE=@COCODE ";
+                    using (SqlConnection Conn = new SqlConnection(strConn))
+                    {
+                        Conn.Open();
+                        using (SqlCommand cmd = new SqlCommand(Sql, Conn))
+                        {
+
+                            cmd.Parameters.Add(new SqlParameter("@COCODE", Session["COCODE"].ToString()));
+
+                            using (SqlDataReader Reader = cmd.ExecuteReader())
+                            {
+                                if (Reader.HasRows)
+                                {
+                                    Reader.Read();
+                                    return  Reader["RepName"].ToString();
+                                }
+                                else
+                                {
+                                    return string.Empty;
+                                }
+
+                            }
+                        }
+
+                    }
+                }
+                catch
+                {
+                    throw;
+
+                }
+            
+            }
+
+            private void updateIdMaster(SqlConnection Conn, SqlTransaction Tran)
+            {
+                //Update
+                string Sql = " UPDATE [Jisseki_Report_Ibaraki].[dbo].[ID] "
+                          + " SET "
+                          + "  [RepName]      =  @RepName      "
+                          + " WHERE   "
+                          + " COCODE = @COCODE" ;
+   
+                        try
+                        {
+
+                            using (SqlCommand cmd = new SqlCommand(Sql, Conn, Tran))
+                            {
+                                cmd.Parameters.Add(new SqlParameter("@COCODE", this.Session["COCODE"].ToString()));
+                                cmd.Parameters.Add(new SqlParameter("@RepName", this.txtTantou.Text));
+                                cmd.ExecuteNonQuery();
+                            }
+
+      
+                        }
+                        catch 
+                        {
+                            throw;
+
+                        }
+                    }
+
 
  #region"登録メソッド"
             private void insertHeader(SqlConnection Conn, SqlTransaction Tran)
@@ -3167,6 +3237,14 @@ namespace Jisseki_Report_Ibaraki.common
                                 //合計
                                 this.updateGoukei(Conn, Tran);
 
+
+                                //会員のとき
+                                if (this.Session["Member"].ToString().Trim() == "1")
+                                {
+                                    this.updateIdMaster(Conn, Tran);
+          
+                                }
+
                                 //Commit Transaction
                                 Tran.Commit();
                                 btnSubmit.Enabled = false;
@@ -3225,6 +3303,15 @@ namespace Jisseki_Report_Ibaraki.common
                                 //合計
                                 this.insertGoukei(Conn, Tran);
 
+                                //会員のとき
+                                if (this.Session["Member"].ToString().Trim() == "1")
+                                {
+                                    this.updateIdMaster(Conn, Tran);
+
+                                }
+
+                                
+
                                 //Commit Transaction
                                 Tran.Commit();
                                 btnSubmit.Enabled = false;
@@ -3277,6 +3364,9 @@ namespace Jisseki_Report_Ibaraki.common
 
                 }
             }
+
+
+            
 
         }
 

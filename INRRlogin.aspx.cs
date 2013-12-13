@@ -78,7 +78,16 @@ namespace Jisseki_Report_Ibaraki
                         Session["CONAME"] = reader["CONAME"];
                         Session["Member"] = reader["Member"];
                         Session["MemberType"] = reader["MemberType"];//通常:0・賛助:1
-
+                     //自販連ユーザーのとき担当者名を会員でセットできないよ
+                     //   if (reader["RepName"] == null)
+                     //   {
+                     //       Session["RepName"] = string.Empty;
+                     //   }
+                     //   else
+                     //   {
+                     //       Session["RepName"] = reader["RepName"];
+                     //   }
+                     //
                         if (reader["Member"].ToString().Trim().Equals("1"))
                         {
                             //会員メニュー

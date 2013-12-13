@@ -453,10 +453,42 @@ namespace Jisseki_Report_Ibaraki.jada.master
             //削除
             try
             {
+                string strCONAME=String.Empty;
+
+                if (!COCODEisRegisterd(out strCONAME))
+                {
+                    //削除済
+                    this.lblMsg.Text = "既に削除されています";
+                    this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                    return;
+
+                }
+                else 
+                {
+                    this.lblMsg.Text = "";
+                    this.lblMsg.BackColor = System.Drawing.Color.White;
+
+                }
+                //登録データを削除する
+                //ID,単価,新車新規登録台数すべて削除
                 string Sql = " DELETE FROM  [Jisseki_Report_Ibaraki].dbo.ID "
                            + " WHERE COCODE = @Key; "
                            + " DELETE FROM [Jisseki_Report_Ibaraki].[dbo].[UnitPrice] "
-                           + " WHERE COCODE = @Key; ";
+                           + " WHERE COCODE = @Key; "                          
+                           + " DELETE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Header] "
+                           + " WHERE COCODE = @Key; "
+                           + " DELETE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Mito] "
+                           + " WHERE COCODE = @Key; "
+                           + " DELETE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Tuchiura] "
+                           + " WHERE COCODE = @Key; "
+                           + " DELETE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Tukuba] "
+                           + " WHERE COCODE = @Key; "
+                           + " DELETE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Sonota] "
+                           + " WHERE COCODE = @Key; "
+                           + " DELETE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Goukei]"
+                           + " WHERE COCODE = @Key; "
+                           ;
+
 
                 using (SqlConnection Conn = new SqlConnection(strConn))
                 {
@@ -475,8 +507,8 @@ namespace Jisseki_Report_Ibaraki.jada.master
             }
             catch (Exception ex)
             {
-                 this.lblMsg.Text = ex.Message;
-     
+                this.lblMsg.Text = ex.Message;
+
             }
         }
 

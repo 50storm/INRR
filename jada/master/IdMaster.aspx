@@ -138,7 +138,7 @@
         <asp:Button ID="btnInsert" runat="server" Text="登録" onclick="btnInsert_Click" 
             onclientclick="return confirmRegister();" />
         <asp:Button ID="btnUpdate" runat="server" Text="更新" onclick="btnUpdate_Click"  
-            onclientclick="return confirmRegister();" />
+            onclientclick="return confirmUpdate();" />
         <asp:Button ID="btnDelete" runat="server" Text="削除" onclick="btnDelete_Click" 
             onclientclick="return confirmDeletion();" />
         <asp:Button ID="Button1" runat="server" Text="リセット" onclick="Button1_Click" />

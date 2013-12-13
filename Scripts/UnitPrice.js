@@ -108,6 +108,15 @@ function checkForm() {
         return false;
 
     }
-    return true;
+
+
+    if(confirm("更新してもよろしいですか？"))
+    {
+        return true;
+    }else{
+        return false;
+    }
+
+    
 
 }

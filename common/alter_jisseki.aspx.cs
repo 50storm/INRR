@@ -2478,13 +2478,40 @@ namespace Jisseki_Report_Ibaraki.common
             }
 
         }
+
+        private void updateIdMaster(SqlConnection Conn, SqlTransaction Tran)
+        {
+            //Update
+            string Sql = " UPDATE [Jisseki_Report_Ibaraki].[dbo].[ID] "
+                      + " SET "
+                      + "  [RepName]      =  @RepName      "
+                      + " WHERE   "
+                      + " COCODE = @COCODE";
+
+            try
+            {
+
+                using (SqlCommand cmd = new SqlCommand(Sql, Conn, Tran))
+                {
+                    cmd.Parameters.Add(new SqlParameter("@COCODE", this.Session["COCODE"].ToString()));
+                    cmd.Parameters.Add(new SqlParameter("@RepName", this.txtTantou.Text));
+                    cmd.ExecuteNonQuery();
+                }
+
+
+            }
+            catch
+            {
+                throw;
+
+            }
+        }
         #endregion
 
         #region "イベント"
         protected void Page_Load(object sender, EventArgs e)
         {
             try{
-                //TODO
                  //ログインしていなければ表示しない
                  if (Session["COCODE"] == null) {
                      Response.Redirect(URL.LOGIN_DEALER);           
@@ -2679,6 +2706,14 @@ namespace Jisseki_Report_Ibaraki.common
 
                             //合計
                             this.updateGoukei(Conn, Tran);
+
+                            //会員のとき
+                            if (this.Session["Member"].ToString().Trim() == "1")
+                            {
+
+                                this.updateIdMaster(Conn, Tran);
+                             
+                            }
 
                             //Commit Transaction
                             Tran.Commit();

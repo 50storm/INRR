@@ -225,8 +225,8 @@
 		<tr>
 		<td   style="background:gray;" colspan="2">小　計</td>
 		<td  style="background:gray;" colspan="2"><asp:TextBox ID="txtMito_SubTotal1" 
-                runat="server" class="txtTableType1"  MaxLength="3"  onfocus="select();" 
-                BackColor="Silver" >0</asp:TextBox></td>
+               BackColor="Silver"  runat="server" class="txtTableType1"  MaxLength="3"  onfocus="select();" 
+                 >0</asp:TextBox></td>
 		<td  style="background:gray;" colspan="2"><asp:TextBox ID="txtTuchiura_SubTotal1" 
                 runat="server" class="txtTableType1"  MaxLength="3" onfocus="select();" 
                 BackColor="Silver" >0</asp:TextBox></td>

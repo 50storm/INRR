@@ -37,7 +37,9 @@ namespace Jisseki_Report_Ibaraki.jada.search
                             + " H.YearRep = @YearRep AND H.MonthRep = @MonthRep "//20131204
                             + " AND I.Member = '1' "
                             + " ) "
-                            + " AND Member = '1' ";
+                            + " AND Member = '1' AND ( isCanceled is null OR isCanceled ='0' ) "
+                            + " ORDER BY COCODE "
+                            ;
 
 
             using (SqlConnection Conn = new SqlConnection(strConn))
@@ -153,6 +155,7 @@ namespace Jisseki_Report_Ibaraki.jada.search
    
         protected void Gridview1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            //リダイレクトで渡す
             try
             {
                 //画面の年月

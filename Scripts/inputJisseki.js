@@ -768,5 +768,40 @@ function checkForms() {
 		//check Goukei
 		if(checkGoukei() === false){
 			return false;
-		}
+        }
+
+        if (!confirm("送信しますか？")) {
+            //CSSがとれてしまう
+            document.getElementById("txtMito_SubTotal1").style.backgroundColor = "Silver";
+            document.getElementById("txtTuchiura_SubTotal1").style.backgroundColor = "Silver";
+            document.getElementById("txtTukuba_SubTotal1").style.backgroundColor = "Silver";
+            document.getElementById("txtSonota_SubTotal1").style.backgroundColor = "Silver";
+            document.getElementById("txtGoukei_SubTotal1").style.backgroundColor = "Silver";
+
+            document.getElementById("txtMito_Total1").style.backgroundColor = "Silver";
+            document.getElementById("txtTuchiura_Total1").style.backgroundColor = "Silver";
+            document.getElementById("txtTukuba_Total1").style.backgroundColor = "Silver";
+            document.getElementById("txtSonota_Total1").style.backgroundColor = "Silver";
+            document.getElementById("txtGoukei_Total1").style.backgroundColor = "Silver";
+
+            document.getElementById("txtGoukei_Kamotu1").style.backgroundColor = "Silver";
+            document.getElementById("txtGoukei_Kamotu2").style.backgroundColor = "Silver";
+            document.getElementById("txtGoukei_Kamotu3").style.backgroundColor = "Silver";
+            document.getElementById("txtGoukei_Kamotu4").style.backgroundColor = "Silver";
+            document.getElementById("txtGoukei_Bus1").style.backgroundColor = "Silver";
+            document.getElementById("txtGoukei_Bus2").style.backgroundColor = "Silver";
+
+            document.getElementById("txtGoukei_JK_J1").style.backgroundColor = "Silver";
+            document.getElementById("txtGoukei_JK_K1").style.backgroundColor = "Silver";
+
+            document.getElementById("txtGoukei_JK_J2").style.backgroundColor = "Silver";
+            document.getElementById("txtGoukei_JK_K2").style.backgroundColor = "Silver";
+
+            document.getElementById("txtGoukei_JK_J3").style.backgroundColor = "Silver";
+            document.getElementById("txtGoukei_JK_K3").style.backgroundColor = "Silver";
+
+            return false;  
+        
+        }
+
 }

@@ -144,22 +144,13 @@ function setFocus() {
                     document.getElementById('txtCOCODE').focus();
                     document.getElementById('txtCOCODE').select();
                     return false;
+
                 }
             }
 }
 
-//登録確認
 
-
-//削除確認
-function confirmDeletion() {
-    if (!confirm("削除してよろしいですか？")) {
-        return false;
-    }
-}
-
-//登録確認
-function confirmRegister() {
+function validateFrom() {
     /*必須チェック*/
     //会員コード
     if (!isEmpty("txtCOCODE")) {
@@ -220,7 +211,7 @@ function confirmRegister() {
     } else {
         eraseMsg("lblMsg");
     }
-    
+
     //会員フラグ
     var txtMember = document.getElementById("txtMember");
     if (parseInt(txtMember.value, 10) !== 0
@@ -275,4 +266,53 @@ function confirmRegister() {
         isOk("txtisCanceled");
     }
 
+    return true;
+
+}
+
+//登録確認
+function confirmRegister() {
+
+    if (!validateFrom()) {
+        return false;
+    }
+
+    if (!confirm("登録しますか？")) {
+        return false;
+    }
+}
+
+//更新登録
+function confirmUpdate() {
+
+    if (!validateFrom()) {
+        return false;
+    }
+
+    if (!confirm("更新しますか？")) {
+        return false;
+    }
+}
+
+
+//削除確認
+function confirmDeletion() {
+    /*必須チェック*/
+    //会員コード
+    if (!isEmpty("txtCOCODE")) {
+        isError("txtCOCODE");
+        showMsg("lblMsg", "会員コードは必須です");
+        return false;
+    } else {
+        eraseMsg("lblMsg");
+    }
+
+    alert("会員マスターから削除すると、新車新規登録台数のデータも削除されます。");
+
+    alert("会員が退会の場合は、退会フラグを「1：退会済み」にしてください");
+     
+
+    if (!confirm("本当に削除しますか？")) {
+        return false;
+    }
 }
