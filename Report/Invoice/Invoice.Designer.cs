@@ -382,9 +382,10 @@
             // 
             this.textBox1.DataField = "=Sum_Kamotu7t+Sum_Kamotu6DP9_5t+Sum_Kamotu4DP9_3t+Sum_Kamotu2DP9_2DP5t+Sum_Over20" +
     "01cc+Sum_To2000From1000cc+Sum_Over30+Sum_LessThan29+U_MemberFee";
-            this.textBox1.Height = 0.28125F;
+            this.textBox1.Height = 0.307874F;
             this.textBox1.Left = 3.622047F;
             this.textBox1.Name = "textBox1";
+            this.textBox1.OutputFormat = resources.GetString("textBox1.OutputFormat");
             this.textBox1.Style = "font-family: ＭＳ Ｐ明朝; font-size: 24pt; font-style: italic; text-align: center; ver" +
     "tical-align: middle";
             this.textBox1.Text = "999";
@@ -398,6 +399,7 @@
             this.txtSum_LessThan29.Height = 0.28125F;
             this.txtSum_LessThan29.Left = 4.488189F;
             this.txtSum_LessThan29.Name = "txtSum_LessThan29";
+            this.txtSum_LessThan29.OutputFormat = resources.GetString("txtSum_LessThan29.OutputFormat");
             this.txtSum_LessThan29.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtSum_LessThan29.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
@@ -471,6 +473,7 @@
             this.txtSum_Over30.Height = 0.28125F;
             this.txtSum_Over30.Left = 4.488189F;
             this.txtSum_Over30.Name = "txtSum_Over30";
+            this.txtSum_Over30.OutputFormat = resources.GetString("txtSum_Over30.OutputFormat");
             this.txtSum_Over30.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtSum_Over30.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
@@ -544,6 +547,7 @@
             this.txtSum_To2000From1000cc.Height = 0.28125F;
             this.txtSum_To2000From1000cc.Left = 4.488189F;
             this.txtSum_To2000From1000cc.Name = "txtSum_To2000From1000cc";
+            this.txtSum_To2000From1000cc.OutputFormat = resources.GetString("txtSum_To2000From1000cc.OutputFormat");
             this.txtSum_To2000From1000cc.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtSum_To2000From1000cc.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
@@ -617,6 +621,7 @@
             this.txtSum_Over2001cc.Height = 0.28125F;
             this.txtSum_Over2001cc.Left = 4.488189F;
             this.txtSum_Over2001cc.Name = "txtSum_Over2001cc";
+            this.txtSum_Over2001cc.OutputFormat = resources.GetString("txtSum_Over2001cc.OutputFormat");
             this.txtSum_Over2001cc.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtSum_Over2001cc.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
@@ -712,6 +717,7 @@
             this.txtSum_Kamotu4DP9_3t.Height = 0.28125F;
             this.txtSum_Kamotu4DP9_3t.Left = 4.488189F;
             this.txtSum_Kamotu4DP9_3t.Name = "txtSum_Kamotu4DP9_3t";
+            this.txtSum_Kamotu4DP9_3t.OutputFormat = resources.GetString("txtSum_Kamotu4DP9_3t.OutputFormat");
             this.txtSum_Kamotu4DP9_3t.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtSum_Kamotu4DP9_3t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
@@ -901,6 +907,7 @@
             this.txtSum_BigSize.Height = 0.3149606F;
             this.txtSum_BigSize.Left = 4.488189F;
             this.txtSum_BigSize.Name = "txtSum_BigSize";
+            this.txtSum_BigSize.OutputFormat = resources.GetString("txtSum_BigSize.OutputFormat");
             this.txtSum_BigSize.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtSum_BigSize.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; text" +
     "-justify: auto; vertical-align: middle";
@@ -1011,6 +1018,7 @@
             this.txtSum_MediumSmall.Height = 0.3149606F;
             this.txtSum_MediumSmall.Left = 4.488189F;
             this.txtSum_MediumSmall.Name = "txtSum_MediumSmall";
+            this.txtSum_MediumSmall.OutputFormat = resources.GetString("txtSum_MediumSmall.OutputFormat");
             this.txtSum_MediumSmall.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtSum_MediumSmall.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
@@ -1025,6 +1033,7 @@
             this.txtU_Average.Height = 0.3149606F;
             this.txtU_Average.Left = 4.488189F;
             this.txtU_Average.Name = "txtU_Average";
+            this.txtU_Average.OutputFormat = resources.GetString("txtU_Average.OutputFormat");
             this.txtU_Average.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtU_Average.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
@@ -1039,6 +1048,7 @@
             this.txtSumSibuMemberFee.Height = 0.3149606F;
             this.txtSumSibuMemberFee.Left = 4.488189F;
             this.txtSumSibuMemberFee.Name = "txtSumSibuMemberFee";
+            this.txtSumSibuMemberFee.OutputFormat = resources.GetString("txtSumSibuMemberFee.OutputFormat");
             this.txtSumSibuMemberFee.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtSumSibuMemberFee.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
@@ -1115,6 +1125,7 @@
             this.txtSum_Kamotu7t.Height = 0.28125F;
             this.txtSum_Kamotu7t.Left = 4.488189F;
             this.txtSum_Kamotu7t.Name = "txtSum_Kamotu7t";
+            this.txtSum_Kamotu7t.OutputFormat = resources.GetString("txtSum_Kamotu7t.OutputFormat");
             this.txtSum_Kamotu7t.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtSum_Kamotu7t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
@@ -1153,6 +1164,7 @@
             this.txtSum_Kamotu6DP9_5t.Height = 0.28125F;
             this.txtSum_Kamotu6DP9_5t.Left = 4.488189F;
             this.txtSum_Kamotu6DP9_5t.Name = "txtSum_Kamotu6DP9_5t";
+            this.txtSum_Kamotu6DP9_5t.OutputFormat = resources.GetString("txtSum_Kamotu6DP9_5t.OutputFormat");
             this.txtSum_Kamotu6DP9_5t.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtSum_Kamotu6DP9_5t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
@@ -1191,6 +1203,7 @@
             this.txtSum_Kamotu2DP9_2DP5t.Height = 0.28125F;
             this.txtSum_Kamotu2DP9_2DP5t.Left = 4.488189F;
             this.txtSum_Kamotu2DP9_2DP5t.Name = "txtSum_Kamotu2DP9_2DP5t";
+            this.txtSum_Kamotu2DP9_2DP5t.OutputFormat = resources.GetString("txtSum_Kamotu2DP9_2DP5t.OutputFormat");
             this.txtSum_Kamotu2DP9_2DP5t.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtSum_Kamotu2DP9_2DP5t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
@@ -1205,6 +1218,7 @@
             this.txtSumSibuMemberFeeHeader.Height = 0.3229167F;
             this.txtSumSibuMemberFeeHeader.Left = 3.622047F;
             this.txtSumSibuMemberFeeHeader.Name = "txtSumSibuMemberFeeHeader";
+            this.txtSumSibuMemberFeeHeader.OutputFormat = resources.GetString("txtSumSibuMemberFeeHeader.OutputFormat");
             this.txtSumSibuMemberFeeHeader.Style = "font-family: ＭＳ Ｐ明朝; font-size: 24pt; font-style: italic; text-align: center; ver" +
     "tical-align: middle";
             this.txtSumSibuMemberFeeHeader.SummaryRunning = DataDynamics.ActiveReports.SummaryRunning.Group;
@@ -1219,6 +1233,7 @@
             this.txtU_MemberFee.Height = 0.28125F;
             this.txtU_MemberFee.Left = 4.488189F;
             this.txtU_MemberFee.Name = "txtU_MemberFee";
+            this.txtU_MemberFee.OutputFormat = resources.GetString("txtU_MemberFee.OutputFormat");
             this.txtU_MemberFee.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtU_MemberFee.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
@@ -1247,6 +1262,7 @@
             this.txtSumMemberFee.Height = 0.3149606F;
             this.txtSumMemberFee.Left = 4.488189F;
             this.txtSumMemberFee.Name = "txtSumMemberFee";
+            this.txtSumMemberFee.OutputFormat = resources.GetString("txtSumMemberFee.OutputFormat");
             this.txtSumMemberFee.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
             this.txtSumMemberFee.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
