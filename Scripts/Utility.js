@@ -97,6 +97,19 @@ function eraseMsg(id) {
     obj.style.backgroundColor = "White";
     obj.innerHTML = "";
 }
+//=============================
+//メッセージを表示する form内
+//=============================
+function showMsgValue(id, message) {
+    var obj = document.getElementById(id);
+    obj.style.backgroundColor = "Pink";
+    obj.value = message;
+}
+function eraseMsgValue(id) {
+    var obj = document.getElementById(id);
+    obj.style.backgroundColor = "White";
+    obj.value = "";
+}
 
 
 //和暦を西暦に変換(igarashi)

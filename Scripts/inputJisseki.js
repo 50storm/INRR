@@ -189,81 +189,88 @@ var flgMito =
 
 function checkMito(){
 	if (isNumber("txtMito_Kamotu1")) {
-		flgMito.txtMito_Kamotu1 = true;
+	    flgMito.txtMito_Kamotu1 = true;
 	}else{
-		flgMito.txtMito_Kamotu1 = false;
+	    flgMito.txtMito_Kamotu1 = false;
 	}
 	if (isNumber("txtMito_Kamotu2")) {
-		flgMito.txtMito_Kamotu2 = true;
-    } else {
-		flgMito.txtMito_Kamotu2 = false;
+	    flgMito.txtMito_Kamotu2 = true;
+	} else {
+        flgMito.txtMito_Kamotu2 = false;
+        
     }
     if (isNumber("txtMito_Kamotu3")) {
-		flgMito.txtMito_Kamotu3 = true;
+        flgMito.txtMito_Kamotu3 = true;
     } else {
-		flgMito.txtMito_Kamotu3 = false;
+        flgMito.txtMito_Kamotu3 = false;
     }
 	if (isNumber("txtMito_Kamotu4")) {
-		flgMito.txtMito_Kamotu4 = true;
+	    flgMito.txtMito_Kamotu4 = true;
     } else {
-		flgMito.txtMito_Kamotu4 = false;
+	    flgMito.txtMito_Kamotu4 = false;
     }      
  	if (isNumber("txtMito_Bus1")) {
-		flgMito.txtMito_Bus1 = true;
+        flgMito.txtMito_Bus1 = true;
     } else {
-		flgMito.txtMito_Bus1 = false;
+        flgMito.txtMito_Bus1 = false;
     }
  	if (isNumber("txtMito_Bus2")) {
-		flgMito.txtMito_Bus2 = true;
+        flgMito.txtMito_Bus2 = true;
     } else {
-		flgMito.txtMito_Bus2 = false;
+        flgMito.txtMito_Bus2 = false;
     }
 	if (isNumber("txtMito_JK_J1")) {
-		flgMito.txtMito_JK_J1 = true;
+	    flgMito.txtMito_JK_J1 = true;
     } else {
-		flgMito.txtMito_JK_J1 = false;
+	    flgMito.txtMito_JK_J1 = false;
     }
 	
 	if (isNumber("txtMito_JK_K1")) {
-		flgMito.txtMito_JK_K1 = true;
+	    flgMito.txtMito_JK_K1 = true;
     } else {
-		flgMito.txtMito_JK_K1 = false;
-
+        flgMito.txtMito_JK_K1 = false;	
     }
 	if (isNumber("txtMito_JK_J2")) {
-		flgMito.txtMito_JK_J2 = true;
+        flgMito.txtMito_JK_J2 = true;    
     } else {
-		flgMito.txtMito_JK_J2 = false;
+        flgMito.txtMito_JK_J2 = false;
+        
     }
 	
 	if (isNumber("txtMito_JK_K2")) {
-		flgMito.txtMito_JK_K2 = true;
+        flgMito.txtMito_JK_K2 = true;
+	    
     } else {
-		flgMito.txtMito_JK_K2 = false;
+        flgMito.txtMito_JK_K2 = false;   
     }
            
     if (isNumber("txtMito_JK_J3")) {
-		flgMito.txtMito_JK_J3 = true;
+        flgMito.txtMito_JK_J3 = true;
+        
     } else {
-		flgMito.txtMito_JK_J3 = false;
+        flgMito.txtMito_JK_J3 = false;
+        
     }
     
 	if (isNumber("txtMito_JK_K3")) {
-		flgMito.txtMito_JK_K3 = true;
+        flgMito.txtMito_JK_K3 = true;
+	    
     } else {
-		flgMito.txtMito_JK_K3 = false;
+        flgMito.txtMito_JK_K3 = false;
+    
     }
 	
 	if (isNumber("txtMito_SubTotal1")) {
-		flgMito.txtMito_SubTotal1 = true;
+	    flgMito.txtMito_SubTotal1 = true;
     } else {
-		flgMito.txtMito_SubTotal1 = false;
+	    flgMito.txtMito_SubTotal1 = false;
     }
 	
 	if (isNumber("txtMito_Total1")) {
-		flgMito.txtMito_Total1 = true;
-    } else {
-		flgMito.txtMito_Total1 = false;
+	    flgMito.txtMito_Total1 = true;
+	} else {
+        flgMito.txtMito_Total1 = false;
+    
     }
 	
 	if(flgMito.txtMito_Kamotu1 && flgMito.txtMito_Kamotu2 && flgMito.txtMito_Kamotu3 &&
@@ -746,29 +753,49 @@ function checkForms() {
 		}
 		
         //check Mito
-		if(checkMito() === false){
-			return false;
-		}
+		if (checkMito() === false) {
+		    showMsg("lblMsg", "【水戸】の欄に数字以外の項目が含まれています");
+		    return false;
+		} else 
+        {
+            eraseMsg("lblMsg");
+        }
 		
 		//check Tuchiura
-		if(checkTuchiura() === false){
+        if (checkTuchiura() === false) {
+            showMsg("lblMsg", "【土浦】の欄に数字以外の項目が含まれています");
 			return false;
-		}
+        } else {
+            eraseMsg("lblMsg");
+        }
+		
 		
 		//check Tukuba
-		if(checkTukuba() === false){
+        if (checkTukuba() === false) {
+            showMsg("lblMsg", "【つくば】の欄に数字以外の項目が含まれています");
 			return false;
-		}
+        } else {
+            eraseMsg("lblMsg");
+        }
+		
 		
 		//check Sonota
-		if(checkSonota() === false){
+        if (checkSonota() === false) {
+            showMsg("lblMsg", "【その他】の欄に数字以外の項目が含まれています");
 			return false;
-		}
+        } else {
+            eraseMsg("lblMsg");
+        }
+		
 		
 		//check Goukei
-		if(checkGoukei() === false){
+        if (checkGoukei() === false) {
+            showMsg("lblMsg", "【合計】の欄に数字以外の項目が含まれています");
 			return false;
+        } else {
+            eraseMsg("lblMsg");
         }
+		
 
         if (!confirm("送信しますか？")) {
             //CSSがとれてしまう

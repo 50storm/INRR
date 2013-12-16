@@ -13,7 +13,6 @@
 </style>
 <script type="text/javascript" src="../../Scripts/Utility.js"></script>
 <script type="text/javascript" src="../../Scripts/UnitPrice.js"></script>
-</script>
     <title>単価マスター【一括修正】</title>
 </head>
 <body onload="return setFocus();">
