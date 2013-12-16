@@ -120,3 +120,127 @@ function checkForm() {
     
 
 }
+
+// ==============================
+//  カーソル制御処理
+// ==============================
+function setFocus() {
+    document.getElementById('txtBigSize').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('txtMediumSmall').focus();
+                    document.getElementById('txtMediumSmall').select();
+                    return false;
+                }
+            }
+
+            document.getElementById('txtMediumSmall').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('txtAverage').focus();
+                    document.getElementById('txtAverage').select();
+                    return false;
+                }
+            }
+
+
+    document.getElementById('txtAverage').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('txtKamotu7t').focus();
+                    document.getElementById('txtKamotu7t').select();
+                    return false;
+                }
+            }
+
+    document.getElementById('txtKamotu7t').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('txtKamotu6DP9_5t').focus();
+                    document.getElementById('txtKamotu6DP9_5t').select();
+                    return false;
+                }
+            }
+
+    document.getElementById('txtKamotu6DP9_5t').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('txtKamotu4DP9_3t').focus();
+                    document.getElementById('txtKamotu4DP9_3t').select();
+                    return false;
+                }
+            }
+
+            document.getElementById('txtKamotu4DP9_3t').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('txtKamotu2DP9_2DP5t').focus();
+                    document.getElementById('txtKamotu2DP9_2DP5t').select();
+                    return false;
+                }
+            }
+
+            document.getElementById('txtKamotu2DP9_2DP5t').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('txtOver2001cc').focus();
+                    document.getElementById('txtOver2001cc').select();
+                    return false;
+                }
+            }
+
+            document.getElementById('txtOver2001cc').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('txtTo2000From1000cc').focus();
+                    document.getElementById('txtTo2000From1000cc').select();
+                    return false;
+                }
+            }
+
+            document.getElementById('txtTo2000From1000cc').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('txtOver30').focus();
+                    document.getElementById('txtOver30').select();
+                    return false;
+                }
+            }
+
+            document.getElementById('txtOver30').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('txtLessThan29').focus();
+                    document.getElementById('txtLessThan29').select();
+                    return false;
+                }
+            }
+
+            document.getElementById('txtLessThan29').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('txtMemberFee').focus();
+                    document.getElementById('txtMemberFee').select();
+                    return false;
+                }
+            }
+
+            document.getElementById('txtMemberFee').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('btnUpdate').focus();
+                    document.getElementById('btnUpdate').select();
+                    return false;
+                }
+            }
+
+            document.getElementById('btnUpdate').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('btnReset').focus();
+                    document.getElementById('btnReset').select();
+                    return false;
+                }
+            }
+
+}
