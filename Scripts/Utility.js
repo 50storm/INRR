@@ -1,4 +1,9 @@
-﻿//=============================
+﻿/*正規表現*/
+//  \d+
+//  \d:半角数字 +:直前のパターンを1回以上繰り返し
+
+
+//=============================
 // 先頭の空白を削除
 //=============================
 String.prototype.ltrim = function () {
@@ -56,7 +61,7 @@ function isEmpty(id) {
     var obj = document.getElementById(id);
 
     //エラーの時は背景色を変える
-    if (obj.value == "") {
+    if (obj.value.jtrim() == "") {
 
     //    document.getElementById(id).style.backgroundColor = "Pink";
         //    document.getElementById(id).focus();
