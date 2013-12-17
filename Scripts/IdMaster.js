@@ -220,16 +220,18 @@ function validateFrom() {
                ) {
         document.getElementById("txtMember").focus();
         isError("txtMember");
+        showMsg("lblMsg", "会員フラグは数値(0,1)のみ入力可能です");
         return false;
     } else {
         isOk("txtMember");
+        eraseMsg("lblMsg");
     }
 
     //会員種別
-    if (!isNumber("txtMemberType")) {
-        document.getElementById("txtMemberType").focus();
-        return false;
-    }
+//    if (!isNumber("txtMemberType")) {
+//        document.getElementById("txtMemberType").focus();
+//        return false;
+//    }
 
     var txtMemberType = document.getElementById("txtMemberType");
     if (parseInt(txtMemberType.value, 10) !== 0
@@ -237,23 +239,31 @@ function validateFrom() {
                 parseInt(txtMemberType.value, 10) !== 1
                ) {
         document.getElementById("txtMemberType").focus();
+        showMsg("lblMsg", "会員種別は数値(0,1)のみ入力可能です");
         isError("txtMemberType");
         return false;
     } else {
+        eraseMsg("lblMsg");
         isOk("txtMemberType");
+
     }
 
     //ポジション
-    if (!isNumber("txtPosition")) {
+    if (!isNumber("txtPosition")) 
+    {
         document.getElementById("txtPosition").focus();
+        showMsg("lblMsg", "ポジションは数値のみ入力可能です");
         return false;
+    } else {
+        eraseMsg("lblMsg");
     }
 
+
     //退会フラグ
-    if (!isNumber("txtisCanceled")) {
-        document.getElementById("txtisCanceled").focus();
-        return false;
-    }
+//    if (!isNumber("txtisCanceled")) {
+//        document.getElementById("txtisCanceled").focus();
+//        return false;
+//    }
     var txtisCanceled = document.getElementById("txtisCanceled");
     if (parseInt(txtisCanceled.value, 10) !== 0
                &&
@@ -261,9 +271,11 @@ function validateFrom() {
                ) {
         document.getElementById("txtisCanceled").focus();
         isError("txtisCanceled");
+        showMsg("lblMsg", "退会フラグは数値(0,1)のみ入力可能です");
         return false;
     } else {
         isOk("txtisCanceled");
+        eraseMsg("lblMsg");
     }
 
     return true;
