@@ -990,27 +990,22 @@ namespace Jisseki_Report_Ibaraki.common
 
 
  #endregion
-        /*
+        
  #region "コンバートメソッド" 
 
-        private void Header_ConvertNothingTo0() {
+        //private void Header_ConvertNothingTo0() {
 
-            this.txtYear.Text = Utility.ToHankaku(this.txtYear.Text.Trim());
+        //    this.txtYear.Text = Utility.ToHankaku(this.txtYear.Text.Trim());
 
-            this.txtMonth.Text = Utility.ToHankaku(this.txtMonth.Text.Trim());
+        //    this.txtMonth.Text = Utility.ToHankaku(this.txtMonth.Text.Trim());
 
-            this.txtDay.Text = Utility.ToHankaku(this.txtDay.Text.Trim());
+        //    this.txtDay.Text = Utility.ToHankaku(this.txtDay.Text.Trim());
             
-            this.txtYearRep0.Text = Utility.ToHankaku(this.txtYearRep0.Text.Trim());
+        //    this.txtYearRep0.Text = Utility.ToHankaku(this.txtYearRep0.Text.Trim());
 
-            this.txtYearRep1.Text = Utility.ToHankaku(this.txtYearRep1.Text.Trim());
+        //    this.txtMonthRep0.Text = Utility.ToHankaku(this.txtMonthRep0.Text.Trim());
 
-            this.txtMonthRep0.Text = Utility.ToHankaku(this.txtMonthRep0.Text.Trim());
-
-            this.txtMonthRep1.Text = Utility.ToHankaku(this.txtMonthRep1.Text.Trim());
-        
-
-        }
+        //}
 
 
         /// <summary>
@@ -1574,7 +1569,7 @@ namespace Jisseki_Report_Ibaraki.common
         }
 
 #endregion
-*/
+
         #region"セッター"
         private void setHeaderForJada() {
             string SqlHeader =
@@ -2629,16 +2624,16 @@ namespace Jisseki_Report_Ibaraki.common
             //何もないときは0に変換する
             ////ヘッダー
             //this.Header_ConvertNothingTo0();
-            ////水戸
-            //this.Mito_ConvertNothingTo0();
-            ////土浦
-            //this.Tuchiura_ConvertNothingTo0();
-            ////つくば
-            //this.Tukuba_ConvertNothingTo0();
-            ////その他
-            //this.Sonota_ConvertNothingTo0();
-            ////合計
-            //this.Goukei_ConvertNothingTo0();
+            //水戸
+            this.Mito_ConvertNothingTo0();
+            //土浦
+            this.Tuchiura_ConvertNothingTo0();
+            //つくば
+            this.Tukuba_ConvertNothingTo0();
+            //その他
+            this.Sonota_ConvertNothingTo0();
+            //合計
+            this.Goukei_ConvertNothingTo0();
 
             /**********/
             //チェック//

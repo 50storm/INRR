@@ -187,7 +187,8 @@ var flgMito =
 	txtMito_Total1:false
 };
 
-function checkMito(){
+function checkMito() {
+
 	if (isNumber("txtMito_Kamotu1")) {
 	    flgMito.txtMito_Kamotu1 = true;
 	}else{
@@ -745,13 +746,118 @@ function checkGoukei(){
 }
 
 
+//空白はゼロに自動変換
+function convertSpaceToZero(id) 
+{
+    if (!isEmpty(id)) {
+        document.getElementById(id).value = "0";
+    }
+}
+
+//水戸　ゼロ変換
+function MitoZeroConverter() {
+    convertSpaceToZero("txtMito_Kamotu1");
+    convertSpaceToZero("txtMito_Kamotu2");
+    convertSpaceToZero("txtMito_Kamotu3");
+    convertSpaceToZero("txtMito_Kamotu4");
+    convertSpaceToZero("txtMito_Bus1");
+    convertSpaceToZero("txtMito_Bus2");
+    convertSpaceToZero("txtMito_JK_J1");
+    convertSpaceToZero("txtMito_JK_J2");
+    convertSpaceToZero("txtMito_JK_J3");
+    convertSpaceToZero("txtMito_JK_K1");
+    convertSpaceToZero("txtMito_JK_K2");
+    convertSpaceToZero("txtMito_JK_K3");
+    convertSpaceToZero("txtMito_SubTotal1");
+    convertSpaceToZero("txtMito_Total1");
+}
+
+//土浦　ゼロ変換
+function TuchiuraZeroConverter() {
+    convertSpaceToZero("txtTuchiura_Kamotu1");
+    convertSpaceToZero("txtTuchiura_Kamotu2");
+    convertSpaceToZero("txtTuchiura_Kamotu3");
+    convertSpaceToZero("txtTuchiura_Kamotu4");
+    convertSpaceToZero("txtTuchiura_Bus1");
+    convertSpaceToZero("txtTuchiura_Bus2");
+    convertSpaceToZero("txtTuchiura_JK_J1");
+    convertSpaceToZero("txtTuchiura_JK_J2");
+    convertSpaceToZero("txtTuchiura_JK_J3");
+    convertSpaceToZero("txtTuchiura_JK_K1");
+    convertSpaceToZero("txtTuchiura_JK_K2");
+    convertSpaceToZero("txtTuchiura_JK_K3");
+    convertSpaceToZero("txtTuchiura_SubTotal1");
+    convertSpaceToZero("txtTuchiura_Total1");
+}
+
+//つくば　ゼロ変換
+function TukubaZeroConverter() {
+    convertSpaceToZero("txtTukuba_Kamotu1");
+    convertSpaceToZero("txtTukuba_Kamotu2");
+    convertSpaceToZero("txtTukuba_Kamotu3");
+    convertSpaceToZero("txtTukuba_Kamotu4");
+    convertSpaceToZero("txtTukuba_Bus1");
+    convertSpaceToZero("txtTukuba_Bus2");
+    convertSpaceToZero("txtTukuba_JK_J1");
+    convertSpaceToZero("txtTukuba_JK_J2");
+    convertSpaceToZero("txtTukuba_JK_J3");
+    convertSpaceToZero("txtTukuba_JK_K1");
+    convertSpaceToZero("txtTukuba_JK_K2");
+    convertSpaceToZero("txtTukuba_JK_K3");
+    convertSpaceToZero("txtTukuba_SubTotal1");
+    convertSpaceToZero("txtTukuba_Total1");
+}
+
+//その他　ゼロ変換
+function SonotaZeroConverter() {
+    convertSpaceToZero("txtSonota_Kamotu1");
+    convertSpaceToZero("txtSonota_Kamotu2");
+    convertSpaceToZero("txtSonota_Kamotu3");
+    convertSpaceToZero("txtSonota_Kamotu4");
+    convertSpaceToZero("txtSonota_Bus1");
+    convertSpaceToZero("txtSonota_Bus2");
+    convertSpaceToZero("txtSonota_JK_J1");
+    convertSpaceToZero("txtSonota_JK_J2");
+    convertSpaceToZero("txtSonota_JK_J3");
+    convertSpaceToZero("txtSonota_JK_K1");
+    convertSpaceToZero("txtSonota_JK_K2");
+    convertSpaceToZero("txtSonota_JK_K3");
+    convertSpaceToZero("txtSonota_SubTotal1");
+    convertSpaceToZero("txtSonota_Total1");
+}
+
+//合計　ゼロ変換
+function GoukeiZeroConverter() {
+    convertSpaceToZero("txtGoukei_Kamotu1");
+    convertSpaceToZero("txtGoukei_Kamotu2");
+    convertSpaceToZero("txtGoukei_Kamotu3");
+    convertSpaceToZero("txtGoukei_Kamotu4");
+    convertSpaceToZero("txtGoukei_Bus1");
+    convertSpaceToZero("txtGoukei_Bus2");
+    convertSpaceToZero("txtGoukei_JK_J1");
+    convertSpaceToZero("txtGoukei_JK_J2");
+    convertSpaceToZero("txtGoukei_JK_J3");
+    convertSpaceToZero("txtGoukei_JK_K1");
+    convertSpaceToZero("txtGoukei_JK_K2");
+    convertSpaceToZero("txtGoukei_JK_K3");
+    convertSpaceToZero("txtGoukei_SubTotal1");
+    convertSpaceToZero("txtGoukei_Total1");
+}
+
 function checkForms() {
 
 		//check Header
 		if (checkFormsHeader() === false) {
 			return false;
 		}
-		
+
+        //ConvertSpaceTo0
+        MitoZeroConverter();
+        TuchiuraZeroConverter();
+        TukubaZeroConverter();
+        SonotaZeroConverter();
+        GoukeiZeroConverter();
+
         //check Mito
 		if (checkMito() === false) {
 		    showMsg("lblMsg", "【水戸】の欄に数字以外の項目が含まれています");
