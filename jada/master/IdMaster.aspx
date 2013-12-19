@@ -116,19 +116,19 @@
                
         </tr>
         <tr>
-            <td><asp:TextBox ID="txtCOCODE" runat="server"   MaxLength="4"></asp:TextBox></td>
-            <td><asp:TextBox ID="txtUID" runat="server"   MaxLength="4"></asp:TextBox></td>
-            <td><asp:TextBox ID="txtCONAME" runat="server"   MaxLength="40"></asp:TextBox></td>
-            <td><asp:TextBox ID="txtshort_CONAME" runat="server" MaxLength="40"></asp:TextBox></td>
-            <td><asp:TextBox ID="txtRepName" runat="server"   MaxLength="10" ></asp:TextBox></td>
-            <td><asp:TextBox ID="txtPostalCode" runat="server" MaxLength="8" ></asp:TextBox></td>
-            <td><asp:TextBox ID="txtAddress" runat="server"  MaxLength="50"></asp:TextBox></td>
-            <td><asp:TextBox ID="txtTel" runat="server"   MaxLength="12"></asp:TextBox></td>
-            <td><asp:TextBox ID="txtPassword" runat="server"   MaxLength="15"></asp:TextBox></td>
-            <td><asp:TextBox ID="txtMember" runat="server"   MaxLength="1"></asp:TextBox></td>
-            <td><asp:TextBox ID="txtMemberType" runat="server"   MaxLength="1"></asp:TextBox></td>
-            <td><asp:TextBox ID="txtPosition" runat="server" MaxLength="3"></asp:TextBox></td>
-            <td><asp:TextBox ID="txtisCanceled" runat="server" MaxLength="1"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtCOCODE" runat="server"   MaxLength="4" onFocus="select();" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtUID" runat="server"   MaxLength="4"  onFocus="select();" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtCONAME" runat="server"   MaxLength="40"  onFocus="select();" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtshort_CONAME" runat="server" MaxLength="40"  onFocus="select();" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtRepName" runat="server"   MaxLength="10"  onFocus="select();"  ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPostalCode" runat="server" MaxLength="8"  onFocus="select();"  ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtAddress" runat="server"  MaxLength="50"  onFocus="select();" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtTel" runat="server"   MaxLength="12"  onFocus="select();" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPassword" runat="server"   MaxLength="15"  onFocus="select();" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtMember" runat="server"   MaxLength="1"  onFocus="select();" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtMemberType" runat="server"   MaxLength="1"  onFocus="select();" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPosition" runat="server" MaxLength="3"  onFocus="select();" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtisCanceled" runat="server" MaxLength="1"  onFocus="select();" ></asp:TextBox></td>
         </tr>
         </table>
     <!--改行-->
