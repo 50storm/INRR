@@ -117,7 +117,7 @@
         </tr>
         <tr>
             <td><asp:TextBox ID="txtCOCODE" runat="server"   MaxLength="4" onFocus="select();" ></asp:TextBox></td>
-            <td><asp:TextBox ID="txtUID" runat="server"   MaxLength="4"  onFocus="select();" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtUID" runat="server"   MaxLength="8"  onFocus="select();" ></asp:TextBox></td>
             <td><asp:TextBox ID="txtCONAME" runat="server"   MaxLength="40"  onFocus="select();" ></asp:TextBox></td>
             <td><asp:TextBox ID="txtshort_CONAME" runat="server" MaxLength="40"  onFocus="select();" ></asp:TextBox></td>
             <td><asp:TextBox ID="txtRepName" runat="server"   MaxLength="10"  onFocus="select();"  ></asp:TextBox></td>

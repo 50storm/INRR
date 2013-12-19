@@ -108,6 +108,20 @@ namespace Jisseki_Report_Ibaraki.Tools
             }
         }
 
+        public static bool IsUID(string UID) 
+        {
+            Regex reg = new Regex(@"[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]+$");
+            if (reg.IsMatch(UID))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        } 
+
+
         public static string covertDigit2(int val)
         {
 

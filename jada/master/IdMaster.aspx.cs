@@ -575,6 +575,21 @@ namespace Jisseki_Report_Ibaraki.jada.master
                 this.lblMsg.Text = "";
                 this.txtUID.BackColor = System.Drawing.Color.White;
             }
+            //形式チェック
+            if (!Utility.IsUID(this.txtUID.Text.Trim()))
+            {
+                this.lblMsg.Text = "999-9999形式で入力してください";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                this.txtUID.Focus();
+                return;
+            }
+            else
+            {
+                this.lblMsg.Text = "";
+                this.txtUID.BackColor = System.Drawing.Color.White;
+            }
+
+
 
             //会員フラグ
             if (txtMember.Text.Trim() == string.Empty)
@@ -669,6 +684,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                 this.lblMsg.Text = "";
                 this.txtisCanceled.BackColor = System.Drawing.Color.White;
             }
+
 
             //重複チェック
             string strCOCODE = string.Empty;

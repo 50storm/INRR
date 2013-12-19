@@ -203,14 +203,27 @@ function validateFrom() {
         eraseMsg("lblMsg");
     }
 
+ //   //ログインID
+ //   if (!isNumber("txtUID")) {
+ //       document.getElementById("txtUID").focus();
+ //       showMsg("lblMsg", "ログインIDは数値のみ入力可能です");
+ //       return false;
+ //   } else {
+ //       eraseMsg("lblMsg");
+    //   }
+
     //ログインID
-    if (!isNumber("txtUID")) {
-        document.getElementById("txtUID").focus();
-        showMsg("lblMsg", "ログインIDは数値のみ入力可能です");
-        return false;
-    } else {
+    var txtUID = document.getElementById("txtUID");
+    if (txtUID.value.match(/[0-9]{3}-[0-9]{4}/)) {
+        //OK
         eraseMsg("lblMsg");
+    } else {
+        document.getElementById("txtUID").focus();
+        showMsg("lblMsg", "ログインIDは999-9999形式で入力してください");
+        return false;
     }
+
+
 
     //会員フラグ
     var txtMember = document.getElementById("txtMember");

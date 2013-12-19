@@ -69,7 +69,7 @@
         <div id="Content">
             <form id="form1" runat="server">
             <p><label for="txtCOOCDE" >ログインＩＤ：</label><asp:TextBox ID="txtCOCODE" 
-                    runat="server" MaxLength="4" onFocus="select();" ></asp:TextBox></p>
+                    runat="server" MaxLength="8" onFocus="select();" ></asp:TextBox></p>
             <p><label for="txtPassword" >パスワード：</label><asp:TextBox ID="txtPassword" 
                     runat="server" TextMode="Password" MaxLength="15"  onFocus="select();" ></asp:TextBox></p>
             <p>
