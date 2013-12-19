@@ -198,10 +198,9 @@ namespace Jisseki_Report_Ibaraki.jada.master
                 }
             }
             catch
-            { 
-            
-            }       
-        
+            {
+
+            }        
         }
 
 
@@ -220,6 +219,8 @@ namespace Jisseki_Report_Ibaraki.jada.master
                 strConn = ConfigurationManager.ConnectionStrings["JissekiConnectionString"].ConnectionString;
                 setGridView();
                 clearMsg();
+
+
             }catch{
             }
 
@@ -249,6 +250,8 @@ namespace Jisseki_Report_Ibaraki.jada.master
                             {
                                 reader.Read();
                                 txtCOCODE.Text = reader["COCODE"].ToString();
+                                Session["tmpCOCODE"] = reader["COCODE"].ToString();
+
                                 if (reader["UID"] == null)
                                 {
                                     txtUID.Text = "";
@@ -353,6 +356,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                                 {
                                     txtisCanceled.Text = reader["isCanceled"].ToString();
                                 }
+                                
                             }
                             else
                             {
@@ -374,6 +378,19 @@ namespace Jisseki_Report_Ibaraki.jada.master
 #region"ボタン"
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
+            
+            if (Session["tmpCOCODE"].ToString().Trim() != this.txtCOCODE.Text.Trim())
+            {
+                this.lblMsg.Text = "会員コード[" + Session["tmpCOCODE"].ToString().Trim() + "]が[" + this.txtCOCODE.Text + "]に変更されています。更新できません。";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                return;
+            }
+            else 
+            {
+                this.lblMsg.Text = "";
+                this.lblMsg.BackColor = System.Drawing.Color.White;
+            }
+
             //Update
             string Sql= " UPDATE [Jisseki_Report_Ibaraki].[dbo].[ID] "
                       + " SET "
@@ -420,14 +437,19 @@ namespace Jisseki_Report_Ibaraki.jada.master
                             cmd.Parameters.Add(new SqlParameter("@Position", this.txtPosition.Text));
                             cmd.Parameters.Add(new SqlParameter("@isCanceled", this.txtisCanceled.Text));
                             cmd.Parameters.Add(new SqlParameter("@Key", this.txtCOCODE.Text));
-                            cmd.ExecuteNonQuery();
+                            
+                            if (cmd.ExecuteNonQuery() == 0) 
+                            {
+                                this.lblMsg.Text = "";
+                                return;
+                            }
 
 
                         }
 
                         Tran.Commit();
                         setGridView();
-                        this.lblMsg.Text = "更新しました";
+                        this.lblMsg.Text = "更新しました。会員コード[" + this.txtCOCODE.Text + "]" + "　会員名[" + this.txtCONAME.Text + "]"; 
                         this.lblMsg.BackColor = System.Drawing.Color.Pink;
 
                     }
@@ -448,17 +470,28 @@ namespace Jisseki_Report_Ibaraki.jada.master
         protected void btnDelete_Click(object sender, EventArgs e)
         {
 
-            //削除確認
-            //OnClient_Clickでやる
             //削除
             try
             {
+
+                if (Session["tmpCOCODE"].ToString().Trim() != this.txtCOCODE.Text.Trim())
+                {
+                    this.lblMsg.Text = "会員コード[" + Session["tmpCOCODE"].ToString().Trim() + "]が[" + this.txtCOCODE.Text + "]に変更されています。削除できません。";
+                    this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                    return;
+                }
+                else
+                {
+                    this.lblMsg.Text = "";
+                    this.lblMsg.BackColor = System.Drawing.Color.White;
+                }
+
                 string strCONAME=String.Empty;
 
                 if (!COCODEisRegisterd(out strCONAME))
                 {
                     //削除済
-                    this.lblMsg.Text = "既に削除されています";
+                    this.lblMsg.Text = "会員コード["   + this.txtCOCODE.Text + "]は会員マスターにありません";
                     this.lblMsg.BackColor = System.Drawing.Color.Pink;
                     return;
 
@@ -741,7 +774,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                             //Commit Transaction
                             Tran.Commit();
                             this.setGridView();
-                            this.lblMsg.Text="登録しました";
+                            this.lblMsg.Text = "登録しました。 会員コード[" + this.txtCOCODE.Text + "]" +  "　会員名[" + this.txtCONAME.Text +"]";
                             this.lblMsg.BackColor = System.Drawing.Color.Pink;
 
                         }
@@ -794,6 +827,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
             try
             {
                 //自販連
+                Session.Remove("tmpCOCODE");
                 Response.Redirect(URL.MENU_JADA);
             }
             catch
@@ -815,7 +849,6 @@ namespace Jisseki_Report_Ibaraki.jada.master
 
             }
         }
-#endregion 
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -837,6 +870,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
 
         }
 
+#endregion 
 
     }
 }
