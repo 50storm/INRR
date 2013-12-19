@@ -532,7 +532,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                         cmd.ExecuteNonQuery();
 
                         setGridView();
-                        this.lblMsg.Text = "削除しました";
+                        this.lblMsg.Text = "削除しました。会員コード[" + this.txtCOCODE.Text + "]" + "　会員名[" + this.txtCONAME.Text + "]"; 
                         this.lblMsg.BackColor = System.Drawing.Color.Pink;
 
                     }
