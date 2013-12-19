@@ -96,6 +96,28 @@ namespace Jisseki_Report_Ibaraki.jada.search
         {
             try
             {
+
+                //必須チェック
+                if (this.txtYearRep.Text.Trim() == string.Empty) {
+                    this.txtYearRep.BackColor = System.Drawing.Color.Pink;
+                    return;
+                }
+                else
+                {
+                    this.txtYearRep.BackColor = System.Drawing.Color.White;
+                }
+
+                if (this.txtMonthRep.Text.Trim() == string.Empty)
+                {
+                    this.txtMonthRep.BackColor = System.Drawing.Color.Pink;
+                    return;
+                }
+                else
+                {
+                    this.txtMonthRep.BackColor = System.Drawing.Color.White;
+                } 
+
+                //数字チェック
                 if (Utility.IsNotNumber(this.txtYearRep.Text))
                 {
                     this.txtYearRep.BackColor = System.Drawing.Color.Pink;
