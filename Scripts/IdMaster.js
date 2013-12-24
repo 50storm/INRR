@@ -341,3 +341,9 @@ function confirmDeletion() {
         return false;
     }
 }
+
+//ポジションの頭文字のゼロをとる
+function trimZero() {
+    var txtPosition = document.getElementById('txtPosition');
+    txtPosition.value = txtPosition.value * 1
+}

@@ -57,8 +57,21 @@ namespace Jisseki_Report_Ibaraki.jada.search
                     DataTable header = new DataTable("新車台数ヘッダー");
                     Adapter.Fill(header);
 
-                    Gridview1.DataSource = header;
-                    Gridview1.DataBind();
+                    if (header.Rows.Count == 0)
+                    {
+                        Gridview1.DataSource = header;
+                        Gridview1.DataBind();
+                        lblMsg.Text = "未受信データはありません。";
+                        lblMsg.BackColor = System.Drawing.Color.Pink;
+                    }
+                    else
+                    {
+                        Gridview1.DataSource = header;
+                        Gridview1.DataBind();
+                        lblMsg.Text = "";
+                        lblMsg.BackColor = System.Drawing.Color.White;
+
+                    }
 
                 }
             } 
@@ -138,6 +151,18 @@ namespace Jisseki_Report_Ibaraki.jada.search
                 else
                 {
                     this.txtMonthRep.BackColor = System.Drawing.Color.White;
+                }
+
+                //月範囲チェック。
+                //誤って1～１２月以外で登録されたらいやなので。
+                int ret=0;
+                int.TryParse(this.txtMonthRep.Text, out ret);
+                if (1 <= ret && ret <= 12){
+                    //OK
+                    this.txtMonthRep.BackColor = System.Drawing.Color.White;
+                }else{
+                    this.txtMonthRep.BackColor = System.Drawing.Color.Pink;
+                    return;
                 }
 
                 this.showData();

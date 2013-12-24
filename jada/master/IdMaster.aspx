@@ -127,7 +127,7 @@
             <td><asp:TextBox ID="txtPassword" runat="server"   MaxLength="15"  onFocus="select();" ></asp:TextBox></td>
             <td><asp:TextBox ID="txtMember" runat="server"   MaxLength="1"  onFocus="select();" ></asp:TextBox></td>
             <td><asp:TextBox ID="txtMemberType" runat="server"   MaxLength="1"  onFocus="select();" ></asp:TextBox></td>
-            <td><asp:TextBox ID="txtPosition" runat="server" MaxLength="3"  onFocus="select();" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPosition" runat="server" MaxLength="3"  onFocus="select();" onblur="trimZero();" ></asp:TextBox></td>
             <td><asp:TextBox ID="txtisCanceled" runat="server" MaxLength="1"  onFocus="select();" ></asp:TextBox></td>
         </tr>
         </table>

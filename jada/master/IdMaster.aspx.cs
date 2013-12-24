@@ -18,6 +18,8 @@ namespace Jisseki_Report_Ibaraki.jada.master
             this.lblMsg.Text="";
             
         }
+
+
         private Boolean UIDisRegisterd(out string strCOCODE,out string strCONAME)
         {
             try
@@ -378,7 +380,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
 #region"ボタン"
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            
+            //会員コードが変更されたら変更不可
             if (Session["tmpCOCODE"].ToString().Trim() != this.txtCOCODE.Text.Trim())
             {
                 this.lblMsg.Text = "会員コード[" + Session["tmpCOCODE"].ToString().Trim() + "]が[" + this.txtCOCODE.Text + "]に変更されています。更新できません。";
@@ -390,6 +392,149 @@ namespace Jisseki_Report_Ibaraki.jada.master
                 this.lblMsg.Text = "";
                 this.lblMsg.BackColor = System.Drawing.Color.White;
             }
+
+            //画面値チェック
+            //会員コード
+            if (txtCOCODE.Text.Trim() == string.Empty)
+            {
+                this.lblMsg.Text = "会員コードは必須です";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                this.txtCOCODE.Focus();
+                return;
+
+            }
+            else
+            {
+                this.lblMsg.Text = "";
+                this.txtCOCODE.BackColor = System.Drawing.Color.White;
+            }
+            //ログインID
+            if (txtUID.Text.Trim() == string.Empty)
+            {
+                this.lblMsg.Text = "ログインIDは必須です";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                this.txtUID.Focus();
+                return;
+
+            }
+            else
+            {
+                this.lblMsg.Text = "";
+                this.txtUID.BackColor = System.Drawing.Color.White;
+            }
+            //形式チェック
+            if (!Utility.IsUID(this.txtUID.Text.Trim()))
+            {
+                this.lblMsg.Text = "999-9999形式で入力してください";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                this.txtUID.Focus();
+                return;
+            }
+            else
+            {
+                this.lblMsg.Text = "";
+                this.txtUID.BackColor = System.Drawing.Color.White;
+            }
+
+
+
+            //会員フラグ
+            if (txtMember.Text.Trim() == string.Empty)
+            {
+                this.lblMsg.Text = "会員フラグは必須です";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                this.txtMember.Focus();
+                return;
+
+            }
+            else
+            {
+                this.lblMsg.Text = "";
+                this.txtMember.BackColor = System.Drawing.Color.White;
+            }
+            if (txtMember.Text.Trim() != "0" && txtMember.Text.Trim() != "1")
+            {
+                this.lblMsg.Text = "会員フラグは0か1を入力してください";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                this.txtMember.Focus();
+                return;
+            }
+            else
+            {
+                this.lblMsg.Text = "";
+                this.txtMember.BackColor = System.Drawing.Color.White;
+            }
+            //ポジション
+            if (Utility.IsNotNumber(txtPosition.Text))
+            {
+                this.lblMsg.Text = "ポジションは数値を入力してください";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                this.txtPosition.Focus();
+                return;
+            }
+            else
+            {
+                this.lblMsg.Text = "";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+            }
+
+            //会員種別
+            if (txtMemberType.Text.Trim() == string.Empty)
+            {
+                this.lblMsg.Text = "会員種別は必須です";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                this.txtMemberType.Focus();
+                return;
+            }
+            else
+            {
+                this.lblMsg.BackColor = System.Drawing.Color.Pink; lblMsg.Text = "";
+                this.txtMemberType.BackColor = System.Drawing.Color.White;
+            }
+
+            if (txtMemberType.Text.Trim() != "0" && txtMemberType.Text.Trim() != "1")
+            {
+                this.lblMsg.Text = "会員種別は0か1を入力してください";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                this.txtMemberType.Focus();
+                return;
+            }
+            else
+            {
+                this.lblMsg.Text = "";
+                this.txtMemberType.BackColor = System.Drawing.Color.White;
+            }
+
+            //退会フラグ
+            if (Utility.IsNotNumber(txtisCanceled.Text))
+            {
+                this.lblMsg.Text = "退会フラグは数値を入力してください";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                this.txtisCanceled.Focus();
+                return;
+            }
+            else
+            {
+                this.lblMsg.Text = "";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+            }
+            if (txtisCanceled.Text.Trim() != "0" && txtisCanceled.Text.Trim() != "1")
+            {
+                this.lblMsg.Text = "退会フラグは0か1を入力してください";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                this.txtisCanceled.Focus();
+                return;
+            }
+            else
+            {
+                this.lblMsg.Text = "";
+                this.txtisCanceled.BackColor = System.Drawing.Color.White;
+            }
+
+
+
+
 
             //Update
             string Sql= " UPDATE [Jisseki_Report_Ibaraki].[dbo].[ID] "
@@ -547,6 +692,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
 
         protected void btnInsert_Click(object sender, EventArgs e)
         {
+            //画面値チェック
             //会員コード
             if (txtCOCODE.Text.Trim() == string.Empty)
             {

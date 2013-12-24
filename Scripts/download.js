@@ -50,6 +50,15 @@ function setFocus() {
                 return false;
             }
         }
+
+    document.getElementById('txtFileName').onkeydown
+    = function () {
+        if (event.keyCode == 13) {
+            document.getElementById('btnDownload').focus();
+            document.getElementById('btnDownload').select();
+            return false;
+        }
+    }
 }
 
 

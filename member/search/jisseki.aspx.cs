@@ -78,11 +78,14 @@ namespace Jisseki_Report_Ibaraki.member.search
                             Gridview1.DataSource = header;
                             Gridview1.DataBind();
                             lblMsg.Text = "検索データはありません。";
+                            lblMsg.BackColor = System.Drawing.Color.Pink;
                         }
                         else
                         {
                             Gridview1.DataSource = header;
                             Gridview1.DataBind();
+                            lblMsg.Text = "";
+                            lblMsg.BackColor = System.Drawing.Color.White;
                         }
                     }
 
@@ -229,6 +232,47 @@ namespace Jisseki_Report_Ibaraki.member.search
 
             try
             {
+                //必須チェック
+                if (this.txtYearRepFrom.Text.Trim() == string.Empty)
+                {
+                    this.txtYearRepFrom.BackColor = System.Drawing.Color.Pink;
+                    return;
+                }
+                else
+                {
+                    this.txtYearRepFrom.BackColor = System.Drawing.Color.White;
+                }
+
+                if (this.txtMonthRepFrom.Text.Trim() == string.Empty)
+                {
+                    this.txtMonthRepFrom.BackColor = System.Drawing.Color.Pink;
+                    return;
+                }
+                else
+                {
+                    this.txtMonthRepFrom.BackColor = System.Drawing.Color.White;
+                }
+
+                if (this.txtYearRepTo.Text.Trim() == string.Empty)
+                {
+                    this.txtYearRepTo.BackColor = System.Drawing.Color.Pink;
+                    return;
+                }
+                else
+                {
+                    this.txtYearRepTo.BackColor = System.Drawing.Color.White;
+                }
+
+                if (this.txtMonthRepTo.Text.Trim() == string.Empty)
+                {
+                    this.txtMonthRepTo.BackColor = System.Drawing.Color.Pink;
+                    return;
+                }
+                else
+                {
+                    this.txtMonthRepTo.BackColor = System.Drawing.Color.White;
+                } 
+
                 //数字以外はだめよ
                 if (Utility.IsNotNumber(this.txtYearRepFrom.Text))
                 {
@@ -272,6 +316,30 @@ namespace Jisseki_Report_Ibaraki.member.search
                 else
                 {
                     this.txtMonthRepTo.BackColor = System.Drawing.Color.White;
+                }
+                //月範囲チェック。
+                int ret = 0;
+                int.TryParse(this.txtMonthRepFrom.Text, out ret);
+                if (1 <= ret && ret <= 12)
+                {
+                    //OK
+                    this.txtMonthRepFrom.BackColor = System.Drawing.Color.White;
+                }
+                else
+                {
+                    this.txtMonthRepFrom.BackColor = System.Drawing.Color.Pink;
+                    return;
+                }
+                int.TryParse(this.txtMonthRepTo.Text, out ret);
+                if (1 <= ret && ret <= 12)
+                {
+                    //OK
+                    this.txtMonthRepTo.BackColor = System.Drawing.Color.White;
+                }
+                else
+                {
+                    this.txtMonthRepTo.BackColor = System.Drawing.Color.Pink;
+                    return;
                 }
 
                 this.searchReportData(Session["COCODE"].ToString(),

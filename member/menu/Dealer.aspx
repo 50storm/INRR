@@ -5,35 +5,65 @@
     <title>会員メニュー</title>
     <style type="text/css">
         /*新車登録台数入力*/
-        #MemberInputDiv
+        #Wrap
         {
-      	   width:400px;height:345px; float:left; margin-bottom:32px; padding:0px;
-        	
+	        width: 900px;  
+	        height:auto;
+	        margin: 0 auto;
+	        margin: 0 auto 0 auto;
+	        /*text-align: left;  */
+	        /*border: 5px solid #FF00FF;*/
+	        
         }
-        #MemberInputTitleDiv
+        #Header
         {
-        	 margin:0px; padding:0px;           
+        	margin-top:0px;
+        	margin-left:auto;
+        	margin-right:auto;
+        	margin-bottom:100px;
+        	/*border: 5px solid blue;*/
+        	width:900px;
+        	height:50px;
+        	float:left;
         }
-        #MemberInputBtnDiv
+        H1
         {
-        	width:320px;height:280px;border:1px solid black; padding:10px 10px 10px 10px;margin:0px
+        	text-align:center;
+        	vertical-align:middle;
+        	padding-top:15px;
+        	width:900px;
+        	height:50px;
+        	background-color: #009090;
+        	font-size:30px;
+		    color:white;
+        	/*height:200px;*/
+        	/*background-color:blue;*/
         }
-
-
+        #Content
+        {
+            /*margin-top: 50px;*/
+            /*
+        	border: 5px solid pink;
+        	*/
+        	margin-left : auto ; 
+        	margin-right : auto ; 
+            width:400px;
+        	height:200px;
+        }
+        #btnInputJisseki
+        {
+        	height:3.11cm;
+        	width:3.79cm;
+        	background-color:#DCDCDC;
+      	}
         
         /*登録済みデータ検索*/
-        #MemberSearchDiv
+        #btnSerachJisseki
         {
-            width:400px;height:345px; float:left; padding:0px;
+        	height:3.11cm;
+        	width:3.79cm;
+        	background-color:#DCDCDC;
         	
-        }
-        #MemberSearchTitleDiv
-        {
-        	margin:0px; padding:0px;
-        }
-        #MemberSearchBtnDiv
-        {
-        	width:230px;height:280px;border:1px solid black; padding:10px 10px 10px 10px;
         }
         #Env
        {
@@ -46,43 +76,60 @@
         }
         #btnLogOut
         {
-        	/*LinkButtonが動作しない*/
-        	/*LinkButton風にＣＳＳを当てる*/
-        	text-decoration:underline;
-            color:#0000ff;
-            border:none;
-            background:transparent;
+            background-color:#DCDCDC;
+            width:6.67cm;
+            height:0.94cm;
         }
     </style>
 </head>
 <body>
-    <h1>会員メニュー</h1>
-    <div>
-        <form id="form1" runat="server">
-        <div id="MemberInputDiv">
-            <div id ="MemberInputTitleDiv">
-                <h2>新車登録台数入力</h2>
-            </div>
-            <div id ="MemberInputBtnDiv">
-                <p><asp:Button ID="btnInputJisseki" runat="server" Text="新車台数実績入力"   onclick="btnInputJisseki_Click" /></p>
-            </div>
-        </div>
-        <div id="MemberSearchDiv">
-            <div id="MemberSearchTitleDiv">
-                <h2>登録済みデータ検索</h2>
-            </div>
-            <div  id="MemberSearchBtnDiv" >
-                <p><asp:Button ID="btnSerachJisseki" runat="server" Text="新車台数実績検索"  onclick="btnSearchJisseki_Click" /></p>
-            </div>
-        </div>
-    <div id="Env">
-        <p><a href="../../pdf/動作環境.pdf">動作環境について</a></p>
+<div id="Wrap">
+    <div id="Header">
+        <h1>会員メニュー</h1>
     </div>
-        <div id="MemberLogOut">
-            <asp:Button ID="btnLogOut" runat="server" Text="ログアウト" onclick="btnLogOut_Click" />
-        </div>
-
+    <div id="Content">
+        <form id="form1" runat="server">
+        <table>
+        <tr>
+            <td>
+                <asp:Button ID="btnInputJisseki" runat="server" Text="新車台数実績入力"   onclick="btnInputJisseki_Click" />
+            </td>
+            <td style="width:200px;">
+              
+            </td>
+            <td>
+                <asp:Button ID="btnSerachJisseki" runat="server" Text="新車台数実績検索"  onclick="btnSearchJisseki_Click" />
+            </td>
+        </tr>
+        </table>
+        <p>
+        <br/>
+        <table>
+            <tr>
+                <td style="width:70px;">
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td style="width:70px;">
+                </td>
+                <td>
+                    <asp:Button ID="btnLogOut" runat="server" Text="ログアウト" onclick="btnLogOut_Click" />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:70px;">
+                </td>
+                <td>
+                    <a href="../../pdf/動作環境.pdf"  target="_blank" >動作環境について</a>
+                </td>
+            </tr>
+        </table>
+        </p>
         </form>
     </div>
+</div>
 </body>
 </html>

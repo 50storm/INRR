@@ -51,7 +51,7 @@
             <asp:Label ID="lblMonthRep" runat="server" Text="月"></asp:Label>
         </p>
         <p>
-            <asp:Label ID="Label1" runat="server" Text="ファイル名："></asp:Label><asp:TextBox ID="txtFileName" runat="server"  Width="190px"  onFocus="select();"   ></asp:TextBox>
+            <asp:Label ID="Label1" runat="server" Text="ファイル名："></asp:Label><asp:TextBox ID="txtFileName" runat="server"  Width="230px"  onFocus="select();"   ></asp:TextBox>
             <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
         </p>
         <asp:Button ID="btnDownload" runat="server" Text="ダウンロード" onclientclick="return validateForm();"

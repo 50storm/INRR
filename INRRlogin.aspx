@@ -8,13 +8,20 @@
         H1
         {
         	text-align:center;
+        	vertical-align:middle;
+        	padding-top:15px;
         	width:900px;
+        	height:50px;
+        	background-color: #009090;
+        	font-size:30px;
+		    color:white;
         	/*height:200px;*/
         	/*background-color:blue;*/
         }
         Label
         {
-        	background-color:Gray;
+        	height:35px;
+        	background-color:white;
         }
         #Wrap
         {
@@ -28,10 +35,10 @@
         }
         #Header
         {
-        	margin-top:150px;
+        	margin-top:0px;
         	margin-left:auto;
         	margin-right:auto;
-        	margin-bottom:20px;
+        	margin-bottom:100px;
         	/*border: 5px solid blue;*/
         	width:900px;
         	height:50px;
@@ -43,20 +50,34 @@
             /*
         	border: 5px solid pink;
         	*/
-            width:600px;
+        	margin-left : auto ; 
+        	margin-right : auto ; 
+            width:300px;
         	height:200px;
         }
-        
+        #ContentTable
+        {
+            	width:300px;
+        	
+        }
         #txtCOCODE
         {
             ime-mode:inactive;
-            width:100px;
+            width:160px;
             
         }
         #txtPassword
         {
             ime-mode:disabled;    
-            width:100px;
+            width:160px;
+        }
+        #btnLogin
+        {
+        	width:3.89cm;
+        	height:0.93cm;
+
+        	/*background-color:#C0C0C0;*/
+        	background-color:#DCDCDC;
         }
     </style>
     <title>新車登録台数報告システム</title>
@@ -64,21 +85,45 @@
 <body>
 <div id="Wrap">
         <div id="Header">
-            <h1 style="background-color: #00FFFF">新車登録台数報告システム</h1>
+            <h1>新車登録台数報告システム</h1>
         </div>
         <div id="Content">
             <form id="form1" runat="server">
-            <p><label for="txtCOOCDE" >ログインＩＤ：</label><asp:TextBox ID="txtCOCODE" 
-                    runat="server" MaxLength="8" onFocus="select();" ></asp:TextBox></p>
-            <p><label for="txtPassword" >パスワード：</label><asp:TextBox ID="txtPassword" 
-                    runat="server" TextMode="Password" MaxLength="15"  onFocus="select();" ></asp:TextBox></p>
-            <p>
-                <asp:Button ID="btnLogin" runat="server" Text="ログイン" onclick="btnLogin_Click" />
-                <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
-            </p>
-            
-            </form>
+            <table id="ContentTable">
+                <tr>
+                    <td >
+                        <label for="txtCOOCDE" >ログインＩＤ：</label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtCOCODE" runat="server" MaxLength="8" onFocus="select();" ></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="txtPassword" >パスワード：</label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtPassword" 
+                    runat="server" TextMode="Password" MaxLength="15"  onFocus="select();" ></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <asp:Button ID="btnLogin" runat="server" Text="ログイン" onclick="btnLogin_Click" /> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+                    </td>
+                </tr>
+           </table>
+            </form>     
         </div>
+
 </div>
 </body>
 </html>

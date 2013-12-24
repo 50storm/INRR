@@ -22,6 +22,15 @@ namespace Jisseki_Report_Ibaraki.jada.menu {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// lblReport コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblReport;
+        
+        /// <summary>
         /// btn_NonReportedSearch コントロール。
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace Jisseki_Report_Ibaraki.jada.menu {
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button bnt_DownloadReortedData;
+        
+        /// <summary>
+        /// lblMaster コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMaster;
         
         /// <summary>
         /// btn_ID コントロール。
