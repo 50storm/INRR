@@ -38,7 +38,7 @@ namespace Jisseki_Report_Ibaraki.member.search
         {
             //初期表示
             string Sql =
-                " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Header]  "
+                " SELECT * FROM [Jisseki_Header]  "
                 + " WHERE "
                 + " COCODE=@COCODE  "
                 +" AND ( YearRep >= @YearRepFrom AND MonthRep >= @MonthRepFrom) "
@@ -148,7 +148,7 @@ namespace Jisseki_Report_Ibaraki.member.search
             {
                 //初期表示は報告台数の報告年
                 string strSql =
-                    " SELECT *  FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Header] "
+                    " SELECT *  FROM [Jisseki_Header] "
                     + "WHERE COCODE=@COCODE AND YearRep = @YearRep ";
 
                 using (SqlConnection Conn = new SqlConnection(strConn))

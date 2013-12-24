@@ -50,7 +50,7 @@ namespace Jisseki_Report_Ibaraki
                 using (SqlConnection Conn = new SqlConnection(strConn))
                 {
                     Conn.Open();
-                    string strSQL = "SELECT * FROM Jisseki_Report_Ibaraki.dbo.ID WHERE UID = @UID AND Password = @Password ";
+                    string strSQL = "SELECT * FROM ID WHERE UID = @UID AND Password = @Password ";
 
                     SqlCommand cmd = new SqlCommand(strSQL, Conn);
                     cmd.Parameters.Add(new SqlParameter("@UID", txtCOCODE.Text));

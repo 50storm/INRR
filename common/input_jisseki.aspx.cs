@@ -35,8 +35,8 @@ namespace Jisseki_Report_Ibaraki.common
                 + "      H.MonthRep AS MonthRep ,"
                 + "      H.TANTOU AS TANTOU  ,"
                 + "      I.CONAME AS CONAME  "
-                + " FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Header] H "
-                + " INNER JOIN  [Jisseki_Report_Ibaraki].[dbo].[ID] I"
+                + " FROM [Jisseki_Header] H "
+                + " INNER JOIN  [ID] I"
                 + " ON H.COCODE = I.COCODE "
                 + " WHERE H.COCODE=@COCODE AND H.YearRep = @YearRep AND H.MonthRep = @MonthRep ";//TODO
 
@@ -92,7 +92,7 @@ namespace Jisseki_Report_Ibaraki.common
 
 
             string SqlHeader =
-                " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Header]  "
+                " SELECT * FROM [Jisseki_Header]  "
                 + " WHERE COCODE=@COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep ";//TODO
 
             using (SqlConnection Conn = new SqlConnection(strConn))
@@ -151,7 +151,7 @@ namespace Jisseki_Report_Ibaraki.common
         /// </summary>
         private void setMito() {
             string SqlMito =
-                    " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Mito]  "
+                    " SELECT * FROM [Jisseki_Mito]  "
                     //+ " WHERE COCODE=@COCODE AND Year = @Year AND Month = @Month AND Day = @Day";
                     +" WHERE COCODE=@COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep ";
             using (SqlConnection Conn = new SqlConnection(strConn))
@@ -213,7 +213,7 @@ namespace Jisseki_Report_Ibaraki.common
         private void setTuchiura()
         {
             string SqlTuchiura =
-                    " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Tuchiura]  "
+                    " SELECT * FROM [Jisseki_Tuchiura]  "
                     + " WHERE COCODE=@COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep ";
             using (SqlConnection Conn = new SqlConnection(strConn))
             {
@@ -272,7 +272,7 @@ namespace Jisseki_Report_Ibaraki.common
         private void setTukuba()
         {
             string SqlTukuba =
-                    " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Tukuba]  "
+                    " SELECT * FROM [Jisseki_Tukuba]  "
                     +" WHERE COCODE=@COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep ";
             using (SqlConnection Conn = new SqlConnection(strConn))
             {
@@ -331,7 +331,7 @@ namespace Jisseki_Report_Ibaraki.common
         private void setSonota()
         {
             string SqlSonota =
-                    " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Sonota]  "
+                    " SELECT * FROM [Jisseki_Sonota]  "
                     +" WHERE COCODE=@COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep ";
             using (SqlConnection Conn = new SqlConnection(strConn))
             {
@@ -388,7 +388,7 @@ namespace Jisseki_Report_Ibaraki.common
         private void setGoukei()
         {
             string SqlGoukei =
-                    " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Goukei]  "
+                    " SELECT * FROM [Jisseki_Goukei]  "
                     +" WHERE COCODE=@COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep ";
             using (SqlConnection Conn = new SqlConnection(strConn))
             {
@@ -2154,7 +2154,7 @@ namespace Jisseki_Report_Ibaraki.common
             {
                 //初期表示
                 string SqlHeader =
-                    " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[ID]  "
+                    " SELECT * FROM [ID]  "
                     + " WHERE COCODE=@COCODE ";
                 using (SqlConnection Conn = new SqlConnection(strConn))
                 {
@@ -2180,7 +2180,7 @@ namespace Jisseki_Report_Ibaraki.common
             private string getRepName() {
                 try
                 {
-                    string Sql = " SELECT * FROM [Jisseki_Report_Ibaraki].dbo.ID WHERE COCODE=@COCODE ";
+                    string Sql = " SELECT * FROM ID WHERE COCODE=@COCODE ";
                     using (SqlConnection Conn = new SqlConnection(strConn))
                     {
                         Conn.Open();
@@ -2217,7 +2217,7 @@ namespace Jisseki_Report_Ibaraki.common
             private void updateIdMaster(SqlConnection Conn, SqlTransaction Tran)
             {
                 //Update
-                string Sql = " UPDATE [Jisseki_Report_Ibaraki].[dbo].[ID] "
+                string Sql = " UPDATE [ID] "
                           + " SET "
                           + "  [RepName]      =  @RepName      "
                           + " WHERE   "
@@ -2249,7 +2249,7 @@ namespace Jisseki_Report_Ibaraki.common
 
                 //INSERT作成
 
-                String InsertHeaderSql = "INSERT INTO [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Header] "
+                String InsertHeaderSql = "INSERT INTO [Jisseki_Header] "
                                + "("
                                + "  [COCODE],[TANTOU],[Year],[Month],[Day],[YearRep],[MonthRep]"
                                + " ) "
@@ -2299,7 +2299,7 @@ namespace Jisseki_Report_Ibaraki.common
 
                 //INSERT作成
                 //SqlConnection sn = new ;
-                String InsertMitoSql = "INSERT INTO [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Mito] "
+                String InsertMitoSql = "INSERT INTO [Jisseki_Mito] "
                                + "("
                                + "  [COCODE],[Year],[Month],[Day],[YearRep],[MonthRep],"
                                + "  [Kamotu1],[Kamotu2],[Kamotu3],[Kamotu4],[Bus1],[Bus2], "
@@ -2371,7 +2371,7 @@ namespace Jisseki_Report_Ibaraki.common
 
                 //INSERT作成
 
-                String InsertTuchiuraSql = "INSERT INTO [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Tuchiura] "
+                String InsertTuchiuraSql = "INSERT INTO [Jisseki_Tuchiura] "
                                + "("
                                + "  [COCODE],[Year],[Month],[Day],[YearRep],[MonthRep],"
                                + "  [Kamotu1],[Kamotu2],[Kamotu3],[Kamotu4],[Bus1],[Bus2], "
@@ -2443,7 +2443,7 @@ namespace Jisseki_Report_Ibaraki.common
 
                 //INSERT作成
                 //SqlConnection sn = new ;
-                String InsertTukubaSql = "INSERT INTO [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Tukuba] "
+                String InsertTukubaSql = "INSERT INTO [Jisseki_Tukuba] "
                                + "("
                                + "  [COCODE],[Year],[Month],[Day],[YearRep],[MonthRep],"
                                + "  [Kamotu1],[Kamotu2],[Kamotu3],[Kamotu4],[Bus1],[Bus2], "
@@ -2517,7 +2517,7 @@ namespace Jisseki_Report_Ibaraki.common
 
                 //INSERT作成
                 //SqlConnection sn = new ;
-                String InsertSonotaSql = "INSERT INTO [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Sonota] "
+                String InsertSonotaSql = "INSERT INTO [Jisseki_Sonota] "
                                + "("
                                + "  [COCODE],[Year],[Month],[Day],[YearRep],[MonthRep],"
                                + "  [Kamotu1],[Kamotu2],[Kamotu3],[Kamotu4],[Bus1],[Bus2], "
@@ -2589,7 +2589,7 @@ namespace Jisseki_Report_Ibaraki.common
 
                 //INSERT作成
                 //SqlConnection sn = new ;
-                String InsertGoukeiSql = "INSERT INTO [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Goukei] "
+                String InsertGoukeiSql = "INSERT INTO [Jisseki_Goukei] "
                                + "("
                                + "  [COCODE],[Year],[Month],[Day],[YearRep],[MonthRep],"
                                + "  [Kamotu1],[Kamotu2],[Kamotu3],[Kamotu4],[Bus1],[Bus2], "
@@ -2659,7 +2659,7 @@ namespace Jisseki_Report_Ibaraki.common
         private void updateHeader(SqlConnection Conn, SqlTransaction Tran)
         {
 
-            String UpdateMitoSql = "UPDATE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Header] "
+            String UpdateMitoSql = "UPDATE [Jisseki_Header] "
                                     + " SET "
                                     + "    [Year]   = @Year"
                                     + "   ,[Month]  = @Month "
@@ -2702,7 +2702,7 @@ namespace Jisseki_Report_Ibaraki.common
             
             //INSERT作成
             //SqlConnection sn = new ;
-            String updateMitoSql = "UPDATE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Mito] "
+            String updateMitoSql = "UPDATE [Jisseki_Mito] "
                                  + " SET"
                                  + "  [Year]      = @Year "
                                  + " ,[Month]     = @Month "
@@ -2778,7 +2778,7 @@ namespace Jisseki_Report_Ibaraki.common
 
             //INSERT作成
             //SqlConnection sn = new ;
-            String updateTuchiuraSql = "UPDATE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Tuchiura] "
+            String updateTuchiuraSql = "UPDATE [Jisseki_Tuchiura] "
                                  + " SET"
                                  + "  [Year]      = @Year "
                                  + " ,[Month]     = @Month "
@@ -2856,7 +2856,7 @@ namespace Jisseki_Report_Ibaraki.common
 
             //INSERT作成
             //SqlConnection sn = new ;
-            String updateTukubaSql = "UPDATE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Tukuba] "
+            String updateTukubaSql = "UPDATE [Jisseki_Tukuba] "
                                  + " SET"
                                  + "  [Year]      = @Year "
                                  + " ,[Month]     = @Month "
@@ -2933,7 +2933,7 @@ namespace Jisseki_Report_Ibaraki.common
 
             //INSERT作成
             //SqlConnection sn = new ;
-            String updateSonotaSql = "UPDATE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Sonota] "
+            String updateSonotaSql = "UPDATE [Jisseki_Sonota] "
                                  + " SET"
                                  + "  [Year]      = @Year "
                                  + " ,[Month]     = @Month "
@@ -3009,7 +3009,7 @@ namespace Jisseki_Report_Ibaraki.common
 
             //INSERT作成
             //SqlConnection sn = new ;
-            String updateGoukeiSql = "UPDATE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Goukei] "
+            String updateGoukeiSql = "UPDATE [Jisseki_Goukei] "
                                  + " SET"
                                  + "  [Year]      = @Year "
                                  + " ,[Month]     = @Month "
@@ -3245,6 +3245,8 @@ namespace Jisseki_Report_Ibaraki.common
                                 btnSubmit.Enabled = false;
                                 this.lblMsg.Text = "修正しました";
                                 this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                                this.btnPrint.Visible = true;       //20131224 Add
+                                this.btnKariInvoice.Visible = true; //20131224 Add
                             }
                             catch
                             {

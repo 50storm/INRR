@@ -26,12 +26,12 @@ namespace Jisseki_Report_Ibaraki.jada.search
 
         private void showData() {
             //初期表示は事務処理年月
-            string strSql = "SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].ID WHERE "
+            string strSql = "SELECT * FROM ID WHERE "
                             + " COCODE NOT IN "
                             + "( "
-                            + " SELECT I.COCODE FROM  [Jisseki_Report_Ibaraki].[dbo].[ID] I "
+                            + " SELECT I.COCODE FROM  [ID] I "
                             + " INNER JOIN  "
-                            + " [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Header] H "
+                            + " [Jisseki_Header] H "
                             + " ON I.COCODE = H.COCODE "
                             + " WHERE "
                             + " H.YearRep = @YearRep AND H.MonthRep = @MonthRep "//20131204

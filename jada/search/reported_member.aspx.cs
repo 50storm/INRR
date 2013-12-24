@@ -44,8 +44,8 @@ namespace Jisseki_Report_Ibaraki.jada.search
         {
             //初期表示
             string Sql =
-                " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Header] H "
-                + " INNER JOIN  [Jisseki_Report_Ibaraki].[dbo].[ID ] I "
+                " SELECT * FROM [Jisseki_Header] H "
+                + " INNER JOIN  [ID ] I "
                 + " ON H.COCODE=I.COCODE "
                 + " WHERE "
                 + "  ( H.YearRep >= @YearRepFrom AND H.MonthRep >= @MonthRepFrom) "
@@ -155,8 +155,8 @@ namespace Jisseki_Report_Ibaraki.jada.search
             {
                 //初期表示は報告台数の報告年
                 string strSql =
-                    " SELECT *  FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Header] H "
-                      + " INNER JOIN  [Jisseki_Report_Ibaraki].[dbo].[ID ] I "
+                    " SELECT *  FROM [Jisseki_Header] H "
+                      + " INNER JOIN  [ID ] I "
                       + " ON H.COCODE=I.COCODE "
                       + " WHERE YearRep = @YearRep ";
 

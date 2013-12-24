@@ -40,8 +40,8 @@ namespace Jisseki_Report_Ibaraki.common
                 + "      H.MonthRep AS MonthRep ,"
                 + "      H.TANTOU AS TANTOU  ,"
                 + "      I.CONAME AS CONAME  "
-                + " FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Header] H "
-                + " INNER JOIN  [Jisseki_Report_Ibaraki].[dbo].[ID] I"
+                + " FROM [Jisseki_Header] H "
+                + " INNER JOIN  [ID] I"
                 + " ON H.COCODE = I.COCODE "
                 + " WHERE H.COCODE=@COCODE AND H.YearRep = @YearRep AND H.MonthRep = @MonthRep ";//TODO
 
@@ -90,7 +90,7 @@ namespace Jisseki_Report_Ibaraki.common
         {
             //初期表示
             string SqlHeader =
-                " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Header]  "
+                " SELECT * FROM [Jisseki_Header]  "
                 + " WHERE COCODE=@COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep ";
 
             using (SqlConnection Conn = new SqlConnection(strConn))
@@ -139,7 +139,7 @@ namespace Jisseki_Report_Ibaraki.common
         private void setMito()
         {
             string SqlMito =
-                    " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Mito]  "
+                    " SELECT * FROM [Jisseki_Mito]  "
                     + " WHERE COCODE=@COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep ";
             using (SqlConnection Conn = new SqlConnection(strConn))
             {
@@ -200,7 +200,7 @@ namespace Jisseki_Report_Ibaraki.common
         private void setTuchiura()
         {
             string SqlTuchiura =
-                    " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Tuchiura]  "
+                    " SELECT * FROM [Jisseki_Tuchiura]  "
                     + " WHERE COCODE=@COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep ";
             using (SqlConnection Conn = new SqlConnection(strConn))
             {
@@ -258,7 +258,7 @@ namespace Jisseki_Report_Ibaraki.common
         private void setTukuba()
         {
             string SqlTukuba =
-                    " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Tukuba]  "
+                    " SELECT * FROM [Jisseki_Tukuba]  "
                 //+ " WHERE COCODE=@COCODE AND Year = @Year AND Month = @Month AND Day = @Day";
                     + " WHERE COCODE=@COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep ";
             using (SqlConnection Conn = new SqlConnection(strConn))
@@ -317,7 +317,7 @@ namespace Jisseki_Report_Ibaraki.common
         private void setSonota()
         {
             string SqlSonota =
-                    " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Sonota]  "
+                    " SELECT * FROM [Jisseki_Sonota]  "
                     + " WHERE COCODE=@COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep ";
             using (SqlConnection Conn = new SqlConnection(strConn))
             {
@@ -374,7 +374,7 @@ namespace Jisseki_Report_Ibaraki.common
         private void setGoukei()
         {
             string SqlGoukei =
-                    " SELECT * FROM [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Goukei]  "
+                    " SELECT * FROM [Jisseki_Goukei]  "
                     + " WHERE COCODE=@COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep ";
             using (SqlConnection Conn = new SqlConnection(strConn))
             {
@@ -469,17 +469,17 @@ namespace Jisseki_Report_Ibaraki.common
 
         private void deleteAll(SqlConnection Conn, SqlTransaction Tran)
         {
-            String DeleteAll = "DELETE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Header] "
+            String DeleteAll = "DELETE [Jisseki_Header] "
                                + " WHERE COCODE = @COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep "
-                               + " DELETE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Mito] "
+                               + " DELETE [Jisseki_Mito] "
                                + " WHERE COCODE = @COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep "
-                               + " DELETE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Tuchiura] "
+                               + " DELETE [Jisseki_Tuchiura] "
                                + " WHERE COCODE = @COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep "
-                               + " DELETE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Tukuba] "
+                               + " DELETE [Jisseki_Tukuba] "
                                + " WHERE COCODE = @COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep "
-                               + " DELETE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Sonota] "
+                               + " DELETE [Jisseki_Sonota] "
                                + " WHERE COCODE = @COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep "
-                               + " DELETE [Jisseki_Report_Ibaraki].[dbo].[Jisseki_Goukei] "
+                               + " DELETE [Jisseki_Goukei] "
                                + " WHERE COCODE = @COCODE AND YearRep = @YearRep AND MonthRep = @MonthRep "
                                 ;
             //Sqlコネクション
