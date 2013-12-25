@@ -524,11 +524,17 @@ namespace Jisseki_Report_Ibaraki.common
                  { //TODO自販連ユーザーと振り分け
                      //会員
                      jadaUser = false;
+                     qCOCODE = Session["COCODE"].ToString();
+                     qYearRep = Page.Request.QueryString.Get("YearRep");
+                     qMonthRep = Page.Request.QueryString.Get("MonthRep");
                  }
                  else
                  {
                      //自販連
                      jadaUser = true;
+                     qCOCODE = Page.Request.QueryString.Get("COCODE");
+                     qYearRep = Page.Request.QueryString.Get("YearRep");
+                     qMonthRep = Page.Request.QueryString.Get("MonthRep");
 
                  }
 
@@ -536,9 +542,9 @@ namespace Jisseki_Report_Ibaraki.common
                  strConn = ConfigurationManager.ConnectionStrings["JissekiConnectionString"].ConnectionString;
 
                  //Receive Keys by GET
-                 qCOCODE = Page.Request.QueryString.Get("COCODE");
-                 qYearRep = Page.Request.QueryString.Get("YearRep");
-                 qMonthRep = Page.Request.QueryString.Get("MonthRep");
+                 //qCOCODE = Page.Request.QueryString.Get("COCODE");
+                 //qYearRep = Page.Request.QueryString.Get("YearRep");
+                 //qMonthRep = Page.Request.QueryString.Get("MonthRep");
                //  Response.Write(qYear);
                //  Response.Write(qMonth);
           
