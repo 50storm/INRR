@@ -2551,37 +2551,72 @@ namespace Jisseki_Report_Ibaraki.common
                      //会員の場合閉め日を過ぎてたら修正できないようにする
                      if (!jadaUser) 
                      {
-                         if (DateTime.Today.Day < 6)
-                         {
-                             //前の月で取得
-                             if (DateTime.Today.AddMonths(-1).Month > int.Parse(qMonthRep))
-                             {
 
-                                 this.lblMsg.Text = "５日を過ぎているので修正できません。";
-                                 this.btnSubmit.Enabled = false;
-                             }
-                         }
-                         else 
+                         //1～11月の報告書の場合
+                         if ( int.Parse(qMonthRep) >= 1 && int.Parse(qMonthRep) <= 11)
                          {
-                             //1～11月
-                             if (DateTime.Today.Month >= 1 && DateTime.Today.Month <= 11)
+                             if (int.Parse(qYearRep) == DateTime.Today.Year)
                              {
-                                 if (DateTime.Today.Month > int.Parse(qMonthRep))
+                                 
+                                 if (int.Parse(qMonthRep) == DateTime.Today.Month)
                                  {
+                                     //同じ月なら編集OK
+
+                                 }
+                                 else if (int.Parse(qMonthRep) <= DateTime.Today.AddMonths(-1).Month && DateTime.Today.Day < 6)
+                                 {
+                                     //翌月で5日以内
+
+                                 }
+                                 else if (int.Parse(qMonthRep) <= DateTime.Today.AddMonths(-1).Month && DateTime.Today.Day >= 6)
+                                 {
+                                     //翌月で6日以降
                                      this.lblMsg.Text = "５日を過ぎているので修正できません。";
+                                     this.lblMsg.BackColor = System.Drawing.Color.Pink;
                                      this.btnSubmit.Enabled = false;
                                  }
                              }
                              else 
-                             { 
-                             //12月
-                                 if (DateTime.Today.Month < int.Parse(qMonthRep))
+                             {
+                                 this.lblMsg.Text = "５日を過ぎているので修正できません。";
+                                 this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                                 this.btnSubmit.Enabled = false;
+                             
+                             }                             
+                             
+                         }
+                         else
+                         {
+                             //12月の報告書の場合
+                             if (int.Parse(qYearRep) == DateTime.Today.Year)
+                             {
+                                 //編集OK
+                             }
+                             else 
+                             {
+
+                                 if (int.Parse(qMonthRep) == DateTime.Today.Month)
                                  {
+                                     //同じ年なら編集OK
+
+                                 }
+                                 else if (DateTime.Today.Day < 6)
+                                 {
+                                     //翌月で5日以内
+
+                                 }
+                                 else if (DateTime.Today.Day >= 6)
+                                 {
+                                     //翌月で6日以降
                                      this.lblMsg.Text = "５日を過ぎているので修正できません。";
+                                     this.lblMsg.BackColor = System.Drawing.Color.Pink;
                                      this.btnSubmit.Enabled = false;
                                  }
+
                              }
-                         }                     
+                             
+                         }
+                   
                      }
 
                  }
