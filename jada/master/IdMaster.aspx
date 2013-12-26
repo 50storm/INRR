@@ -98,7 +98,7 @@
         <br/><br/><br/>
     </div>
     <div id="input" >
-        <table border="1px">
+        <table border="1px" >
         <tr style="background-color:#1C5E55;color:White;">
             <th>会員コード</th>
             <th>ログインID</th>
@@ -147,7 +147,7 @@
 <asp:GridView ID="GridView1" runat="server"  AutoGenerateColumns="False"  
         DataKeyNames="COCODE" onselectedindexchanged="GridView1_SelectedIndexChanged" 
         opageindexchanging="GridView1_PageIndexChanging" PageSize="500" 
-        CellPadding="4" ForeColor="#333333" GridLines="None">
+        CellPadding="4" ForeColor="#333333" GridLines="None" Width="1600px">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:CommandField ShowSelectButton="True" />
@@ -167,9 +167,10 @@
         </Columns>
         <EditRowStyle BackColor="#7C6F57" />
         <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" 
+            Wrap="False" />
         <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#E3EAEB" />
+        <RowStyle BackColor="#E3EAEB" Wrap="False" />
         <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
         <SortedAscendingCellStyle BackColor="#F8FAFA" />
         <SortedAscendingHeaderStyle BackColor="#246B61" />
