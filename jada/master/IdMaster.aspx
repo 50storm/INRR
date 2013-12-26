@@ -147,8 +147,8 @@
 <asp:GridView ID="GridView1" runat="server"  AutoGenerateColumns="False"  
         DataKeyNames="COCODE" onselectedindexchanged="GridView1_SelectedIndexChanged" 
         opageindexchanging="GridView1_PageIndexChanging" PageSize="500" 
-        CellPadding="4" ForeColor="#333333" GridLines="None" Width="1600px" 
-        onrowcreated="GridView1_RowCreated">
+        CellPadding="4" ForeColor="#333333" GridLines="None" 
+        onrowcreated="GridView1_RowCreated" Width="1700px">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:CommandField ShowSelectButton="True" />
