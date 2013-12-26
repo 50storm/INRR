@@ -1163,5 +1163,15 @@ namespace Jisseki_Report_Ibaraki.jada.master
 
 #endregion 
 
+        protected void GridView1_RowCreated(object sender, GridViewRowEventArgs e)
+        {
+            //列幅を固定
+            if (e.Row.Cells.Count > 1)
+            {
+                e.Row.Cells[5].Style.Add("width", "160px");
+            }
+
+        }
+
     }
 }
