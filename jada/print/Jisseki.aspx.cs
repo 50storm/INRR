@@ -514,6 +514,7 @@ namespace Jisseki_Report_Ibaraki.jada.print
          
                 //削除
                 deleteHeader();
+                int cnt = 0;
 
                 for (int i = 0; i < Gridview1.Rows.Count; i++)
                 {
@@ -533,13 +534,16 @@ namespace Jisseki_Report_Ibaraki.jada.print
                                         Gridview1.Rows[i].Cells[GV_INDEX_YEAR_REP].Text,
                                         Gridview1.Rows[i].Cells[GV_INDEX_MONTH_REP].Text
                                         );
-
+                           cnt += 1;
 
              
                     }            
                 
                 }
-
+                if (cnt == 0) 
+                {
+                    return;
+                }
                 this.Session["PrintAll_Jisseki"] = true;
 
                 string js = "";
