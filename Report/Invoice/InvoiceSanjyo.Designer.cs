@@ -255,7 +255,7 @@
             this.line19,
             this.line18,
             this.line34});
-            this.detail.Height = 6.72982F;
+            this.detail.Height = 10.82677F;
             this.detail.Name = "detail";
             this.detail.Format += new System.EventHandler(this.detail_Format);
             // 

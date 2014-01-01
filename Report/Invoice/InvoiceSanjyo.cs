@@ -33,5 +33,7 @@ namespace Jisseki_Report_Ibaraki.Report
         {
 
         }
+
+
     }
 }

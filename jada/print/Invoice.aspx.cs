@@ -613,8 +613,9 @@ namespace Jisseki_Report_Ibaraki.jada.print
                                          Gridview1.Rows[i].Cells[GV_INDEX_MONTH_REP].Text
                                          );
 
+                            cnt_sanjyo += 1;
                         }
-                        cnt_sanjyo += 1;
+                        
                     }
                     else 
                     {
@@ -641,6 +642,10 @@ namespace Jisseki_Report_Ibaraki.jada.print
                 
                 }
 
+                if (cnt == 0 && cnt_sanjyo == 0)
+                {
+                    return;
+                }
                 if (cnt > 0 || cnt_sanjyo > 0) 
                 {
 
