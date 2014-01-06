@@ -597,7 +597,7 @@ namespace Jisseki_Report_Ibaraki.jada.print
                     
 
 
-                    if (MemberType.Equals("0"))
+                    if (MemberType.Equals("1"))
                     {
                         //賛助
                         if (cb.Checked)
