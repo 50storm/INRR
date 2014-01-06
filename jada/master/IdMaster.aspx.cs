@@ -14,6 +14,22 @@ namespace Jisseki_Report_Ibaraki.jada.master
     public partial class IdMaster : System.Web.UI.Page
     {
         private string strConn;
+        //Index for Gridview
+        private const int GV_INDEX_選択 　　　  = 0;
+        private const int GV_INDEX_会員コード   = 1;
+        private const int GV_INDEX_ログインID   = 2;
+        private const int GV_INDEX_会員名       = 3;
+        private const int GV_INDEX_略名         = 4;
+        private const int GV_INDEX_担当者       = 5;
+        private const int GV_INDEX_郵便番号     = 6;
+        private const int GV_INDEX_住所         = 7;
+        private const int GV_INDEX_電話番号     = 8;
+        private const int GV_INDEX_パスワード   = 9;
+        private const int GV_INDEX_会員フラグ   = 10;
+        private const int GV_INDEX_会員種別     = 11;
+        private const int GV_INDEX_ポジション   = 12;
+        private const int GV_INDEX_退会フラグ   = 13;
+
         private void clearMsg(){
             this.lblMsg.Text="";
             
@@ -1168,7 +1184,22 @@ namespace Jisseki_Report_Ibaraki.jada.master
             //列幅を固定
             if (e.Row.Cells.Count > 1)
             {
-                e.Row.Cells[5].Style.Add("width", "160px");
+                
+                e.Row.Cells[GV_INDEX_会員コード].Style.Add("width", "160px");
+                e.Row.Cells[GV_INDEX_ログインID].Style.Add("width", "160px");
+                e.Row.Cells[GV_INDEX_会員名].Style.Add("width", "500px");
+                e.Row.Cells[GV_INDEX_略名].Style.Add("width", "300px");
+                e.Row.Cells[GV_INDEX_担当者].Style.Add("width", "320px");
+                e.Row.Cells[GV_INDEX_郵便番号].Style.Add("width", "150px");
+                e.Row.Cells[GV_INDEX_住所].Style.Add("width", "400px");
+                e.Row.Cells[GV_INDEX_電話番号].Style.Add("width", "200px");
+                e.Row.Cells[GV_INDEX_パスワード].Style.Add("width", "160px");
+                e.Row.Cells[GV_INDEX_会員フラグ].Style.Add("width", "140px");
+                e.Row.Cells[GV_INDEX_会員種別].Style.Add("width", "130px");
+                e.Row.Cells[GV_INDEX_ポジション].Style.Add("width", "160px");
+                e.Row.Cells[GV_INDEX_退会フラグ].Style.Add("width", "160px");
+
+
             }
 
         }
