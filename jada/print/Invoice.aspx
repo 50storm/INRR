@@ -228,14 +228,13 @@
         
         <asp:BoundField DataField="YearRep" HeaderText="YearRep" />
         <asp:BoundField DataField="MonthRep" HeaderText="MonthRep" />
+        <asp:BoundField DataField="MemberType" HeaderText="MemberType" />
         <asp:TemplateField>
         <ItemTemplate>
             <asp:CheckBox ID="CheckBoxPrintOnt" runat="server"　Text="印刷する"  />
 
         </ItemTemplate>
         </asp:TemplateField>
-        <asp:BoundField DataField="MemberType" HeaderText="MemberType" 
-            Visible="False" />
     </Columns>
         <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
         <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />

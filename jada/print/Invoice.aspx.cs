@@ -173,7 +173,7 @@ namespace Jisseki_Report_Ibaraki.jada.print
         private const int GV_INDEX_DAY = 7;
         private const int GV_INDEX_YEAR_REP = 8;
         private const int GV_INDEX_MONTH_REP = 9;
-        private const int GV_INDEX_MEMBER_TYPE = 11;
+        private const int GV_INDEX_MEMBER_TYPE = 10;
         #endregion
 
         #region "データ検索"
@@ -313,7 +313,8 @@ namespace Jisseki_Report_Ibaraki.jada.print
                         //報告台数提出日
                         Gridview1.Columns[GV_INDEX_YEAR_REP].Visible = false;
                         Gridview1.Columns[GV_INDEX_MONTH_REP].Visible = false;
-
+                        //会員種別
+                        Gridview1.Columns[GV_INDEX_MEMBER_TYPE].Visible = false;
 
                     }
                 }
