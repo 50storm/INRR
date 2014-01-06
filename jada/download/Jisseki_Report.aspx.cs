@@ -372,15 +372,24 @@ namespace Jisseki_Report_Ibaraki.jada.download
 
                         break;
                 }
-                this.txtYearRep.Text = jCalender.GetYear(DateTime.Today).ToString();
-                this.txtMonthRep.Text = Utility.covertDigit2(DateTime.Today.AddMonths(-1).Month);
+                //20130106                
+                //1月のときは、昨年度
+                if (DateTime.Today.Month == 1) {
+                    this.txtYearRep.Text = jCalender.GetYear(DateTime.Today.AddYears(-1)).ToString();
+                    this.txtMonthRep.Text = Utility.covertDigit2(DateTime.Today.AddMonths(-1).Month);
 
+                }
+                else 
+                {
+                    this.txtYearRep.Text = jCalender.GetYear(DateTime.Today).ToString();
+                    this.txtMonthRep.Text = Utility.covertDigit2(DateTime.Today.AddMonths(-1).Month);
+
+                }
+                
                 //string strYearMonthDay = (jCalender.GetYear(DateTime.Today).ToString() + DateTime.Today.Month.ToString() + DateTime.Today.Day.ToString());
                 string strYearMonthDay = (DateTime.Today.Year.ToString() + Utility.covertDigit2(DateTime.Today.Month) + Utility.covertDigit2(DateTime.Today.Day));
                 string strHourMinSec = (Utility.covertDigit2(DateTime.Now.Hour) + Utility.covertDigit2(DateTime.Now.Minute) + Utility.covertDigit2(DateTime.Now.Second));
-
-
-                this.txtFileName.Text = DateTime.Today.Year.ToString() + this.txtMonthRep.Text + "Jisseki" + strYearMonthDay + strHourMinSec + ".csv";
+                this.txtFileName.Text = Utility.HeiseiToChristianEra(this.txtYearRep.Text) + this.txtMonthRep.Text + "Jisseki" + strYearMonthDay + strHourMinSec + ".csv";
 
 
             }
@@ -468,6 +477,9 @@ namespace Jisseki_Report_Ibaraki.jada.download
                 {
                     this.lblMsg.Text = "ダウンロードデータがありませんでした。";
                     this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                    //20130106
+                    //ﾃﾞｰﾀがないとき
+                    return;
                 };
 
                 //クライアントへ返す
