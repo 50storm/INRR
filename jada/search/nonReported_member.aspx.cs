@@ -96,9 +96,18 @@ namespace Jisseki_Report_Ibaraki.jada.search
             else 
             {
                 JapaneseCalendar jCalender = new JapaneseCalendar();
-
-                this.txtYearRep.Text = jCalender.GetYear(DateTime.Today).ToString();
-                this.txtMonthRep.Text = DateTime.Today.AddMonths(-1).Month.ToString();
+                //20130106                
+                //1月のときは、昨年度
+                if (DateTime.Today.Month == 1) 
+                {
+                    this.txtYearRep.Text = jCalender.GetYear(DateTime.Today.AddYears(-1)).ToString();
+                    this.txtMonthRep.Text = DateTime.Today.AddMonths(-1).Month.ToString();
+                }
+                else
+                {
+                    this.txtYearRep.Text = jCalender.GetYear(DateTime.Today).ToString();
+                    this.txtMonthRep.Text = DateTime.Today.AddMonths(-1).Month.ToString();
+                }
             }
             
 
