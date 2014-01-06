@@ -59,12 +59,19 @@ namespace Jisseki_Report_Ibaraki.Report
                     this.txtDay.Text
                            );
                 this.txtYear.Text = jCalender.GetYear(JapaneseDate).ToString();
+                
+
             }
             catch
             {
 
             }
 
+        }
+
+        private void detail_AfterPrint(object sender, EventArgs e)
+        {
+            this.pageBreak1.Enabled = true;
         }       
 
     }

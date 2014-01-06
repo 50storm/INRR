@@ -54,12 +54,12 @@
         
         #ReportDiv
         {
-            width:280px;height:345px; float:left; margin-bottom:32px; padding:0px;
+            width:280px;height:450px; float:left; margin-bottom:32px; padding:0px;
            /* border: 1px solid pink;*/
         }
         #ReportDivBtn
         {
-            width:160px;height:280px;border:1px solid black; padding:10px 10px 10px 10px;margin:0px;
+            width:160px;height:400px;border:1px solid black; padding:10px 10px 10px 10px;margin:0px;
             background-color:#c0c0c0;
         }
         /*マスター保守*/
@@ -70,7 +70,7 @@
 
        #MasterDivBtn
        {
-            width:160px;height:280px;border:1px solid black; padding:10px 10px 10px 10px;
+            width:160px;height:400px;border:1px solid black; padding:10px 10px 10px 10px;
             background-color:#c0c0c0;
        }
        #Env
@@ -135,6 +135,31 @@
                 <tr>
                     <td>
                         <asp:Button  class="btnClass"   ID="btn_ReportedSearch" runat="server" Text="受信データ確認"   onclick="btn_ReportedSearch_Click" /> 
+                    </td>
+                </tr>
+                <tr style="height:30px;">
+                    <td>
+                
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button  class="btnClass"   ID="btn_Jisseki" runat="server" Text="一括印刷(作業報告書)" 
+                            onclick="btn_Jisseki_Click"   /> 
+
+                    </td>
+                </tr>
+                <tr style="height:30px;">
+                    <td>
+                
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button  class="btnClass"   ID="btn_PrintAtOnce" runat="server" Text="一括印刷(仮請求書)" 
+                            onclick="btn_PrintAtOnce_Click"   /> 
+
+
                     </td>
                 </tr>
                 <tr style="height:30px;">

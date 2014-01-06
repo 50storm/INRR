@@ -190,6 +190,7 @@
             this.line28 = new DataDynamics.ActiveReports.Line();
             this.label49 = new DataDynamics.ActiveReports.Label();
             this.label50 = new DataDynamics.ActiveReports.Label();
+            this.pageBreak1 = new DataDynamics.ActiveReports.PageBreak();
             ((System.ComponentModel.ISupportInitialize)(this.txtCONAME)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblCONAME)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTANTOU_SIMEI)).BeginInit();
@@ -494,10 +495,12 @@
             this.line27,
             this.line28,
             this.label49,
-            this.label50});
+            this.label50,
+            this.pageBreak1});
             this.detail.Height = 10.27008F;
             this.detail.Name = "detail";
             this.detail.Format += new System.EventHandler(this.detail_Format);
+            this.detail.AfterPrint += new System.EventHandler(this.detail_AfterPrint);
             // 
             // txtCONAME
             // 
@@ -2493,6 +2496,15 @@
             this.label50.Top = 9.212599F;
             this.label50.Width = 0.3149606F;
             // 
+            // pageBreak1
+            // 
+            this.pageBreak1.Height = 0.01F;
+            this.pageBreak1.Left = 0F;
+            this.pageBreak1.Name = "pageBreak1";
+            this.pageBreak1.Size = new System.Drawing.SizeF(8.017716F, 0.01F);
+            this.pageBreak1.Top = 10.27008F;
+            this.pageBreak1.Width = 8.017716F;
+            // 
             // Jisseki_Report
             // 
             this.MasterReport = false;
@@ -2812,5 +2824,6 @@
         private DataDynamics.ActiveReports.Line line28;
         private DataDynamics.ActiveReports.Label label49;
         private DataDynamics.ActiveReports.Label label50;
+        private DataDynamics.ActiveReports.PageBreak pageBreak1;
     }
 }

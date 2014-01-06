@@ -51,5 +51,15 @@ namespace Jisseki_Report_Ibaraki.jada.menu
         {
             Response.Redirect(URL.UNIT_PRICE_MADTER);
         }
+
+        protected void btn_PrintAtOnce_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(URL.PRINT_KARI_INVOICE);
+        }
+
+        protected void btn_Jisseki_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(URL.PRINT_JISSEKI);
+        }
     }
 }

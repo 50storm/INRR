@@ -1946,13 +1946,12 @@
             // Invoice
             // 
             this.MasterReport = false;
-            this.PageSettings.Margins.Bottom = 0.1968504F;
+            this.PageSettings.Margins.Bottom = 0F;
             this.PageSettings.Margins.Left = 0.7874016F;
             this.PageSettings.Margins.Right = 0.1968504F;
             this.PageSettings.Margins.Top = 1.574803F;
-            this.PageSettings.PaperHeight = 11.69F;
-            this.PageSettings.PaperName = "ユーザー定義のサイズ";
-            this.PageSettings.PaperWidth = 8.27F;
+            this.PageSettings.PaperHeight = 11F;
+            this.PageSettings.PaperWidth = 8.5F;
             this.PrintWidth = 6.892716F;
             this.Sections.Add(this.detail);
             this.StyleSheet.Add(new DDCssLib.StyleSheetRule("font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; " +

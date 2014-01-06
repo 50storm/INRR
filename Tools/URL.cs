@@ -26,6 +26,10 @@ namespace Jisseki_Report_Ibaraki.Tools
 
       public const string DOWNLOAD_REPORTRED_DATA = "~/jada/download/Jisseki_Report.aspx";
 
+      public const string PRINT_JISSEKI = "~/jada/print/Jisseki.aspx";
+
+      public const string PRINT_KARI_INVOICE = "~/jada/print/Invoice.aspx";
+
       //レポート
       //実績報告書(相対パスJavaScript用)
       public const string REPORT_JISSEKI_REPORT_JS = "../Report/Jisseki_Report/Jisseki_Report_View.aspx";

@@ -49,6 +49,24 @@ namespace Jisseki_Report_Ibaraki.jada.menu {
         protected global::System.Web.UI.WebControls.Button btn_ReportedSearch;
         
         /// <summary>
+        /// btn_Jisseki コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Jisseki;
+        
+        /// <summary>
+        /// btn_PrintAtOnce コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_PrintAtOnce;
+        
+        /// <summary>
         /// bnt_DownloadReortedData コントロール。
         /// </summary>
         /// <remarks>
