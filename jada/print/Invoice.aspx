@@ -11,6 +11,10 @@
 	text-align:center;
 	ime-mode:disabled;
 }
+.txtCOCODE
+{
+	ime-mode:disabled;
+}
 #Wrapper
 {
     width:900px;	
@@ -165,9 +169,9 @@
                 <asp:Label   ID="Label1" runat="server" >会員コード：</asp:Label>        
             </td>
             <td>
-                <asp:TextBox ID="From_COCODE" runat="server" MaxLength="4" Width="80px" onFocus="select();" ></asp:TextBox>
+                <asp:TextBox ID="From_COCODE" runat="server" MaxLength="4" Width="80px" onFocus="select();" class="txtCOCODE" ></asp:TextBox>
                 <asp:Label   ID="Label2" runat="server" >～</asp:Label>        
-                <asp:TextBox ID="To_COCODE" runat="server" MaxLength="4" Width="80px" onFocus="select();" ></asp:TextBox>                
+                <asp:TextBox ID="To_COCODE" runat="server" MaxLength="4" Width="80px" onFocus="select();"  class="txtCOCODE"></asp:TextBox>                
             </td>
 
         </tr>
@@ -230,7 +234,8 @@
 
         </ItemTemplate>
         </asp:TemplateField>
-        <asp:BoundField DataField="MemberType" HeaderText="MemberType" />
+        <asp:BoundField DataField="MemberType" HeaderText="MemberType" 
+            Visible="False" />
     </Columns>
         <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
         <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
