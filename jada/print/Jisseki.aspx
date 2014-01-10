@@ -216,8 +216,8 @@
             ForeColor="#333333" GridLines="None" >
         <AlternatingRowStyle BackColor="White" />
     <Columns>
-        <asp:BoundField DataField="COCODE" HeaderText="会社コード" />
-        <asp:BoundField DataField="CONAME" HeaderText="会社名" />
+        <asp:BoundField DataField="COCODE" HeaderText="会員コード" />
+        <asp:BoundField DataField="CONAME" HeaderText="会員名" />
         <asp:BoundField DataField="RepName" HeaderText="会員担当者" />
         <asp:BoundField HeaderText="受信日付" Visible="False" />
         <asp:BoundField HeaderText="報告年月" Visible="False" />

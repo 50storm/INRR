@@ -139,6 +139,42 @@ namespace Jisseki_Report_Ibaraki.jada.print {
         protected global::System.Web.UI.WebControls.TextBox To_COCODE;
         
         /// <summary>
+        /// Label4 コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
+        
+        /// <summary>
+        /// rbtnBoth コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbtnBoth;
+        
+        /// <summary>
+        /// rbtnTujyo コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbtnTujyo;
+        
+        /// <summary>
+        /// rbtnSanjyo コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbtnSanjyo;
+        
+        /// <summary>
         /// Label3 コントロール。
         /// </summary>
         /// <remarks>

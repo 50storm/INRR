@@ -26,7 +26,17 @@ namespace Jisseki_Report_Ibaraki.Report
 
         private void detail_Format(object sender, EventArgs e)
         {
-
+            //販売店協会会費は次月
+            int MonthRep1 = int.Parse(this.txtMonthRep1.Text);
+            if (MonthRep1 == 12)
+            {
+                MonthRep1 = 1;
+            }
+            else
+            {
+                MonthRep1 = MonthRep1 + 1;
+            }
+            this.txtMonthRep1.Text = MonthRep1.ToString();
         }
 
         private void Invoice_ReportStart(object sender, EventArgs e)

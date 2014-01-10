@@ -3,6 +3,7 @@
             BigSize: false,
             MediumSmall: false,
             Average: false,
+            ShibuFee: false,
             Kamotu7t: false,
             Kamotu6DP9_5t: false,
             Kamotu4DP9_3t: false,
@@ -32,6 +33,12 @@ function checkForm() {
         flag.Average = false;
     } else {
         flag.Average = true;
+    }
+
+    if (!isNumber("txtShibuFee")) {
+        flag.ShibuFee = false;
+    } else {
+        flag.ShibuFee = true;
     }
 
 
@@ -93,6 +100,7 @@ function checkForm() {
                 flag.BigSize
                 && flag.MediumSmall
                 && flag.Average
+                && flag.ShibuFee
                 && flag.Kamotu7t
                 && flag.Kamotu6DP9_5t
                 && flag.Kamotu4DP9_3t
@@ -145,6 +153,15 @@ function setFocus() {
 
 
     document.getElementById('txtAverage').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
+                    document.getElementById('txtShibuFee').focus();
+                    document.getElementById('txtShibuFee').select();
+                    return false;
+                }
+            }
+
+    document.getElementById('txtShibuFee').onkeydown
             = function () {
                 if (event.keyCode == 13) {
                     document.getElementById('txtKamotu7t').focus();

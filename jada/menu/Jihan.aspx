@@ -144,9 +144,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button  class="btnClass"   ID="btn_Jisseki" runat="server" Text="一括印刷(作業報告書)" 
-                            onclick="btn_Jisseki_Click"   /> 
-
+                        <asp:Button  class="btnClass"   ID="btn_Jisseki" runat="server" Text="一括印刷(台数報告書)"      onclick="btn_Jisseki_Click"   />
                     </td>
                 </tr>
                 <tr style="height:30px;">

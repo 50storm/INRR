@@ -35,6 +35,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                                 this.txtBigSize.Text = Reader["BigSize"].ToString();
                                 this.txtMediumSmall.Text = Reader["MediumSmall"].ToString();
                                 this.txtAverage.Text = Reader["Average"].ToString();
+                                this.txtShibuFee.Text = Reader["ShibuFee"].ToString();//20140106 Igarashi 支部費追加
                                 this.txtKamotu7t.Text = Reader["Kamotu7t"].ToString();
                                 this.txtKamotu6DP9_5t.Text = Reader["Kamotu6DP9_5t"].ToString();
                                 this.txtKamotu4DP9_3t.Text = Reader["Kamotu4DP9_3t"].ToString();
@@ -147,6 +148,18 @@ namespace Jisseki_Report_Ibaraki.jada.master
                 else
                 {
                     this.txtAverage.BackColor = System.Drawing.Color.White;
+                }
+
+                //20140106 Igarashi 支部費追加
+                if (Utility.IsNotNumber(this.txtShibuFee.Text))
+                {
+                    this.txtShibuFee.BackColor = System.Drawing.Color.Pink;
+                    this.txtShibuFee.Focus();
+                    return;
+                }
+                else
+                {
+                    this.txtShibuFee.BackColor = System.Drawing.Color.White;
                 }
 
 
@@ -263,6 +276,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                         + "      [BigSize]          = @BigSize "
                         + "     ,[MediumSmall]      = @MediumSmall "
                         + "     ,[Average]          = @Average"
+                        + "     ,[ShibuFee]         = @ShibuFee"//20140106 Igarashi 支部費追加
                         + "     ,[Kamotu7t]         = @Kamotu7t "
                         + "     ,[Kamotu6DP9_5t]    = @Kamotu6DP9_5t "
                         + "     ,[Kamotu4DP9_3t]    = @Kamotu4DP9_3t "
@@ -287,7 +301,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                             cmd.Parameters.Add(new SqlParameter("@BigSize", this.txtBigSize.Text));
                             cmd.Parameters.Add(new SqlParameter("@MediumSmall", this.txtMediumSmall.Text));
                             cmd.Parameters.Add(new SqlParameter("@Average", this.txtAverage.Text));
-
+                            cmd.Parameters.Add(new SqlParameter("@ShibuFee", this.txtShibuFee.Text));//20140106 Igarashi 支部費追加
                             cmd.Parameters.Add(new SqlParameter("@Kamotu7t", this.txtKamotu7t.Text));
                             cmd.Parameters.Add(new SqlParameter("@Kamotu6DP9_5t", this.txtKamotu6DP9_5t.Text));
                             cmd.Parameters.Add(new SqlParameter("@Kamotu4DP9_3t", this.txtKamotu4DP9_3t.Text));

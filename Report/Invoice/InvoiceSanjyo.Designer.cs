@@ -107,6 +107,10 @@
             this.line19 = new DataDynamics.ActiveReports.Line();
             this.line18 = new DataDynamics.ActiveReports.Line();
             this.line34 = new DataDynamics.ActiveReports.Line();
+            this.txtCONAME = new DataDynamics.ActiveReports.TextBox();
+            this.label23 = new DataDynamics.ActiveReports.Label();
+            this.line1 = new DataDynamics.ActiveReports.Line();
+            this.line2 = new DataDynamics.ActiveReports.Line();
             ((System.ComponentModel.ISupportInitialize)(this.label14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label16)).BeginInit();
@@ -168,6 +172,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.label49)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label50)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonthRep1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONAME)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // detail
@@ -254,7 +260,11 @@
             this.txtMonthRep1,
             this.line19,
             this.line18,
-            this.line34});
+            this.line34,
+            this.txtCONAME,
+            this.label23,
+            this.line1,
+            this.line2});
             this.detail.Height = 10.82677F;
             this.detail.Name = "detail";
             this.detail.Format += new System.EventHandler(this.detail_Format);
@@ -268,7 +278,7 @@
             this.label14.Padding = new DataDynamics.ActiveReports.PaddingEx(20, 0, 0, 0);
             this.label14.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: left; vertical-align: middle";
             this.label14.Text = "７t以上";
-            this.label14.Top = 1.496063F;
+            this.label14.Top = 2.204725F;
             this.label14.Width = 2.401575F;
             // 
             // label15
@@ -280,7 +290,7 @@
             this.label15.Padding = new DataDynamics.ActiveReports.PaddingEx(20, 0, 0, 0);
             this.label15.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: left; vertical-align: middle";
             this.label15.Text = "６．９t～５t";
-            this.label15.Top = 1.968504F;
+            this.label15.Top = 2.677165F;
             this.label15.Width = 2.401575F;
             // 
             // label16
@@ -292,7 +302,7 @@
             this.label16.Padding = new DataDynamics.ActiveReports.PaddingEx(20, 0, 0, 0);
             this.label16.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: left; vertical-align: middle";
             this.label16.Text = "４．９t～３t";
-            this.label16.Top = 2.440945F;
+            this.label16.Top = 3.149606F;
             this.label16.Width = 2.401575F;
             // 
             // label17
@@ -305,7 +315,7 @@
             this.label17.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: justify; vertical-align: middle" +
     "";
             this.label17.Text = "２．９t～２．５t";
-            this.label17.Top = 2.913386F;
+            this.label17.Top = 3.622047F;
             this.label17.Width = 2.401575F;
             // 
             // txtNum_Kamotu7t
@@ -316,7 +326,7 @@
             this.txtNum_Kamotu7t.Name = "txtNum_Kamotu7t";
             this.txtNum_Kamotu7t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtNum_Kamotu7t.Text = "999";
-            this.txtNum_Kamotu7t.Top = 1.496063F;
+            this.txtNum_Kamotu7t.Top = 2.204725F;
             this.txtNum_Kamotu7t.Width = 0.5905512F;
             // 
             // txtU_Kamotu7t
@@ -327,7 +337,7 @@
             this.txtU_Kamotu7t.Name = "txtU_Kamotu7t";
             this.txtU_Kamotu7t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtU_Kamotu7t.Text = "999";
-            this.txtU_Kamotu7t.Top = 1.496063F;
+            this.txtU_Kamotu7t.Top = 2.204725F;
             this.txtU_Kamotu7t.Width = 0.5905512F;
             // 
             // txtSum_Kamotu7t
@@ -341,7 +351,7 @@
             this.txtSum_Kamotu7t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
             this.txtSum_Kamotu7t.Text = "999";
-            this.txtSum_Kamotu7t.Top = 1.496063F;
+            this.txtSum_Kamotu7t.Top = 2.204725F;
             this.txtSum_Kamotu7t.Width = 2.007874F;
             // 
             // txtNum_Kamotu6DP9_5t
@@ -352,7 +362,7 @@
             this.txtNum_Kamotu6DP9_5t.Name = "txtNum_Kamotu6DP9_5t";
             this.txtNum_Kamotu6DP9_5t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtNum_Kamotu6DP9_5t.Text = "999";
-            this.txtNum_Kamotu6DP9_5t.Top = 1.968504F;
+            this.txtNum_Kamotu6DP9_5t.Top = 2.677165F;
             this.txtNum_Kamotu6DP9_5t.Width = 0.5905512F;
             // 
             // txtU_Kamotu6DP9_5t
@@ -363,7 +373,7 @@
             this.txtU_Kamotu6DP9_5t.Name = "txtU_Kamotu6DP9_5t";
             this.txtU_Kamotu6DP9_5t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtU_Kamotu6DP9_5t.Text = "999";
-            this.txtU_Kamotu6DP9_5t.Top = 1.968504F;
+            this.txtU_Kamotu6DP9_5t.Top = 2.677165F;
             this.txtU_Kamotu6DP9_5t.Width = 0.5905512F;
             // 
             // txtSum_Kamotu6DP9_5t
@@ -377,7 +387,7 @@
             this.txtSum_Kamotu6DP9_5t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
             this.txtSum_Kamotu6DP9_5t.Text = "999";
-            this.txtSum_Kamotu6DP9_5t.Top = 1.968504F;
+            this.txtSum_Kamotu6DP9_5t.Top = 2.677165F;
             this.txtSum_Kamotu6DP9_5t.Width = 2.007874F;
             // 
             // txtNum_Kamotu4DP9_3t
@@ -388,7 +398,7 @@
             this.txtNum_Kamotu4DP9_3t.Name = "txtNum_Kamotu4DP9_3t";
             this.txtNum_Kamotu4DP9_3t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtNum_Kamotu4DP9_3t.Text = "999";
-            this.txtNum_Kamotu4DP9_3t.Top = 2.440945F;
+            this.txtNum_Kamotu4DP9_3t.Top = 3.149606F;
             this.txtNum_Kamotu4DP9_3t.Width = 0.5905512F;
             // 
             // txtU_Kamotu4DP9_3t
@@ -399,7 +409,7 @@
             this.txtU_Kamotu4DP9_3t.Name = "txtU_Kamotu4DP9_3t";
             this.txtU_Kamotu4DP9_3t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtU_Kamotu4DP9_3t.Text = "999";
-            this.txtU_Kamotu4DP9_3t.Top = 2.440945F;
+            this.txtU_Kamotu4DP9_3t.Top = 3.149606F;
             this.txtU_Kamotu4DP9_3t.Width = 0.5905512F;
             // 
             // txtSum_Kamotu4DP9_3t
@@ -413,7 +423,7 @@
             this.txtSum_Kamotu4DP9_3t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
             this.txtSum_Kamotu4DP9_3t.Text = "999";
-            this.txtSum_Kamotu4DP9_3t.Top = 2.440945F;
+            this.txtSum_Kamotu4DP9_3t.Top = 3.149606F;
             this.txtSum_Kamotu4DP9_3t.Width = 2.007874F;
             // 
             // txtNum_Kamotu2DP9_2DP5t
@@ -424,7 +434,7 @@
             this.txtNum_Kamotu2DP9_2DP5t.Name = "txtNum_Kamotu2DP9_2DP5t";
             this.txtNum_Kamotu2DP9_2DP5t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtNum_Kamotu2DP9_2DP5t.Text = "999";
-            this.txtNum_Kamotu2DP9_2DP5t.Top = 2.913386F;
+            this.txtNum_Kamotu2DP9_2DP5t.Top = 3.622047F;
             this.txtNum_Kamotu2DP9_2DP5t.Width = 0.5905512F;
             // 
             // txtU_Kamotu2DP9_2DP5t
@@ -435,7 +445,7 @@
             this.txtU_Kamotu2DP9_2DP5t.Name = "txtU_Kamotu2DP9_2DP5t";
             this.txtU_Kamotu2DP9_2DP5t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtU_Kamotu2DP9_2DP5t.Text = "999";
-            this.txtU_Kamotu2DP9_2DP5t.Top = 2.913386F;
+            this.txtU_Kamotu2DP9_2DP5t.Top = 3.622047F;
             this.txtU_Kamotu2DP9_2DP5t.Width = 0.5905512F;
             // 
             // txtSum_Kamotu2DP9_2DP5t
@@ -449,7 +459,7 @@
             this.txtSum_Kamotu2DP9_2DP5t.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
             this.txtSum_Kamotu2DP9_2DP5t.Text = "999";
-            this.txtSum_Kamotu2DP9_2DP5t.Top = 2.913386F;
+            this.txtSum_Kamotu2DP9_2DP5t.Top = 3.622047F;
             this.txtSum_Kamotu2DP9_2DP5t.Width = 2.007874F;
             // 
             // label18
@@ -462,7 +472,7 @@
             this.label18.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: justify; vertical-align: middle" +
     "";
             this.label18.Text = "２,００１cc以上";
-            this.label18.Top = 3.385827F;
+            this.label18.Top = 4.094488F;
             this.label18.Width = 2.401575F;
             // 
             // label19
@@ -475,7 +485,7 @@
             this.label19.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: justify; vertical-align: middle" +
     "";
             this.label19.Text = "２，０００cc～１，０００cc";
-            this.label19.Top = 3.858268F;
+            this.label19.Top = 4.566929F;
             this.label19.Width = 2.401575F;
             // 
             // label20
@@ -488,7 +498,7 @@
             this.label20.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: justify; vertical-align: middle" +
     "";
             this.label20.Text = "乗合定員３０人以上";
-            this.label20.Top = 4.330709F;
+            this.label20.Top = 5.03937F;
             this.label20.Width = 2.401575F;
             // 
             // label21
@@ -501,7 +511,7 @@
             this.label21.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: justify; vertical-align: middle" +
     "";
             this.label21.Text = "乗合定員２９人以下";
-            this.label21.Top = 4.80315F;
+            this.label21.Top = 5.511811F;
             this.label21.Width = 2.401575F;
             // 
             // txtNum_Over2001cc
@@ -512,7 +522,7 @@
             this.txtNum_Over2001cc.Name = "txtNum_Over2001cc";
             this.txtNum_Over2001cc.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtNum_Over2001cc.Text = "999";
-            this.txtNum_Over2001cc.Top = 3.385827F;
+            this.txtNum_Over2001cc.Top = 4.094488F;
             this.txtNum_Over2001cc.Width = 0.5905512F;
             // 
             // txtU_Over2001cc
@@ -523,7 +533,7 @@
             this.txtU_Over2001cc.Name = "txtU_Over2001cc";
             this.txtU_Over2001cc.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtU_Over2001cc.Text = "999";
-            this.txtU_Over2001cc.Top = 3.385827F;
+            this.txtU_Over2001cc.Top = 4.094488F;
             this.txtU_Over2001cc.Width = 0.5905512F;
             // 
             // txtSum_Over2001cc
@@ -537,7 +547,7 @@
             this.txtSum_Over2001cc.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
             this.txtSum_Over2001cc.Text = "999";
-            this.txtSum_Over2001cc.Top = 3.385827F;
+            this.txtSum_Over2001cc.Top = 4.094488F;
             this.txtSum_Over2001cc.Width = 2.007874F;
             // 
             // txtNum_To2000From1000cc
@@ -548,7 +558,7 @@
             this.txtNum_To2000From1000cc.Name = "txtNum_To2000From1000cc";
             this.txtNum_To2000From1000cc.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtNum_To2000From1000cc.Text = "999";
-            this.txtNum_To2000From1000cc.Top = 3.858268F;
+            this.txtNum_To2000From1000cc.Top = 4.566929F;
             this.txtNum_To2000From1000cc.Width = 0.5905512F;
             // 
             // txtU_To2000From1000cc
@@ -559,7 +569,7 @@
             this.txtU_To2000From1000cc.Name = "txtU_To2000From1000cc";
             this.txtU_To2000From1000cc.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtU_To2000From1000cc.Text = "999";
-            this.txtU_To2000From1000cc.Top = 3.858268F;
+            this.txtU_To2000From1000cc.Top = 4.566929F;
             this.txtU_To2000From1000cc.Width = 0.5905512F;
             // 
             // txtSum_To2000From1000cc
@@ -573,7 +583,7 @@
             this.txtSum_To2000From1000cc.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
             this.txtSum_To2000From1000cc.Text = "999";
-            this.txtSum_To2000From1000cc.Top = 3.858268F;
+            this.txtSum_To2000From1000cc.Top = 4.566929F;
             this.txtSum_To2000From1000cc.Width = 2.007874F;
             // 
             // txtNum_Over30
@@ -584,7 +594,7 @@
             this.txtNum_Over30.Name = "txtNum_Over30";
             this.txtNum_Over30.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtNum_Over30.Text = "999";
-            this.txtNum_Over30.Top = 4.330709F;
+            this.txtNum_Over30.Top = 5.03937F;
             this.txtNum_Over30.Width = 0.5905512F;
             // 
             // txtU_Over30
@@ -595,7 +605,7 @@
             this.txtU_Over30.Name = "txtU_Over30";
             this.txtU_Over30.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtU_Over30.Text = "999";
-            this.txtU_Over30.Top = 4.330709F;
+            this.txtU_Over30.Top = 5.03937F;
             this.txtU_Over30.Width = 0.5905512F;
             // 
             // txtSum_Over30
@@ -609,7 +619,7 @@
             this.txtSum_Over30.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
             this.txtSum_Over30.Text = "999";
-            this.txtSum_Over30.Top = 4.330709F;
+            this.txtSum_Over30.Top = 5.03937F;
             this.txtSum_Over30.Width = 2.007874F;
             // 
             // txtNum_LessThan29
@@ -620,7 +630,7 @@
             this.txtNum_LessThan29.Name = "txtNum_LessThan29";
             this.txtNum_LessThan29.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtNum_LessThan29.Text = "999";
-            this.txtNum_LessThan29.Top = 4.80315F;
+            this.txtNum_LessThan29.Top = 5.511811F;
             this.txtNum_LessThan29.Width = 0.5905512F;
             // 
             // txtU_LessThan29
@@ -631,7 +641,7 @@
             this.txtU_LessThan29.Name = "txtU_LessThan29";
             this.txtU_LessThan29.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.txtU_LessThan29.Text = "999";
-            this.txtU_LessThan29.Top = 4.80315F;
+            this.txtU_LessThan29.Top = 5.511811F;
             this.txtU_LessThan29.Width = 0.5905512F;
             // 
             // txtSum_LessThan29
@@ -645,7 +655,7 @@
             this.txtSum_LessThan29.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
             this.txtSum_LessThan29.Text = "999";
-            this.txtSum_LessThan29.Top = 4.80315F;
+            this.txtSum_LessThan29.Top = 5.511811F;
             this.txtSum_LessThan29.Width = 2.007874F;
             // 
             // txtU_MemberFee
@@ -659,7 +669,7 @@
             this.txtU_MemberFee.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
             this.txtU_MemberFee.Text = "999";
-            this.txtU_MemberFee.Top = 5.275591F;
+            this.txtU_MemberFee.Top = 5.984252F;
             this.txtU_MemberFee.Width = 2.007874F;
             // 
             // label22
@@ -672,7 +682,7 @@
             this.label22.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: justify; vertical-align: middle" +
     "";
             this.label22.Text = "会費";
-            this.label22.Top = 5.275591F;
+            this.label22.Top = 5.984252F;
             this.label22.Width = 4.055118F;
             // 
             // txtSumMemberFee
@@ -687,7 +697,7 @@
             this.txtSumMemberFee.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; font-style: italic; text-align: right; vert" +
     "ical-align: middle";
             this.txtSumMemberFee.Text = "999";
-            this.txtSumMemberFee.Top = 5.826772F;
+            this.txtSumMemberFee.Top = 6.535433F;
             this.txtSumMemberFee.Width = 2.007874F;
             // 
             // textBox1
@@ -701,7 +711,7 @@
             this.textBox1.Style = "font-family: ＭＳ Ｐ明朝; font-size: 20pt; font-style: italic; text-align: justify; ve" +
     "rtical-align: middle";
             this.textBox1.Text = "999";
-            this.textBox1.Top = 0.472441F;
+            this.textBox1.Top = 1.181102F;
             this.textBox1.Width = 2.041995F;
             // 
             // label10
@@ -712,7 +722,7 @@
             this.label10.Name = "label10";
             this.label10.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label10.Text = "摘要";
-            this.label10.Top = 1.023622F;
+            this.label10.Top = 1.732284F;
             this.label10.Width = 2.401575F;
             // 
             // label11
@@ -724,7 +734,7 @@
             this.label11.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; text-justify: auto; ver" +
     "tical-align: middle";
             this.label11.Text = "金額";
-            this.label11.Top = 1.023622F;
+            this.label11.Top = 1.732284F;
             this.label11.Width = 2.007874F;
             // 
             // label12
@@ -736,7 +746,7 @@
             this.label12.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; text-justify: auto; ver" +
     "tical-align: middle";
             this.label12.Text = "単価";
-            this.label12.Top = 1.023622F;
+            this.label12.Top = 1.732284F;
             this.label12.Width = 0.7874014F;
             // 
             // label13
@@ -748,7 +758,7 @@
             this.label13.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; text-justify: auto; ver" +
     "tical-align: middle";
             this.label13.Text = "台数";
-            this.label13.Top = 1.023622F;
+            this.label13.Top = 1.732284F;
             this.label13.Width = 0.7874014F;
             // 
             // label31
@@ -759,7 +769,7 @@
             this.label31.Name = "label31";
             this.label31.Style = "font-family: ＭＳ Ｐ明朝; font-size: 14pt; vertical-align: middle";
             this.label31.Text = "茨城県自動車販売店協会";
-            this.label31.Top = 0.472441F;
+            this.label31.Top = 1.181102F;
             this.label31.Width = 2.283465F;
             // 
             // label32
@@ -770,7 +780,7 @@
             this.label32.Name = "label32";
             this.label32.Style = "font-family: ＭＳ Ｐ明朝; font-size: 14pt; vertical-align: middle";
             this.label32.Text = "月分会費";
-            this.label32.Top = 0.472441F;
+            this.label32.Top = 1.181102F;
             this.label32.Width = 0.9479167F;
             // 
             // label33
@@ -782,7 +792,7 @@
             this.label33.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 20, 0);
             this.label33.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: right; vertical-align: middle";
             this.label33.Text = "請求金額合計";
-            this.label33.Top = 5.826772F;
+            this.label33.Top = 6.535433F;
             this.label33.Width = 4.72441F;
             // 
             // line20
@@ -791,12 +801,12 @@
             this.line20.Left = 0.472441F;
             this.line20.LineWeight = 1F;
             this.line20.Name = "line20";
-            this.line20.Top = 1.417323F;
+            this.line20.Top = 2.125985F;
             this.line20.Width = 6.771656F;
             this.line20.X1 = 0.472441F;
             this.line20.X2 = 7.244097F;
-            this.line20.Y1 = 1.417323F;
-            this.line20.Y2 = 1.417323F;
+            this.line20.Y1 = 2.125985F;
+            this.line20.Y2 = 2.125985F;
             // 
             // line21
             // 
@@ -804,12 +814,12 @@
             this.line21.Left = 0.472441F;
             this.line21.LineWeight = 1F;
             this.line21.Name = "line21";
-            this.line21.Top = 1.889764F;
+            this.line21.Top = 2.598425F;
             this.line21.Width = 6.771656F;
             this.line21.X1 = 0.472441F;
             this.line21.X2 = 7.244097F;
-            this.line21.Y1 = 1.889764F;
-            this.line21.Y2 = 1.889764F;
+            this.line21.Y1 = 2.598425F;
+            this.line21.Y2 = 2.598425F;
             // 
             // line22
             // 
@@ -817,12 +827,12 @@
             this.line22.Left = 0.472441F;
             this.line22.LineWeight = 1F;
             this.line22.Name = "line22";
-            this.line22.Top = 2.362205F;
+            this.line22.Top = 3.070866F;
             this.line22.Width = 6.771656F;
             this.line22.X1 = 0.472441F;
             this.line22.X2 = 7.244097F;
-            this.line22.Y1 = 2.362205F;
-            this.line22.Y2 = 2.362205F;
+            this.line22.Y1 = 3.070866F;
+            this.line22.Y2 = 3.070866F;
             // 
             // line23
             // 
@@ -830,12 +840,12 @@
             this.line23.Left = 0.472441F;
             this.line23.LineWeight = 1F;
             this.line23.Name = "line23";
-            this.line23.Top = 2.834646F;
+            this.line23.Top = 3.543307F;
             this.line23.Width = 6.771656F;
             this.line23.X1 = 0.472441F;
             this.line23.X2 = 7.244097F;
-            this.line23.Y1 = 2.834646F;
-            this.line23.Y2 = 2.834646F;
+            this.line23.Y1 = 3.543307F;
+            this.line23.Y2 = 3.543307F;
             // 
             // line24
             // 
@@ -843,12 +853,12 @@
             this.line24.Left = 0.472441F;
             this.line24.LineWeight = 1F;
             this.line24.Name = "line24";
-            this.line24.Top = 3.307087F;
+            this.line24.Top = 4.015748F;
             this.line24.Width = 6.771656F;
             this.line24.X1 = 0.472441F;
             this.line24.X2 = 7.244097F;
-            this.line24.Y1 = 3.307087F;
-            this.line24.Y2 = 3.307087F;
+            this.line24.Y1 = 4.015748F;
+            this.line24.Y2 = 4.015748F;
             // 
             // line25
             // 
@@ -856,12 +866,12 @@
             this.line25.Left = 0.472441F;
             this.line25.LineWeight = 1F;
             this.line25.Name = "line25";
-            this.line25.Top = 3.779528F;
+            this.line25.Top = 4.488189F;
             this.line25.Width = 6.771656F;
             this.line25.X1 = 0.472441F;
             this.line25.X2 = 7.244097F;
-            this.line25.Y1 = 3.779528F;
-            this.line25.Y2 = 3.779528F;
+            this.line25.Y1 = 4.488189F;
+            this.line25.Y2 = 4.488189F;
             // 
             // line26
             // 
@@ -869,12 +879,12 @@
             this.line26.Left = 0.472441F;
             this.line26.LineWeight = 1F;
             this.line26.Name = "line26";
-            this.line26.Top = 4.251969F;
+            this.line26.Top = 4.96063F;
             this.line26.Width = 6.771656F;
             this.line26.X1 = 0.472441F;
             this.line26.X2 = 7.244097F;
-            this.line26.Y1 = 4.251969F;
-            this.line26.Y2 = 4.251969F;
+            this.line26.Y1 = 4.96063F;
+            this.line26.Y2 = 4.96063F;
             // 
             // line27
             // 
@@ -882,12 +892,12 @@
             this.line27.Left = 0.472441F;
             this.line27.LineWeight = 1F;
             this.line27.Name = "line27";
-            this.line27.Top = 4.72441F;
+            this.line27.Top = 5.433071F;
             this.line27.Width = 6.771656F;
             this.line27.X1 = 0.472441F;
             this.line27.X2 = 7.244097F;
-            this.line27.Y1 = 4.72441F;
-            this.line27.Y2 = 4.72441F;
+            this.line27.Y1 = 5.433071F;
+            this.line27.Y2 = 5.433071F;
             // 
             // line28
             // 
@@ -895,12 +905,12 @@
             this.line28.Left = 0.472441F;
             this.line28.LineWeight = 1F;
             this.line28.Name = "line28";
-            this.line28.Top = 5.196851F;
+            this.line28.Top = 5.905512F;
             this.line28.Width = 6.771656F;
             this.line28.X1 = 0.472441F;
             this.line28.X2 = 7.244097F;
-            this.line28.Y1 = 5.196851F;
-            this.line28.Y2 = 5.196851F;
+            this.line28.Y1 = 5.905512F;
+            this.line28.Y2 = 5.905512F;
             // 
             // line29
             // 
@@ -908,25 +918,25 @@
             this.line29.Left = 0.472441F;
             this.line29.LineWeight = 1F;
             this.line29.Name = "line29";
-            this.line29.Top = 5.669292F;
+            this.line29.Top = 6.377953F;
             this.line29.Width = 6.771656F;
             this.line29.X1 = 0.472441F;
             this.line29.X2 = 7.244097F;
-            this.line29.Y1 = 5.669292F;
-            this.line29.Y2 = 5.669292F;
+            this.line29.Y1 = 6.377953F;
+            this.line29.Y2 = 6.377953F;
             // 
             // line30
             // 
-            this.line30.Height = 5.275591F;
+            this.line30.Height = 5.27559F;
             this.line30.Left = 0.472441F;
             this.line30.LineWeight = 1F;
             this.line30.Name = "line30";
-            this.line30.Top = 0.944882F;
+            this.line30.Top = 1.653544F;
             this.line30.Width = 0F;
             this.line30.X1 = 0.472441F;
             this.line30.X2 = 0.472441F;
-            this.line30.Y1 = 0.944882F;
-            this.line30.Y2 = 6.220473F;
+            this.line30.Y1 = 1.653544F;
+            this.line30.Y2 = 6.929134F;
             // 
             // line31
             // 
@@ -934,12 +944,12 @@
             this.line31.Left = 0.472441F;
             this.line31.LineWeight = 1F;
             this.line31.Name = "line31";
-            this.line31.Top = 5.748032F;
+            this.line31.Top = 6.456693F;
             this.line31.Width = 6.771656F;
             this.line31.X1 = 0.472441F;
             this.line31.X2 = 7.244097F;
-            this.line31.Y1 = 5.748032F;
-            this.line31.Y2 = 5.748032F;
+            this.line31.Y1 = 6.456693F;
+            this.line31.Y2 = 6.456693F;
             // 
             // line32
             // 
@@ -947,51 +957,51 @@
             this.line32.Left = 0.472441F;
             this.line32.LineWeight = 1F;
             this.line32.Name = "line32";
-            this.line32.Top = 6.220473F;
+            this.line32.Top = 6.929134F;
             this.line32.Width = 6.771656F;
             this.line32.X1 = 0.472441F;
             this.line32.X2 = 7.244097F;
-            this.line32.Y1 = 6.220473F;
-            this.line32.Y2 = 6.220473F;
+            this.line32.Y1 = 6.929134F;
+            this.line32.Y2 = 6.929134F;
             // 
             // line33
             // 
-            this.line33.Height = 4.251969F;
+            this.line33.Height = 4.251968F;
             this.line33.Left = 2.913386F;
             this.line33.LineWeight = 1F;
             this.line33.Name = "line33";
-            this.line33.Top = 0.944882F;
+            this.line33.Top = 1.653544F;
             this.line33.Width = 0F;
             this.line33.X1 = 2.913386F;
             this.line33.X2 = 2.913386F;
-            this.line33.Y1 = 0.944882F;
-            this.line33.Y2 = 5.196851F;
+            this.line33.Y1 = 1.653544F;
+            this.line33.Y2 = 5.905512F;
             // 
             // line35
             // 
-            this.line35.Height = 5.275591F;
+            this.line35.Height = 5.27559F;
             this.line35.Left = 5.196851F;
             this.line35.LineWeight = 1F;
             this.line35.Name = "line35";
-            this.line35.Top = 0.944882F;
+            this.line35.Top = 1.653544F;
             this.line35.Width = 0F;
             this.line35.X1 = 5.196851F;
             this.line35.X2 = 5.196851F;
-            this.line35.Y1 = 0.944882F;
-            this.line35.Y2 = 6.220473F;
+            this.line35.Y1 = 1.653544F;
+            this.line35.Y2 = 6.929134F;
             // 
             // line36
             // 
-            this.line36.Height = 5.275591F;
+            this.line36.Height = 5.27559F;
             this.line36.Left = 7.244095F;
             this.line36.LineWeight = 1F;
             this.line36.Name = "line36";
-            this.line36.Top = 0.944882F;
+            this.line36.Top = 1.653544F;
             this.line36.Width = 0F;
             this.line36.X1 = 7.244095F;
             this.line36.X2 = 7.244095F;
-            this.line36.Y1 = 0.944882F;
-            this.line36.Y2 = 6.220473F;
+            this.line36.Y1 = 1.653544F;
+            this.line36.Y2 = 6.929134F;
             // 
             // label34
             // 
@@ -1001,7 +1011,7 @@
             this.label34.Name = "label34";
             this.label34.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label34.Text = "台";
-            this.label34.Top = 1.496063F;
+            this.label34.Top = 2.204725F;
             this.label34.Width = 0.3937009F;
             // 
             // label35
@@ -1012,7 +1022,7 @@
             this.label35.Name = "label35";
             this.label35.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label35.Text = "台";
-            this.label35.Top = 1.968504F;
+            this.label35.Top = 2.677165F;
             this.label35.Width = 0.3937009F;
             // 
             // label36
@@ -1023,7 +1033,7 @@
             this.label36.Name = "label36";
             this.label36.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label36.Text = "台";
-            this.label36.Top = 2.440945F;
+            this.label36.Top = 3.149606F;
             this.label36.Width = 0.3937009F;
             // 
             // label37
@@ -1034,7 +1044,7 @@
             this.label37.Name = "label37";
             this.label37.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label37.Text = "台";
-            this.label37.Top = 2.913386F;
+            this.label37.Top = 3.622047F;
             this.label37.Width = 0.3937009F;
             // 
             // label38
@@ -1045,7 +1055,7 @@
             this.label38.Name = "label38";
             this.label38.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label38.Text = "台";
-            this.label38.Top = 3.385827F;
+            this.label38.Top = 4.094488F;
             this.label38.Width = 0.3937009F;
             // 
             // label39
@@ -1056,7 +1066,7 @@
             this.label39.Name = "label39";
             this.label39.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label39.Text = "台";
-            this.label39.Top = 3.858268F;
+            this.label39.Top = 4.566929F;
             this.label39.Width = 0.3937009F;
             // 
             // label40
@@ -1067,7 +1077,7 @@
             this.label40.Name = "label40";
             this.label40.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label40.Text = "台";
-            this.label40.Top = 4.330709F;
+            this.label40.Top = 5.03937F;
             this.label40.Width = 0.3937009F;
             // 
             // label41
@@ -1078,7 +1088,7 @@
             this.label41.Name = "label41";
             this.label41.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label41.Text = "台";
-            this.label41.Top = 4.80315F;
+            this.label41.Top = 5.511811F;
             this.label41.Width = 0.3937009F;
             // 
             // label42
@@ -1089,7 +1099,7 @@
             this.label42.Name = "label42";
             this.label42.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label42.Text = "＠";
-            this.label42.Top = 1.496063F;
+            this.label42.Top = 2.204725F;
             this.label42.Width = 0.3543305F;
             // 
             // label43
@@ -1100,7 +1110,7 @@
             this.label43.Name = "label43";
             this.label43.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label43.Text = "＠";
-            this.label43.Top = 1.968504F;
+            this.label43.Top = 2.677165F;
             this.label43.Width = 0.3543305F;
             // 
             // label44
@@ -1111,7 +1121,7 @@
             this.label44.Name = "label44";
             this.label44.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label44.Text = "＠";
-            this.label44.Top = 2.440945F;
+            this.label44.Top = 3.149606F;
             this.label44.Width = 0.3543305F;
             // 
             // label45
@@ -1122,7 +1132,7 @@
             this.label45.Name = "label45";
             this.label45.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label45.Text = "＠";
-            this.label45.Top = 2.913386F;
+            this.label45.Top = 3.622047F;
             this.label45.Width = 0.3543305F;
             // 
             // label46
@@ -1133,7 +1143,7 @@
             this.label46.Name = "label46";
             this.label46.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label46.Text = "＠";
-            this.label46.Top = 3.385827F;
+            this.label46.Top = 4.094488F;
             this.label46.Width = 0.3543305F;
             // 
             // label47
@@ -1144,7 +1154,7 @@
             this.label47.Name = "label47";
             this.label47.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label47.Text = "＠";
-            this.label47.Top = 3.858268F;
+            this.label47.Top = 4.566929F;
             this.label47.Width = 0.3543305F;
             // 
             // label48
@@ -1155,7 +1165,7 @@
             this.label48.Name = "label48";
             this.label48.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label48.Text = "＠";
-            this.label48.Top = 4.330709F;
+            this.label48.Top = 5.03937F;
             this.label48.Width = 0.3543305F;
             // 
             // label49
@@ -1166,7 +1176,7 @@
             this.label49.Name = "label49";
             this.label49.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label49.Text = "＠";
-            this.label49.Top = 4.80315F;
+            this.label49.Top = 5.511811F;
             this.label49.Width = 0.3543305F;
             // 
             // label50
@@ -1177,7 +1187,7 @@
             this.label50.Name = "label50";
             this.label50.Style = "font-family: ＭＳ Ｐ明朝; font-size: 13pt; text-align: center; vertical-align: middle";
             this.label50.Text = "振込先：常陽銀行　本店　普通預金　117235　　茨城県自動車販売店協会";
-            this.label50.Top = 6.377953F;
+            this.label50.Top = 7.086614F;
             this.label50.Width = 6.771654F;
             // 
             // txtMonthRep1
@@ -1188,7 +1198,7 @@
             this.txtMonthRep1.Name = "txtMonthRep1";
             this.txtMonthRep1.Style = "font-family: ＭＳ Ｐ明朝; font-size: 14pt; text-align: center; vertical-align: middle";
             this.txtMonthRep1.Text = "99";
-            this.txtMonthRep1.Top = 0.472441F;
+            this.txtMonthRep1.Top = 1.181102F;
             this.txtMonthRep1.Width = 0.3958333F;
             // 
             // line19
@@ -1197,12 +1207,12 @@
             this.line19.Left = 0.472441F;
             this.line19.LineWeight = 1F;
             this.line19.Name = "line19";
-            this.line19.Top = 0.944882F;
+            this.line19.Top = 1.653544F;
             this.line19.Width = 6.771656F;
             this.line19.X1 = 0.472441F;
             this.line19.X2 = 7.244097F;
-            this.line19.Y1 = 0.944882F;
-            this.line19.Y2 = 0.944882F;
+            this.line19.Y1 = 1.653544F;
+            this.line19.Y2 = 1.653544F;
             // 
             // line18
             // 
@@ -1210,25 +1220,74 @@
             this.line18.Left = 0.472441F;
             this.line18.LineWeight = 1F;
             this.line18.Name = "line18";
-            this.line18.Top = 0.7874016F;
+            this.line18.Top = 1.496063F;
             this.line18.Width = 6.771656F;
             this.line18.X1 = 0.472441F;
             this.line18.X2 = 7.244097F;
-            this.line18.Y1 = 0.7874016F;
-            this.line18.Y2 = 0.7874016F;
+            this.line18.Y1 = 1.496063F;
+            this.line18.Y2 = 1.496063F;
             // 
             // line34
             // 
-            this.line34.Height = 4.251969F;
+            this.line34.Height = 4.251968F;
             this.line34.Left = 4.094489F;
             this.line34.LineWeight = 1F;
             this.line34.Name = "line34";
-            this.line34.Top = 0.944882F;
+            this.line34.Top = 1.653544F;
             this.line34.Width = 0F;
             this.line34.X1 = 4.094489F;
             this.line34.X2 = 4.094489F;
-            this.line34.Y1 = 0.944882F;
-            this.line34.Y2 = 5.196851F;
+            this.line34.Y1 = 1.653544F;
+            this.line34.Y2 = 5.905512F;
+            // 
+            // txtCONAME
+            // 
+            this.txtCONAME.CanGrow = false;
+            this.txtCONAME.DataField = "CONAME";
+            this.txtCONAME.Height = 0.3149606F;
+            this.txtCONAME.Left = 0.5511811F;
+            this.txtCONAME.Name = "txtCONAME";
+            this.txtCONAME.Style = "font-family: ＭＳ Ｐ明朝; font-size: 14pt; text-align: left; vertical-align: middle";
+            this.txtCONAME.Text = "三菱ふそうトラック・バス株式会社北関東ふそう";
+            this.txtCONAME.Top = 0.3937008F;
+            this.txtCONAME.Width = 3.937008F;
+            // 
+            // label23
+            // 
+            this.label23.Height = 0.3149606F;
+            this.label23.HyperLink = null;
+            this.label23.Left = 4.330709F;
+            this.label23.Name = "label23";
+            this.label23.Style = "font-family: ＭＳ Ｐ明朝; font-size: 14pt; text-align: center; vertical-align: middle";
+            this.label23.Text = "御中";
+            this.label23.Top = 0.3937008F;
+            this.label23.Width = 0.84375F;
+            // 
+            // line1
+            // 
+            this.line1.Height = 0F;
+            this.line1.Left = 0.4724409F;
+            this.line1.LineWeight = 1F;
+            this.line1.Name = "line1";
+            this.line1.Top = 0.7086613F;
+            this.line1.Width = 4.488189F;
+            this.line1.X1 = 0.4724409F;
+            this.line1.X2 = 4.96063F;
+            this.line1.Y1 = 0.7086613F;
+            this.line1.Y2 = 0.7086613F;
+            // 
+            // line2
+            // 
+            this.line2.Height = 0F;
+            this.line2.Left = 0.472441F;
+            this.line2.LineWeight = 1F;
+            this.line2.Name = "line2";
+            this.line2.Top = 0.7393701F;
+            this.line2.Width = 4.488189F;
+            this.line2.X1 = 0.472441F;
+            this.line2.X2 = 4.96063F;
+            this.line2.Y1 = 0.7393701F;
+            this.line2.Y2 = 0.7393701F;
             // 
             // InvoiceSanjyo
             // 
@@ -1308,6 +1367,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.label49)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label50)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonthRep1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONAME)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -1393,5 +1454,9 @@
         private DataDynamics.ActiveReports.Label label50;
         private DataDynamics.ActiveReports.TextBox txtMonthRep1;
         private DataDynamics.ActiveReports.Line line29;
+        private DataDynamics.ActiveReports.TextBox txtCONAME;
+        private DataDynamics.ActiveReports.Label label23;
+        private DataDynamics.ActiveReports.Line line1;
+        private DataDynamics.ActiveReports.Line line2;
     }
 }

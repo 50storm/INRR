@@ -29,6 +29,23 @@ namespace Jisseki_Report_Ibaraki.Tools
             return (iYY + 1988).ToString();
  
         }
+
+        public static string ChristinaEraToHeisei(string strYYYY) {
+            int iYY;
+            if (strYYYY == string.Empty)
+            {
+                iYY = 0;
+            }
+            else
+            {
+                iYY = int.Parse(strYYYY);
+            }
+            return (iYY - 1988).ToString();
+ 
+        
+        }
+
+
         /// <summary>
         /// Get JapaneseEraLetter
         /// </summary>

@@ -56,6 +56,10 @@
                 <td><asp:TextBox ID="txtAverage" runat="server" class="txtUnitPrice" onFocus="select();"  ></asp:TextBox></td>
             </tr>
             <tr>
+                <td>支部費: </td>
+                <td><asp:TextBox ID="txtShibuFee" runat="server" class="txtUnitPrice" onFocus="select();"  ></asp:TextBox></td>
+            </tr>
+            <tr>
                 <td>７ｔ以上: </td>
                 <td><asp:TextBox ID="txtKamotu7t" runat="server" class="txtUnitPrice"  onFocus="select();"  ></asp:TextBox></td>
             </tr>

@@ -79,8 +79,8 @@
     <Content Include="jada\master\IdMaster.aspx" />
     <Content Include="jada\master\UnitPriceMaster.aspx" />
     <Content Include="jada\menu\Jihan.aspx" />
-    <Content Include="jada\print\Jisseki.aspx" />
     <Content Include="jada\print\Invoice.aspx" />
+    <Content Include="jada\print\Jisseki.aspx" />
     <Content Include="jada\search\reported_member.aspx" />
     <Content Include="jada\search\nonReported_member.aspx" />
     <Content Include="member\menu\Dealer.aspx" />
@@ -166,19 +166,19 @@
     <Compile Include="jada\menu\Jihan.aspx.designer.cs">
       <DependentUpon>Jihan.aspx</DependentUpon>
     </Compile>
-    <Compile Include="jada\print\Jisseki.aspx.cs">
-      <DependentUpon>Jisseki.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="jada\print\Jisseki.aspx.designer.cs">
-      <DependentUpon>Jisseki.aspx</DependentUpon>
-    </Compile>
     <Compile Include="jada\print\Invoice.aspx.cs">
       <DependentUpon>Invoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="jada\print\Invoice.aspx.designer.cs">
       <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jada\print\Jisseki.aspx.cs">
+      <DependentUpon>Jisseki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jada\print\Jisseki.aspx.designer.cs">
+      <DependentUpon>Jisseki.aspx</DependentUpon>
     </Compile>
     <Compile Include="jada\search\reported_member.aspx.cs">
       <DependentUpon>reported_member.aspx</DependentUpon>
@@ -281,7 +281,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>62143</DevelopmentServerPort>
+          <DevelopmentServerPort>58930</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

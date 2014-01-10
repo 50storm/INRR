@@ -180,7 +180,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                     SqlDataReader Reader = cmd.ExecuteReader();
                     //登録
                     string InsertSQL = "INSERT INTO [UnitPrice] "
-                                    + " ([Code] ,[BigSize] ,[MediumSmall] ,[Average] ,[Kamotu7t] ,[Kamotu6DP9_5t] "
+                                    + " ([Code] ,[BigSize] ,[MediumSmall] ,[Average] ,[ShibuFee],[Kamotu7t] ,[Kamotu6DP9_5t] "
                                     + "  ,[Kamotu4DP9_3t] ,[Kamotu2DP9_2DP5t] ,[Over2001cc] ,[To2000From1000cc] "
                                     + "  ,[Over30] ,[LessThan29] ,[MemberFee] ,[COCODE]) "
                                     + "VALUES"
@@ -189,6 +189,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                                     + " ,@BigSize"
                                     + " ,@MediumSmall"
                                     + " ,@Average"
+                                    + " ,@ShibuFee"
                                     + " ,@Kamotu7t"
                                     + " ,@Kamotu6DP9_5t"
                                     + " ,@Kamotu4DP9_3t"
@@ -220,6 +221,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                             InsertCmd.Parameters.Add(new SqlParameter("@BigSize", Reader["BigSize"].ToString()));
                             InsertCmd.Parameters.Add(new SqlParameter("@MediumSmall", Reader["MediumSmall"].ToString()));
                             InsertCmd.Parameters.Add(new SqlParameter("@Average", Reader["Average"].ToString()));
+                            InsertCmd.Parameters.Add(new SqlParameter("@ShibuFee", Reader["ShibuFee"].ToString()));
                             InsertCmd.Parameters.Add(new SqlParameter("@Kamotu7t", Reader["Kamotu7t"].ToString()));
                             InsertCmd.Parameters.Add(new SqlParameter("@Kamotu6DP9_5t", Reader["Kamotu6DP9_5t"].ToString()));
                             InsertCmd.Parameters.Add(new SqlParameter("@Kamotu4DP9_3t", Reader["Kamotu4DP9_3t"].ToString()));

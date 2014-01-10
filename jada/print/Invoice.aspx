@@ -177,6 +177,16 @@
         </tr>
         <tr>
             <td>
+                <asp:Label   ID="Label4" runat="server" >会員種別：</asp:Label>        
+            </td>
+             <td>
+                <asp:RadioButton ID="rbtnBoth" runat="server" GroupName="MemberType" Text="通常と賛助" />
+                <asp:RadioButton ID="rbtnTujyo" runat="server" GroupName="MemberType"  Text="通常" />
+                <asp:RadioButton ID="rbtnSanjyo" runat="server" GroupName="MemberType" Text="賛助" />
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <asp:Label   ID="Label3" runat="server" >一括選択：</asp:Label>        
             </td>
             <td>
@@ -216,8 +226,9 @@
             ForeColor="#333333" GridLines="None" >
         <AlternatingRowStyle BackColor="White" />
     <Columns>
-        <asp:BoundField DataField="COCODE" HeaderText="会社コード" />
-        <asp:BoundField DataField="CONAME" HeaderText="会社名" />
+        <asp:BoundField DataField="COCODE" HeaderText="会員コード" />
+        <asp:BoundField DataField="MemberType" HeaderText="会員種別" />
+        <asp:BoundField DataField="CONAME" HeaderText="会員名" />
         <asp:BoundField DataField="RepName" HeaderText="会員担当者" />
         <asp:BoundField HeaderText="受信日付" Visible="False" />
         <asp:BoundField HeaderText="報告年月" Visible="False" />

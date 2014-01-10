@@ -27,6 +27,8 @@
         {
             System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(Invoice));
             this.detail = new DataDynamics.ActiveReports.Detail();
+            this.label51 = new DataDynamics.ActiveReports.Label();
+            this.txtNum_ShibuFee = new DataDynamics.ActiveReports.TextBox();
             this.textBox1 = new DataDynamics.ActiveReports.TextBox();
             this.txtSum_LessThan29 = new DataDynamics.ActiveReports.TextBox();
             this.txtU_LessThan29 = new DataDynamics.ActiveReports.TextBox();
@@ -152,6 +154,9 @@
             this.line19 = new DataDynamics.ActiveReports.Line();
             this.line18 = new DataDynamics.ActiveReports.Line();
             this.line32 = new DataDynamics.ActiveReports.Line();
+            this.line37 = new DataDynamics.ActiveReports.Line();
+            ((System.ComponentModel.ISupportInitialize)(this.label51)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNum_ShibuFee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSum_LessThan29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU_LessThan29)).BeginInit();
@@ -248,6 +253,8 @@
             this.detail.CanGrow = false;
             this.detail.ColumnSpacing = 0F;
             this.detail.Controls.AddRange(new DataDynamics.ActiveReports.ARControl[] {
+            this.label51,
+            this.txtNum_ShibuFee,
             this.textBox1,
             this.txtSum_LessThan29,
             this.txtU_LessThan29,
@@ -372,11 +379,39 @@
             this.txtMonthRep1,
             this.line19,
             this.line18,
-            this.line32});
+            this.line32,
+            this.line37});
             this.detail.Height = 9.176592F;
             this.detail.KeepTogether = true;
             this.detail.Name = "detail";
             this.detail.Format += new System.EventHandler(this.detail_Format);
+            // 
+            // label51
+            // 
+            this.label51.Height = 0.3149606F;
+            this.label51.HyperLink = null;
+            this.label51.Left = 0.3149607F;
+            this.label51.Name = "label51";
+            this.label51.Padding = new DataDynamics.ActiveReports.PaddingEx(20, 0, 0, 0);
+            this.label51.Style = "font-family: ＭＳ Ｐ明朝; font-size: 11pt; text-align: left; vertical-align: middle";
+            this.label51.Text = "支部費";
+            this.label51.Top = 2.519685F;
+            this.label51.Width = 2.283465F;
+            // 
+            // txtNum_ShibuFee
+            // 
+            this.txtNum_ShibuFee.CanGrow = false;
+            this.txtNum_ShibuFee.DataField = "Sum_ShibuFee";
+            this.txtNum_ShibuFee.Height = 0.3149606F;
+            this.txtNum_ShibuFee.Left = 4.488189F;
+            this.txtNum_ShibuFee.Name = "txtNum_ShibuFee";
+            this.txtNum_ShibuFee.OutputFormat = resources.GetString("txtNum_ShibuFee.OutputFormat");
+            this.txtNum_ShibuFee.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 10, 0);
+            this.txtNum_ShibuFee.Style = "font-family: ＭＳ Ｐ明朝; font-size: 18pt; font-style: italic; text-align: right; vert" +
+    "ical-align: middle";
+            this.txtNum_ShibuFee.Text = "999";
+            this.txtNum_ShibuFee.Top = 2.519685F;
+            this.txtNum_ShibuFee.Width = 2.007874F;
             // 
             // textBox1
             // 
@@ -973,7 +1008,7 @@
             this.label8.Padding = new DataDynamics.ActiveReports.PaddingEx(0, 0, 20, 0);
             this.label8.Style = "font-family: ＭＳ Ｐ明朝; font-size: 11pt; text-align: right; vertical-align: middle";
             this.label8.Text = "請求金額合計";
-            this.label8.Top = 2.567717F;
+            this.label8.Top = 2.913386F;
             this.label8.Width = 4.173228F;
             // 
             // label9
@@ -1044,7 +1079,7 @@
             // txtSumSibuMemberFee
             // 
             this.txtSumSibuMemberFee.CanGrow = false;
-            this.txtSumSibuMemberFee.DataField = "=Sum_BigSize+Sum_MediumSmall+U_Average+";
+            this.txtSumSibuMemberFee.DataField = "=Sum_BigSize+Sum_MediumSmall+U_Average+Sum_ShibuFee";
             this.txtSumSibuMemberFee.Height = 0.3149606F;
             this.txtSumSibuMemberFee.Left = 4.488189F;
             this.txtSumSibuMemberFee.Name = "txtSumSibuMemberFee";
@@ -1054,7 +1089,7 @@
     "ical-align: middle";
             this.txtSumSibuMemberFee.SummaryRunning = DataDynamics.ActiveReports.SummaryRunning.Group;
             this.txtSumSibuMemberFee.Text = "999";
-            this.txtSumSibuMemberFee.Top = 2.567717F;
+            this.txtSumSibuMemberFee.Top = 2.913386F;
             this.txtSumSibuMemberFee.Width = 2.007874F;
             // 
             // label14
@@ -1371,7 +1406,7 @@
             this.label29.Padding = new DataDynamics.ActiveReports.PaddingEx(20, 0, 0, 0);
             this.label29.Style = "font-family: ＭＳ Ｐ明朝; font-size: 12pt; text-align: left; vertical-align: middle";
             this.label29.Text = "振込先：常陽銀行　本店　普通預金　47517";
-            this.label29.Top = 3.149606F;
+            this.label29.Top = 3.385827F;
             this.label29.Width = 5.905512F;
             // 
             // label30
@@ -1383,7 +1418,7 @@
             this.label30.Padding = new DataDynamics.ActiveReports.PaddingEx(20, 0, 0, 0);
             this.label30.Style = "font-family: ＭＳ Ｐ明朝; font-size: 12pt; text-align: right; vertical-align: middle";
             this.label30.Text = "一般社団法人 日本自動車販売協会連合会茨城県支部";
-            this.label30.Top = 3.464567F;
+            this.label30.Top = 3.700788F;
             this.label30.Width = 5.905512F;
             // 
             // line4
@@ -1509,15 +1544,15 @@
             // line7
             // 
             this.line7.Height = 0F;
-            this.line7.Left = 0.2362204F;
+            this.line7.Left = 0.2362205F;
             this.line7.LineWeight = 1F;
             this.line7.Name = "line7";
-            this.line7.Top = 2.913386F;
+            this.line7.Top = 3.228347F;
             this.line7.Width = 6.299213F;
-            this.line7.X1 = 0.2362204F;
+            this.line7.X1 = 0.2362205F;
             this.line7.X2 = 6.535434F;
-            this.line7.Y1 = 2.913386F;
-            this.line7.Y2 = 2.913386F;
+            this.line7.Y1 = 3.228347F;
+            this.line7.Y2 = 3.228347F;
             // 
             // line8
             // 
@@ -1577,42 +1612,42 @@
             this.line12.Left = 0.2362205F;
             this.line12.LineWeight = 1F;
             this.line12.Name = "line12";
-            this.line12.Top = 2.547244F;
+            this.line12.Top = 2.834646F;
             this.line12.Width = 6.299213F;
             this.line12.X1 = 0.2362205F;
             this.line12.X2 = 6.535434F;
-            this.line12.Y1 = 2.547244F;
-            this.line12.Y2 = 2.547244F;
+            this.line12.Y1 = 2.834646F;
+            this.line12.Y2 = 2.834646F;
             // 
             // line13
             // 
-            this.line13.Height = 1.65354F;
+            this.line13.Height = 1.968504F;
             this.line13.Left = 0.2362204F;
             this.line13.LineWeight = 1F;
             this.line13.Name = "line13";
             this.line13.Top = 1.259843F;
-            this.line13.Width = 2.980232E-07F;
+            this.line13.Width = 8.940697E-08F;
             this.line13.X1 = 0.2362204F;
-            this.line13.X2 = 0.2362207F;
+            this.line13.X2 = 0.2362205F;
             this.line13.Y1 = 1.259843F;
-            this.line13.Y2 = 2.913383F;
+            this.line13.Y2 = 3.228347F;
             // 
             // line14
             // 
-            this.line14.Height = 1.65354F;
-            this.line14.Left = 6.535434F;
+            this.line14.Height = 1.968504F;
+            this.line14.Left = 6.535433F;
             this.line14.LineWeight = 1F;
             this.line14.Name = "line14";
             this.line14.Top = 1.259843F;
-            this.line14.Width = 0F;
+            this.line14.Width = 9.536743E-07F;
             this.line14.X1 = 6.535434F;
-            this.line14.X2 = 6.535434F;
+            this.line14.X2 = 6.535433F;
             this.line14.Y1 = 1.259843F;
-            this.line14.Y2 = 2.913383F;
+            this.line14.Y2 = 3.228347F;
             // 
             // line15
             // 
-            this.line15.Height = 1.653542F;
+            this.line15.Height = 1.968504F;
             this.line15.Left = 4.488189F;
             this.line15.LineWeight = 1F;
             this.line15.Name = "line15";
@@ -1621,11 +1656,11 @@
             this.line15.X1 = 4.488189F;
             this.line15.X2 = 4.488189F;
             this.line15.Y1 = 1.259843F;
-            this.line15.Y2 = 2.913385F;
+            this.line15.Y2 = 3.228347F;
             // 
             // line16
             // 
-            this.line16.Height = 1.259842F;
+            this.line16.Height = 1.574803F;
             this.line16.Left = 3.622047F;
             this.line16.LineWeight = 1F;
             this.line16.Name = "line16";
@@ -1634,11 +1669,11 @@
             this.line16.X1 = 3.622047F;
             this.line16.X2 = 3.622047F;
             this.line16.Y1 = 1.259843F;
-            this.line16.Y2 = 2.519685F;
+            this.line16.Y2 = 2.834646F;
             // 
             // line17
             // 
-            this.line17.Height = 1.259842F;
+            this.line17.Height = 1.574803F;
             this.line17.Left = 2.598425F;
             this.line17.LineWeight = 1F;
             this.line17.Name = "line17";
@@ -1647,7 +1682,7 @@
             this.line17.X1 = 2.598425F;
             this.line17.X2 = 2.598425F;
             this.line17.Y1 = 1.259843F;
-            this.line17.Y2 = 2.519685F;
+            this.line17.Y2 = 2.834646F;
             // 
             // line20
             // 
@@ -1943,6 +1978,19 @@
             this.line32.Y1 = 8.661418F;
             this.line32.Y2 = 8.661418F;
             // 
+            // line37
+            // 
+            this.line37.Height = 0F;
+            this.line37.Left = 0.2362205F;
+            this.line37.LineWeight = 1F;
+            this.line37.Name = "line37";
+            this.line37.Top = 2.913386F;
+            this.line37.Width = 6.299213F;
+            this.line37.X1 = 0.2362205F;
+            this.line37.X2 = 6.535434F;
+            this.line37.Y1 = 2.913386F;
+            this.line37.Y2 = 2.913386F;
+            // 
             // Invoice
             // 
             this.MasterReport = false;
@@ -1961,6 +2009,8 @@
             this.StyleSheet.Add(new DDCssLib.StyleSheetRule("font-size: 14pt; font-weight: bold; ddo-char-set: 128", "Heading2", "Normal"));
             this.StyleSheet.Add(new DDCssLib.StyleSheetRule("font-size: 13pt; font-weight: bold; ddo-char-set: 128", "Heading3", "Normal"));
             this.ReportStart += new System.EventHandler(this.Invoice_ReportStart);
+            ((System.ComponentModel.ISupportInitialize)(this.label51)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNum_ShibuFee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSum_LessThan29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU_LessThan29)).EndInit();
@@ -2180,5 +2230,8 @@
         private DataDynamics.ActiveReports.Label label50;
         private DataDynamics.ActiveReports.TextBox txtMonthRep0;
         private DataDynamics.ActiveReports.TextBox txtMonthRep1;
+        private DataDynamics.ActiveReports.Label label51;
+        private DataDynamics.ActiveReports.TextBox txtNum_ShibuFee;
+        private DataDynamics.ActiveReports.Line line37;
     }
 }

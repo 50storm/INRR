@@ -163,17 +163,18 @@ namespace Jisseki_Report_Ibaraki.jada.print
         #endregion
 
         #region "GridView Index"
-        private const int GV_INDEX_会社コード = 0;
-        private const int GV_INDEX_会社名 = 1;
-        private const int GV_INDEX_会員担当者 = 2;
-        private const int GV_INDEX_受信日付 = 3;
-        private const int GV_INDEX_報告日付 = 4;
-        private const int GV_INDEX_YEAR = 5;
-        private const int GV_INDEX_MONTH = 6;
-        private const int GV_INDEX_DAY = 7;
-        private const int GV_INDEX_YEAR_REP = 8;
-        private const int GV_INDEX_MONTH_REP = 9;
-        private const int GV_INDEX_MEMBER_TYPE = 10;
+        private const int GV_INDEX_会社コード  = 0;
+        private const int GV_INDEX_会社種別    = 1;
+        private const int GV_INDEX_会社名      = 2;
+        private const int GV_INDEX_会員担当者  = 3;
+        private const int GV_INDEX_受信日付    = 4;
+        private const int GV_INDEX_報告日付    = 5;
+        private const int GV_INDEX_YEAR        = 6;
+        private const int GV_INDEX_MONTH       = 7;
+        private const int GV_INDEX_DAY         = 8;
+        private const int GV_INDEX_YEAR_REP    = 9;
+        private const int GV_INDEX_MONTH_REP   = 10;
+        private const int GV_INDEX_MEMBER_TYPE = 11;
         #endregion
 
         #region "データ検索"
@@ -253,6 +254,7 @@ namespace Jisseki_Report_Ibaraki.jada.print
             }
             this.From_COCODE.Text = "0000";
             this.To_COCODE.Text = "9999";
+            this.rbtnBoth.Checked = true;
 
             //初期表示は報告台数の報告年
                 string strSql =
@@ -276,7 +278,7 @@ namespace Jisseki_Report_Ibaraki.jada.print
                         Adapter.SelectCommand = cmd;
                         DataTable header = new DataTable("新車台数ヘッダー");
                         Adapter.Fill(header);
-
+              
                         Gridview1.DataSource = header;
                         Gridview1.DataBind();
 
@@ -303,6 +305,19 @@ namespace Jisseki_Report_Ibaraki.jada.print
                             Gridview1.Rows[i].Cells[GV_INDEX_報告日付].Text = wDate;
 
 
+                            //会員種別
+                            int iMemberType = int.Parse(Gridview1.Rows[i].Cells[GV_INDEX_MEMBER_TYPE].Text);
+                            if(iMemberType == 0)
+                            {
+                                //通常
+                                Gridview1.Rows[i].Cells[GV_INDEX_会社種別].Text = "通常";
+                            }else if(iMemberType == 1)
+                            {
+                            
+                                //賛助
+                                Gridview1.Rows[i].Cells[GV_INDEX_会社種別].Text = "賛助";
+                            }
+                            
 
 
                         }
@@ -330,9 +345,25 @@ namespace Jisseki_Report_Ibaraki.jada.print
                 + " ON H.COCODE=I.COCODE "
                 + " WHERE "
                 + "  ( H.YearRep = @YearRepFrom AND H.MonthRep = @MonthRepFrom) "
-                + "  AND  H.COCODE >=  @From_COCODE AND H.COCODE <= @To_COCODE "
-                ;
-            
+                + "  AND  H.COCODE >=  @From_COCODE AND H.COCODE <= @To_COCODE ";
+
+                if(rbtnBoth.Checked)
+                {
+                    //両方
+                }
+                if(rbtnTujyo.Checked)
+                {
+                    //通常
+                    Sql += "  AND I.MemberType='0' ";
+
+                }
+                if(rbtnSanjyo.Checked)
+                {
+                    //賛助
+                    Sql += "  AND I.MemberType='1' ";
+                
+                }
+             
 
             using (SqlConnection Conn = new SqlConnection(strConn))
             {
@@ -352,6 +383,8 @@ namespace Jisseki_Report_Ibaraki.jada.print
                     //報告台数提出日
                     Gridview1.Columns[GV_INDEX_YEAR_REP].Visible = true;
                     Gridview1.Columns[GV_INDEX_MONTH_REP].Visible = true;
+                    //会員種別
+                    Gridview1.Columns[GV_INDEX_MEMBER_TYPE].Visible = true;
 
 
                     using (SqlDataAdapter Adapter = new SqlDataAdapter(Sql, Conn))
@@ -400,6 +433,20 @@ namespace Jisseki_Report_Ibaraki.jada.print
                         wDate = wEra + wYear + "年" + Gridview1.Rows[i].Cells[GV_INDEX_MONTH_REP].Text + "月";
                         Gridview1.Rows[i].Cells[GV_INDEX_報告日付].Text = wDate;
 
+                        //会員種別
+                        int iMemberType = int.Parse(Gridview1.Rows[i].Cells[GV_INDEX_MEMBER_TYPE].Text);
+                        if (iMemberType == 0)
+                        {
+                            //通常
+                            Gridview1.Rows[i].Cells[GV_INDEX_会社種別].Text = "通常";
+                        }
+                        else if (iMemberType == 1)
+                        {
+
+                            //賛助
+                            Gridview1.Rows[i].Cells[GV_INDEX_会社種別].Text = "賛助";
+                        }
+                            
 
                     }
                     //送信日
@@ -409,6 +456,9 @@ namespace Jisseki_Report_Ibaraki.jada.print
                     //報告台数提出日
                     Gridview1.Columns[GV_INDEX_YEAR_REP].Visible = false;
                     Gridview1.Columns[GV_INDEX_MONTH_REP].Visible = false;
+                    //会員種別
+                    Gridview1.Columns[GV_INDEX_MEMBER_TYPE].Visible = false;
+
                 }
                 Conn.Close();
             }

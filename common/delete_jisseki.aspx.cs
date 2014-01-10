@@ -68,7 +68,11 @@ namespace Jisseki_Report_Ibaraki.common
                         this.lblEra.Text = Utility.getJapaneseEra(jCalender.GetEra(JapaneseDate));
                         this.lblEraRep0.Text = Utility.getJapaneseEra(jCalender.GetEra(JapaneseDate));
                         this.txtYear.Text = jCalender.GetYear(JapaneseDate).ToString();
-                        this.txtYearRep0.Text = jCalender.GetYear(JapaneseDate).ToString();
+                        //TODO　修正
+                        //12月分が出力されない対応
+                        //this.txtYearRep0.Text = jCalender.GetYear(JapaneseDate).ToString();
+                        this.txtYearRep0.Text = Utility.ChristinaEraToHeisei(Reader["YearRep"].ToString());
+
                         this.txtMonth.Text = Reader["Month"].ToString();
                         this.txtMonthRep0.Text = Reader["MonthRep"].ToString();
                         this.txtDay.Text = Reader["Day"].ToString();

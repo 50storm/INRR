@@ -206,6 +206,10 @@ namespace Jisseki_Report_Ibaraki.Report
 
                                //均等割会費
                                " U.Average as U_Average,"
+                               
+                               //支部費(台数*100円)
+                               +
+                                " (G.JK_J1   + G.Kamotu1  + G.Kamotu2 +  G.Kamotu3   + G.Bus1+ G.JK_J2+G.JK_J3  +	G.Kamotu4+G.JK_K1+G.JK_K2+G.JK_K3  + G.Bus2  )*U.ShibuFee as Sum_ShibuFee,"
 
                                //7t以上
                                +
