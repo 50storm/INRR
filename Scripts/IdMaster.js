@@ -96,6 +96,15 @@ function setFocus() {
     document.getElementById('txtMemberType').onkeydown
             = function () {
                 if (event.keyCode == 13) {
+                    document.getElementById('txtShibuFeePrt').focus();
+                    document.getElementById('txtShibuFeePrt').select();
+                    return false;
+                }
+            }
+
+    document.getElementById('txtShibuFeePrt').onkeydown
+            = function () {
+                if (event.keyCode == 13) {
                     document.getElementById('txtPosition').focus();
                     document.getElementById('txtPosition').select();
                     return false;
@@ -261,6 +270,21 @@ function validateFrom() {
 
     }
 
+    //支部費印字フラグ
+    var txtShibuFeePrt = document.getElementById("txtShibuFeePrt");
+    if (parseInt(txtShibuFeePrt.value, 10) !== 0
+               &&
+                parseInt(txtShibuFeePrt.value, 10) !== 1
+               ) {
+        document.getElementById("txtShibuFeePrt").focus();
+        showMsg("lblMsg", "支部費印字フラグは数値(0,1)のみ入力可能です");
+        isError("txtShibuFeePrt");
+        return false;
+    } else {
+        eraseMsg("lblMsg");
+        isOk("txtShibuFeePrt");
+
+    }
     //ポジション
     if (!isNumber("txtPosition")) 
     {

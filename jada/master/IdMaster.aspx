@@ -57,6 +57,11 @@
     Width:100px;
     ime-mode:disabled;
 }
+#txtShibuFeePrt
+{
+    Width:100px;
+    ime-mode:disabled;
+}
 #txtPosition
 {
     Width:100px;
@@ -111,6 +116,7 @@
             <th>パスワード</th>
             <th>会員フラグ<br/>(0:自販連/1:会員)</th>
             <th>会員種別<br/>(0:通常/1:賛助)</th>
+            <th>支部費印字フラグ<br/>(0:通常印字/1:支部費のみ印字)</th>
             <th>ポジション</th>
             <th>退会フラグ<br/>(0:契約中/1:退会済み)</th>
                
@@ -127,6 +133,7 @@
             <td><asp:TextBox ID="txtPassword" runat="server"   MaxLength="15"  onFocus="select();" ></asp:TextBox></td>
             <td><asp:TextBox ID="txtMember" runat="server"   MaxLength="1"  onFocus="select();" ></asp:TextBox></td>
             <td><asp:TextBox ID="txtMemberType" runat="server"   MaxLength="1"  onFocus="select();" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtShibuFeePrt" runat="server"   MaxLength="1"  onFocus="select();" ></asp:TextBox></td>
             <td><asp:TextBox ID="txtPosition" runat="server" MaxLength="3"  onFocus="select();" onblur="trimZero();" ></asp:TextBox></td>
             <td><asp:TextBox ID="txtisCanceled" runat="server" MaxLength="1"  onFocus="select();" ></asp:TextBox></td>
         </tr>
@@ -163,6 +170,7 @@
             <asp:BoundField DataField="Password" HeaderText="パスワード" />
             <asp:BoundField DataField="Member" HeaderText="会員フラグ(0:自販連/1:会員)"  />
             <asp:BoundField DataField="MemberType" HeaderText="会員種別(0:通常/1:賛助)"  />
+            <asp:BoundField DataField="ShibuFeePrt"  HeaderText="支部費印字フラグ(0:通常印字/1:支部費のみ印字)"  />
             <asp:BoundField DataField="Position" HeaderText="ポジション" />
             <asp:BoundField DataField="isCanceled" HeaderText="退会フラグ" />
         </Columns>

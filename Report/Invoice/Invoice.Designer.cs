@@ -155,6 +155,11 @@
             this.line18 = new DataDynamics.ActiveReports.Line();
             this.line32 = new DataDynamics.ActiveReports.Line();
             this.line37 = new DataDynamics.ActiveReports.Line();
+            this.txtShibuFeePrt = new DataDynamics.ActiveReports.TextBox();
+            this.textBox2 = new DataDynamics.ActiveReports.TextBox();
+            this.label52 = new DataDynamics.ActiveReports.Label();
+            this.label53 = new DataDynamics.ActiveReports.Label();
+            this.textBox3 = new DataDynamics.ActiveReports.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.label51)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNum_ShibuFee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox1)).BeginInit();
@@ -246,6 +251,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.label50)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonthRep0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonthRep1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShibuFeePrt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label52)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label53)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // detail
@@ -253,6 +263,10 @@
             this.detail.CanGrow = false;
             this.detail.ColumnSpacing = 0F;
             this.detail.Controls.AddRange(new DataDynamics.ActiveReports.ARControl[] {
+            this.textBox3,
+            this.label53,
+            this.label52,
+            this.textBox2,
             this.label51,
             this.txtNum_ShibuFee,
             this.textBox1,
@@ -380,7 +394,8 @@
             this.line19,
             this.line18,
             this.line32,
-            this.line37});
+            this.line37,
+            this.txtShibuFeePrt});
             this.detail.Height = 9.176592F;
             this.detail.KeepTogether = true;
             this.detail.Name = "detail";
@@ -1249,7 +1264,7 @@
             // txtSumSibuMemberFeeHeader
             // 
             this.txtSumSibuMemberFeeHeader.CanGrow = false;
-            this.txtSumSibuMemberFeeHeader.DataField = "=Sum_BigSize+Sum_MediumSmall+U_Average+";
+            this.txtSumSibuMemberFeeHeader.DataField = "=Sum_BigSize+Sum_MediumSmall+U_Average+Sum_ShibuFee";
             this.txtSumSibuMemberFeeHeader.Height = 0.3229167F;
             this.txtSumSibuMemberFeeHeader.Left = 3.622047F;
             this.txtSumSibuMemberFeeHeader.Name = "txtSumSibuMemberFeeHeader";
@@ -1991,6 +2006,63 @@
             this.line37.Y1 = 2.913386F;
             this.line37.Y2 = 2.913386F;
             // 
+            // txtShibuFeePrt
+            // 
+            this.txtShibuFeePrt.DataField = "ShibuFeePrt";
+            this.txtShibuFeePrt.Height = 0.2F;
+            this.txtShibuFeePrt.Left = 5.511812F;
+            this.txtShibuFeePrt.Name = "txtShibuFeePrt";
+            this.txtShibuFeePrt.Text = "txtShibuFeePrt";
+            this.txtShibuFeePrt.Top = 0.472441F;
+            this.txtShibuFeePrt.Visible = false;
+            this.txtShibuFeePrt.Width = 1F;
+            // 
+            // textBox2
+            // 
+            this.textBox2.CanGrow = false;
+            this.textBox2.DataField = "Num_ShibuFee";
+            this.textBox2.Height = 0.3149606F;
+            this.textBox2.Left = 2.677166F;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Style = "font-family: ＭＳ Ｐ明朝; font-size: 11pt; text-align: center; vertical-align: middle";
+            this.textBox2.Text = "999";
+            this.textBox2.Top = 2.519685F;
+            this.textBox2.Width = 0.5905511F;
+            // 
+            // label52
+            // 
+            this.label52.Height = 0.3149606F;
+            this.label52.HyperLink = null;
+            this.label52.Left = 3.228347F;
+            this.label52.Name = "label52";
+            this.label52.Style = "font-family: ＭＳ Ｐ明朝; font-size: 11pt; text-align: center; vertical-align: middle";
+            this.label52.Text = "台";
+            this.label52.Top = 2.519685F;
+            this.label52.Width = 0.3937009F;
+            // 
+            // label53
+            // 
+            this.label53.Height = 0.3149606F;
+            this.label53.HyperLink = null;
+            this.label53.Left = 3.622047F;
+            this.label53.Name = "label53";
+            this.label53.Style = "font-family: ＭＳ Ｐ明朝; font-size: 11pt; text-align: center; vertical-align: middle";
+            this.label53.Text = "＠";
+            this.label53.Top = 2.519685F;
+            this.label53.Width = 0.3543305F;
+            // 
+            // textBox3
+            // 
+            this.textBox3.CanGrow = false;
+            this.textBox3.DataField = "ShibuFee";
+            this.textBox3.Height = 0.3149606F;
+            this.textBox3.Left = 4.015747F;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Style = "font-family: ＭＳ Ｐ明朝; font-size: 11pt; text-align: center; vertical-align: middle";
+            this.textBox3.Text = "999";
+            this.textBox3.Top = 2.519685F;
+            this.textBox3.Width = 0.472442F;
+            // 
             // Invoice
             // 
             this.MasterReport = false;
@@ -2100,6 +2172,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.label50)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonthRep0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonthRep1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShibuFeePrt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label52)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label53)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -2233,5 +2310,10 @@
         private DataDynamics.ActiveReports.Label label51;
         private DataDynamics.ActiveReports.TextBox txtNum_ShibuFee;
         private DataDynamics.ActiveReports.Line line37;
+        private DataDynamics.ActiveReports.TextBox txtShibuFeePrt;
+        private DataDynamics.ActiveReports.TextBox textBox3;
+        private DataDynamics.ActiveReports.Label label53;
+        private DataDynamics.ActiveReports.Label label52;
+        private DataDynamics.ActiveReports.TextBox textBox2;
     }
 }

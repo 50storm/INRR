@@ -68,6 +68,13 @@ namespace Jisseki_Report_Ibaraki.Report
                                //均等割会費
                                " U.Average as U_Average,"
 
+                               //支部費(台数)
+                               +" (G.JK_J1   + G.Kamotu1  + G.Kamotu2 +  G.Kamotu3   + G.Bus1+ G.JK_J2+G.JK_J3  +	G.Kamotu4+G.JK_K1+G.JK_K2+G.JK_K3  + G.Bus2  ) as Num_ShibuFee,"
+
+                               //支部費(単価)
+                               +
+                               " U.ShibuFee as ShibuFee,"
+
                                //支部費(台数*100円)
                                +
                                 " (G.JK_J1   + G.Kamotu1  + G.Kamotu2 +  G.Kamotu3   + G.Bus1+ G.JK_J2+G.JK_J3  +	G.Kamotu4+G.JK_K1+G.JK_K2+G.JK_K3  + G.Bus2  )*U.ShibuFee as Sum_ShibuFee,"
@@ -81,7 +88,7 @@ namespace Jisseki_Report_Ibaraki.Report
                                +
                                "(G.Kamotu1)*U.Kamotu7t as  Sum_Kamotu7t     , "
                                +
-                //6.9t~5t
+                               //6.9t~5t
                                "(G.Kamotu2) as  Num_Kamotu6DP9_5t  ,"
                                +
                                "U.[Kamotu6DP9_5t]  as U_Kamotu6DP9_5t , "
@@ -140,6 +147,9 @@ namespace Jisseki_Report_Ibaraki.Report
                                "(G.Bus2 )*U.LessThan29 as Sum_LessThan29 , "
                                +
                                "U.MemberFee  as U_MemberFee "
+                               //支部費印字フラグ
+                               +
+                               ", I.ShibuFeePrt as ShibuFeePrt"
                                   + " FROM "
                                   + "  [Prt_Invoice_Jisseki_Header]  H "
                                   + " INNER JOIN  "

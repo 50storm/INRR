@@ -78,6 +78,13 @@ namespace Jisseki_Report_Ibaraki.jada.search
         
         }
 
+        protected void Page_Unload(object sender, EventArgs e)
+        {
+
+            this.Session["FromAllPrt"] = null;
+            
+        }
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -95,18 +102,38 @@ namespace Jisseki_Report_Ibaraki.jada.search
             } 
             else 
             {
-                JapaneseCalendar jCalender = new JapaneseCalendar();
-                //20130106                
-                //1月のときは、昨年度
-                if (DateTime.Today.Month == 1) 
+                //20130114
+                bool FromAllPrt =false;
+                if (this.Session["FromAllPrt"] == null)
                 {
-                    this.txtYearRep.Text = jCalender.GetYear(DateTime.Today.AddYears(-1)).ToString();
-                    this.txtMonthRep.Text = DateTime.Today.AddMonths(-1).Month.ToString();
+                    FromAllPrt = false;
                 }
                 else
                 {
-                    this.txtYearRep.Text = jCalender.GetYear(DateTime.Today).ToString();
-                    this.txtMonthRep.Text = DateTime.Today.AddMonths(-1).Month.ToString();
+                    bool.TryParse(this.Session["FromAllPrt"].ToString(), out FromAllPrt);
+                }
+
+
+                if (FromAllPrt == true)
+                {
+
+                    this.txtYearRep.Text  = this.Session["Param_YY"].ToString();
+                    this.txtMonthRep.Text = this.Session["Param_MM"].ToString();
+
+                }else{
+                    JapaneseCalendar jCalender = new JapaneseCalendar();
+                    //20130106                
+                    //1月のときは、昨年度
+                    if (DateTime.Today.Month == 1) 
+                    {
+                        this.txtYearRep.Text = jCalender.GetYear(DateTime.Today.AddYears(-1)).ToString();
+                        this.txtMonthRep.Text = DateTime.Today.AddMonths(-1).Month.ToString();
+                    }
+                    else
+                    {
+                        this.txtYearRep.Text = jCalender.GetYear(DateTime.Today).ToString();
+                        this.txtMonthRep.Text = DateTime.Today.AddMonths(-1).Month.ToString();
+                    }
                 }
             }
             

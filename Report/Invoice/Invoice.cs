@@ -34,6 +34,37 @@ namespace Jisseki_Report_Ibaraki.Report
             //int TotalDaisuu = BigSize + MediumSmall;
             //this.txtNum_ShibuFee.Text = (TotalDaisuu * ShibuFee).ToString();
 
+            string ShibuFeePrt = this.txtShibuFeePrt.Text;
+
+            //支部費のみ印字
+            if (ShibuFeePrt.Equals("1"))
+            {
+                //支部費のみ印字する
+
+                //台数割会費　大型　　　金額
+                this.txtSum_BigSize.Visible = false;
+                //台数割会費　中・小型　金額
+                this.txtSum_MediumSmall.Visible = false;
+                //均等割会費　　　　　　金額
+                this.txtU_Average.Visible = false;
+                //支部費　　　　　　　　金額
+                this.txtSumSibuMemberFee.Text  = this.txtNum_ShibuFee.Text;
+                this.txtSumSibuMemberFeeHeader.Text = this.txtNum_ShibuFee.Text;
+
+
+            }
+            else 
+            {
+                //通常通り、台数均等割会費を表示と支部費を表示する
+
+                //台数割会費　大型　　　金額
+                this.txtSum_BigSize.Visible = true;
+                //台数割会費　中・小型　金額
+                this.txtSum_MediumSmall.Visible = true;
+                //均等割会費　　　　　　金額
+                this.txtU_Average.Visible = true;
+            
+            }
 
 
             //販売店協会会費は次月

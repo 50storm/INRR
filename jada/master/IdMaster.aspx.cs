@@ -27,8 +27,9 @@ namespace Jisseki_Report_Ibaraki.jada.master
         private const int GV_INDEX_パスワード   = 9;
         private const int GV_INDEX_会員フラグ   = 10;
         private const int GV_INDEX_会員種別     = 11;
-        private const int GV_INDEX_ポジション   = 12;
-        private const int GV_INDEX_退会フラグ   = 13;
+        private const int GV_INDEX_支部費印字フラグ   = 12;
+        private const int GV_INDEX_ポジション   = 13;
+        private const int GV_INDEX_退会フラグ   = 14;
 
         private void clearMsg(){
             this.lblMsg.Text="";
@@ -436,6 +437,17 @@ namespace Jisseki_Report_Ibaraki.jada.master
                                 {
                                     txtMemberType.Text = reader["MemberType"].ToString();
                                 }
+
+                                //支部費会員フラグ
+                                if (reader["ShibuFeePrt"] == null)
+                                {
+                                    txtShibuFeePrt.Text = "";
+                                }
+                                else
+                                {
+                                    txtShibuFeePrt.Text = reader["ShibuFeePrt"].ToString();
+                                }
+
                                 if (reader["short_CONAME"] == null)
                                 {
                                     txtshort_CONAME.Text = "";
@@ -569,6 +581,22 @@ namespace Jisseki_Report_Ibaraki.jada.master
                 this.lblMsg.Text = "";
                 this.txtMember.BackColor = System.Drawing.Color.White;
             }
+
+            //支部費印字フラグ
+            if (txtShibuFeePrt.Text.Trim() != "0" && txtShibuFeePrt.Text.Trim() != "1")
+            {
+                this.lblMsg.Text = "支部費印字フラグは0か1を入力してください";
+                this.lblMsg.BackColor = System.Drawing.Color.Pink;
+                this.txtMember.Focus();
+                return;
+            }
+            else
+            {
+                this.lblMsg.Text = "";
+                this.txtMember.BackColor = System.Drawing.Color.White;
+            }
+
+
             //ポジション
             if (Utility.IsNotNumber(txtPosition.Text))
             {
@@ -677,6 +705,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                       + "  ,[Password]     =  @Password     "
                       + "  ,[Member]       =  @Memeber      "
                       + "  ,[MemberType]   =  @MemeberType  "
+                      + "  ,[ShibuFeePrt]  =  @ShibuFeePrt  "
                       + "  ,[short_CONAME] =  @short_CONAME "
                       + "  ,[Position]     =  @Position     "
                       + "  ,[isCanceled]   =  @isCanceled     "
@@ -706,6 +735,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                             cmd.Parameters.Add(new SqlParameter("@Password", this.txtPassword.Text));
                             cmd.Parameters.Add(new SqlParameter("@Memeber", this.txtMember.Text));
                             cmd.Parameters.Add(new SqlParameter("@MemeberType", this.txtMemberType.Text));
+                            cmd.Parameters.Add(new SqlParameter("@ShibuFeePrt", this.txtShibuFeePrt.Text));
                             cmd.Parameters.Add(new SqlParameter("@short_CONAME", this.txtshort_CONAME.Text));
                             cmd.Parameters.Add(new SqlParameter("@Position", this.txtPosition.Text));
                             cmd.Parameters.Add(new SqlParameter("@isCanceled", this.txtisCanceled.Text));
@@ -1023,6 +1053,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                          + ",[Password] "
                          + ",[Member] "
                          + ",[MemberType] "
+                         + ",[ShibuFeePrt] "
                          + ",[short_CONAME] "
                          + ",[Position] "
                          + ",[isCanceled] " 
@@ -1039,6 +1070,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                          + ",@Password "
                          + ",@Member "
                          + ",@MemberType "
+                         + ",@ShibuFeePrt "
                          + ",@short_CONAME "
                          + ",@Position "
                          + ",@isCanceled"
@@ -1069,6 +1101,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                             cmd.Parameters.Add(new SqlParameter("@Password", this.txtPassword.Text));
                             cmd.Parameters.Add(new SqlParameter("@Member", this.txtMember.Text));
                             cmd.Parameters.Add(new SqlParameter("@MemberType", this.txtMemberType.Text));
+                            cmd.Parameters.Add(new SqlParameter("@ShibuFeePrt", this.txtShibuFeePrt.Text));
                             cmd.Parameters.Add(new SqlParameter("@short_CONAME", this.txtshort_CONAME.Text));
                             cmd.Parameters.Add(new SqlParameter("@Position", this.txtPosition.Text));
                             cmd.Parameters.Add(new SqlParameter("@isCanceled", this.txtisCanceled.Text));
@@ -1198,6 +1231,7 @@ namespace Jisseki_Report_Ibaraki.jada.master
                 e.Row.Cells[GV_INDEX_パスワード].Style.Add("width", "160px");
                 e.Row.Cells[GV_INDEX_会員フラグ].Style.Add("width", "140px");
                 e.Row.Cells[GV_INDEX_会員種別].Style.Add("width", "130px");
+                e.Row.Cells[GV_INDEX_支部費印字フラグ].Style.Add("width", "130px");
                 e.Row.Cells[GV_INDEX_ポジション].Style.Add("width", "160px");
                 e.Row.Cells[GV_INDEX_退会フラグ].Style.Add("width", "160px");
 

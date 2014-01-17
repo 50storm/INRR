@@ -571,6 +571,71 @@ namespace Jisseki_Report_Ibaraki.jada.print
 
         protected void btnToNonReported_Click(object sender, EventArgs e)
         {
+            //20130114
+            //必須チェック
+            if (this.txtYearRepFrom.Text.Trim() == string.Empty)
+            {
+                this.txtYearRepFrom.BackColor = System.Drawing.Color.Pink;
+                return;
+            }
+            else
+            {
+                this.txtYearRepFrom.BackColor = System.Drawing.Color.White;
+            }
+
+            if (this.txtMonthRepFrom.Text.Trim() == string.Empty)
+            {
+                this.txtMonthRepFrom.BackColor = System.Drawing.Color.Pink;
+                return;
+            }
+            else
+            {
+                this.txtMonthRepFrom.BackColor = System.Drawing.Color.White;
+            }
+
+
+
+            //数字以外はだめよ
+            if (Utility.IsNotNumber(this.txtYearRepFrom.Text))
+            {
+                this.txtYearRepFrom.BackColor = System.Drawing.Color.Pink;
+                return;
+
+            }
+            else
+            {
+                this.txtYearRepFrom.BackColor = System.Drawing.Color.White;
+            }
+
+            if (Utility.IsNotNumber(this.txtMonthRepFrom.Text))
+            {
+                this.txtMonthRepFrom.BackColor = System.Drawing.Color.Pink;
+                return;
+
+            }
+            else
+            {
+                this.txtMonthRepFrom.BackColor = System.Drawing.Color.White;
+            }
+
+            //1～12月
+            if (int.Parse(this.txtMonthRepFrom.Text) < 1 || int.Parse(this.txtMonthRepFrom.Text) > 12)
+            {
+                this.txtMonthRepFrom.BackColor = System.Drawing.Color.Pink;
+                return ;
+
+            }
+            else 
+            {
+                this.txtMonthRepFrom.BackColor = System.Drawing.Color.White;
+            }
+
+
+            //未受信データ検索
+            this.Session["FromAllPrt"] = true;
+            this.Session["Param_YY"] = this.txtYearRepFrom.Text;
+            this.Session["Param_MM"] = this.txtMonthRepFrom.Text;
+
             Response.Redirect(URL.SERCH_NON_REPORTED);
         }
 
